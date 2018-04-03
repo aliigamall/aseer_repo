@@ -1,0 +1,18 @@
+.socials-bar{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-right: #{-$icons-padding};
+    margin-left: #{-$icons-padding};
+}
+
+.socials-bar__item{
+    +.socials-bar__item{
+        @supports (margin-inline-start: 10px) {
+            margin-inline-start: $icons-padding;
+        }
+        @supports not (margin-inline-start: 10px) {
+            margin-#{$left}: $icons-padding;
+        }
+    }
+}

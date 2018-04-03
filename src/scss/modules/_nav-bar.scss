@@ -1,0 +1,97 @@
+.nav-bar{
+    background-color: $nav-bar--bg;
+    padding: $nav-bar--padding;
+    font-size: rem(16);
+    &--center{
+        display: flex;
+        justify-content: center;
+    }
+    &--sm{
+        font-size: rem(14);
+    }
+}
+.nav-bar__menu{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    margin-#{$left}: #{-$nav-bar-space-between};
+    margin-#{$right}: #{-$nav-bar-space-between};
+}
+
+.nav-bar__menu-item{
+   padding-#{$left}: $nav-bar-space-between;
+   padding-#{$right}: $nav-bar-space-between;
+   position: relative;
+}
+
+.nav-bar__menu-link{
+    color: $menu-link-color;
+    padding-#{$left}: $nav-bar-space-between;
+    padding-#{$right}: $nav-bar-space-between;
+    @include transition();
+    &:hover{
+        color: $menu-link-hover;
+        text-decoration: none;
+    }
+}
+
+.nav-bar__sub-menu{
+    list-style: none;
+    margin-bottom: 0;
+    padding: $sub-menu--padding;
+    font-size: 0.9em; 
+    @include breakpoint(small){
+        background: $sub-menu--bg;
+        min-width: 120%;
+        left: 0;
+        white-space: nowrap;
+        top: 100%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        @include translate(0, 15px);
+        @include transition();
+    }
+    .nav-bar__menu-link{
+        display: flex;
+    }
+}
+
+.nav-bar__menu-item:hover{
+    .nav-bar__sub-menu{
+        visibility: visible;
+        opacity: 1;
+        @include translate(0, 5px);
+    }
+}
+.nav-bar__secondary-menu{
+    @include breakpoint(isMobile){
+        display: none;
+    }
+}
+
+
+
+@include breakpoint(isMobile){
+    .nav-bar--responsive{
+        background: white;
+        z-index: $overlay-z-index+5;
+        width: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding-top: 70px;
+        padding-#{$right}: 90px;
+        box-shadow: 2px 0 12px 4px rgba(0, 0, 0, 0.1);
+        transform: translateX(-110%);
+        @include transition();
+        .nav-bar{
+            justify-content: baseline;
+        }
+    }
+    .nav-bar--responsive .nav-bar__menu{
+        flex-direction: column;
+    }  
+}
