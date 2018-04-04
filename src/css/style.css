@@ -2880,40 +2880,6 @@ template {
   color: #ededed;
 }
 
-.brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  fill: #da2228;
-  width: 80px;
-  height: auto;
-}
-
-@media (min-width: 576px) {
-  .brand {
-    width: 140px;
-    height: auto;
-  }
-}
-
-.brand--light {
-  fill: #fff;
-}
-
-.brand--dark {
-  fill: #000;
-}
-
-.brand--xs {
-  width: 80px;
-  height: auto;
-}
-
-.brand--lg {
-  width: 160px;
-  height: auto;
-}
-
 .nav-bar {
   background-color: transparent;
   padding: 0;
