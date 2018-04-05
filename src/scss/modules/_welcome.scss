@@ -1,0 +1,46 @@
+.welcome__video{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+    > img,
+    > video{
+        min-width: 100%;
+        min-height: 100vh;
+    }
+}
+.welcome__container{
+    color: #fff;
+    padding-top: 120px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.welcome__messages-title{
+    margin-bottom: 0.6em;
+}
+.welcome__messages-subtitle{
+    margin-bottom: 0.6em;
+}
+.welcome__messages-brief{
+    line-height: 1.7;
+    margin-bottom: 2em;
+}
+
+// cards
+.welcome__card{
+    height: 135px;
+    .card__image,
+    .card__content{
+        flex: 0 0 50%;
+    }
+    .card__content{
+        background-color: rgba(#4f4f4f, .5);
+        box-shadow: 0.035px 0.999px 40px 0px rgba(0, 0, 0, 0.29);
+        color: #fff;
+    }
+}

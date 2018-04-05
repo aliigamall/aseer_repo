@@ -1,0 +1,19 @@
+.weather-condition{
+    strong{
+        font-size: 1.5em;
+        line-height: 1.2;
+        display: inline-flex;
+    }
+}
+.weather-condition__icon{
+    @supports(margin-inline-end: $grid-gutter-width/2){
+        margin-inline-end: $grid-gutter-width/2;
+    }
+    @supports not (margin-inline-end: $grid-gutter-width/2){
+        margin-#{$left}: $grid-gutter-width/2;
+    }
+}
+.weather-condition__text{
+    display: flex;
+    flex-direction: column;
+}

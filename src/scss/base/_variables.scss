@@ -1,6 +1,6 @@
 // Colors
-  $color-primary: #da2228;
-$color-secondary: #ededed;
+  $color-primary: #fecd08;
+$color-secondary: #00ca6c;
     $color-white: #fff;
      $color-grey: #9E9E9E;
  $color-grey-800: #424242;
@@ -8,14 +8,15 @@ $color-secondary: #ededed;
 
 // paths
  $img-path: '../images';
-$font-path: '../../fonts';
+$font-path: '../fonts';
 
 //  selection background color
-$selection-color: darken($color-secondary, 15%);
+$selection-color: #727272;
 
 //  header
-     $header-bg: #fff;
-$header-padding: 10px 0;
+     $header-bg: transparent;
+$header-padding: 30px 0;
+$header-z-index: 10;
 
 // footer
        $footer-bg: #fafafa;

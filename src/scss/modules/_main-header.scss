@@ -1,22 +1,50 @@
-.main-header{
+.main-header {
     background-color: $header-bg;
     padding: $header-padding;
-}   
-.main-header__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    &--absolute,
+    &--fixed {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: $header-z-index;
+    }
+    &--fixed {
+        position: fixed;
+    }
 }
-.main-header__logo{
+
+.main-header--light {
+    color: #fff;
+    svg,
+    .icon > svg{
+        fill: #fff;
+    }
+    .nav-bar__menu-link{
+        color: #fff;
+    }
+    .nav-bar__secondary-menu .nav-bar__menu-item + .nav-bar__menu-item:before {
+        background-color: #fff;
+    }
+}
+
+.main-header__container {
+    display: flex;
+    align-items: center; // justify-content: space-between;
+}
+
+.main-header__logo {
     margin-bottom: 0;
     display: flex;
 }
-.main-header__responsive-icon{
+
+.main-header__responsive-icon {
     margin-#{$right}: 10px;
     z-index: $overlay-z-index+10;
     position: relative;
 }
-.main-header__overlay{
+
+.main-header__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,25 +55,47 @@
     visibility: hidden;
     z-index: $overlay-z-index;
 }
-@include breakpoint(small){
-    .main-header__responsive{
+
+@include breakpoint(small) {
+    .main-header__responsive {
         display: none;
     }
 }
-@include breakpoint(isMobile){
-    .main-header__container{
+
+@include breakpoint(isMobile) {
+    .main-header__container {
         justify-content: baseline;
     }
 }
-.main-header--open{
-    .main-header__responsive-icon{
+
+.main-header--open {
+    .main-header__responsive-icon {
         background-color: rgba(0, 0, 0, 0.2);
     }
-    .main-header__overlay{
+    .main-header__overlay {
         opacity: 1;
         visibility: visible;
     }
-    .nav-bar--responsive{
+    .nav-bar--responsive {
         transform: translateX(0);
+    }
+}
+
+.nav-bar__secondary-menu {
+    .nav-bar__menu-item {
+        display: flex;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .nav-bar__menu-item+.nav-bar__menu-item {
+        &:before {
+            content: "";
+            display: inline-flex;
+            width: 1px;
+            height: 25px;
+            margin: 0 15px;
+            background: rgba(0, 0, 0, 0.3);
+        }
     }
 }

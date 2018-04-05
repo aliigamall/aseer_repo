@@ -1,5 +1,5 @@
 @import "./vendors/bootstrap/functions";
-@import "./base/variables.en";
+@import "./base/variables.ar";
 @import "./base/variables";
 @import "./vendors/bootstrap/variables";
 @import "./base/mixins";
@@ -48,5 +48,11 @@
 @import "./modules/main-footer";
 @import "./modules/nav-bar";
 @import "./modules/vertical-nav";
+@import "./modules/card";
 @import "./modules/icons";
 @import "./modules/socials-bar";
+@import "./modules/weather-condition";
+@import "./modules/welcome";
+@import "./modules/welcome-links";
+
+@import "./layouts/l-home";

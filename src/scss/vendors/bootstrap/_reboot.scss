@@ -31,14 +31,40 @@ html {
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
   -webkit-tap-highlight-color: rgba(0,0,0,0); // 6
+  font-size: 13px;
+  @include breakpoint(mid){
+  	font-size:16px;
+  }
+  @include breakpoint(large){
+  	font-size:16px;
+  }
+  @include breakpoint(wide){
+  	font-size:18px;
+  }
+}
+
+::-moz-selection { 
+    background: $selection-color;
+    color: #fff;
+}
+
+::selection {
+    background: $selection-color;
+    color: #fff;
+}
+
+:-moz-placeholder, .form-control::-moz-placeholder ,
+::-webkit-input-placeholder, .form-control::-webkit-input-placeholder,
+:-ms-input-placeholder, .form-control::-ms-input-placeholder {
+    color: $input-placeholder-color;
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
-}
+// @at-root {
+//   @-ms-viewport {
+//     width: device-width;
+//   }
+// }
 
 // stylelint-disable selector-list-comma-newline-after
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -61,9 +87,12 @@ body {
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;
-  text-align: left; // 3
+  text-align: $txt-direction; // 3
   background-color: $body-bg; // 2
 }
+
+
+
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
 // This prevents an unwanted focus outline from appearing around elements that

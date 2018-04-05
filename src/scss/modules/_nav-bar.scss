@@ -15,8 +15,8 @@
     list-style: none;
     margin-bottom: 0;
     display: flex;
-    margin-#{$left}: #{-$nav-bar-space-between};
-    margin-#{$right}: #{-$nav-bar-space-between};
+    // margin-#{$left}: #{-$nav-bar-space-between};
+    // margin-#{$right}: #{-$nav-bar-space-between};
 }
 
 .nav-bar__menu-item{
@@ -66,6 +66,12 @@
     }
 }
 .nav-bar__secondary-menu{
+    @supports (margin-inline-start: auto) {
+        margin-inline-start: auto;
+    }
+    @supports not (margin-inline-start: auto) {
+        margin-#{$right}: auto;
+    }
     @include breakpoint(isMobile){
         display: none;
     }

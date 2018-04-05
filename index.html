@@ -6,57 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#000" />
-    <link id="favicon" rel="shortcut icon" href="src/images/favico.png" type="image/png">
+    <link id="favicon" rel="shortcut icon" href="./src/images/favico.png" type="image/png">
     <title>عسير الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header main-header--absolute main-header--light">
         <div class="container main-header__container">
+            <div class="vertical-nav">
+                <a href="#0" class="icon vertical-nav__icon">
+                    <svg><use xlink:href="././src/images/svg-icons.svg#icon-menu"></use></svg>
+                </a>
+            </div>
             <h1 class="main-header__logo">
-                <span class="sr-only">Logo</span>
-                <div class="vertical-nav">
-                    <a href="#0" class="icon">
-                        <svg><use xlink:href="src/images/svg-icons.svg#icon-menu"></use></svg>
-                    </a>
-                </div>
+                <span class="sr-only">Aseer Logo</span>
                 <a href="/">
-                    <img src="./src/images/logo.png" alt="Aseer Logo" /> 
+                    <img src="././src/images/logo.png" alt="Aseer Logo" /> 
                 </a>
             </h1>
             <nav class="nav-bar nav-bar--sm nav-bar__secondary-menu">
+                <h3 class="sr-only">Aseer secondary menu</h3>
                 <ul class="nav-bar__menu">
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Home</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">About us</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Our Projects</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Success stories</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="container nav-bar--responsive">
-            <nav class="nav-bar nav-bar--center">
-                <ul class="nav-bar__menu">
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Home</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">About us</a></li>
                     <li class="nav-bar__menu-item">
-                        <a href="#0" class="nav-bar__menu-link">Our Projects</a>
-                        <ul class="nav-bar__sub-menu">
-                            <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Project1</a></li>
-                            <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Project number 2</a></li>
-                            <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Project number three</a></li>
-                        </ul>
+                        <svg width="24" height="24"><use xlink:href="././src/images/svg-icons.svg#icon-search"></use></svg>
                     </li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Success stories</a></li>
-                    <li class="nav-bar__menu-item"><a href="#0" class="nav-bar__menu-link">Contact us</a></li>
+                    <li class="nav-bar__menu-item">
+                        <svg width="24" height="24"><use xlink:href="././src/images/svg-icons.svg#icon-language"></use></svg>
+                        <a href="#0" class="nav-bar__menu-link">
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-bar__menu-item weather-condition">
+                        <svg width="32" height="32" class="weather-condition__icon"><use xlink:href="././src/images/svg-icons.svg#icon-masjed"></use></svg>
+                        <div class="weather-condition__text">
+                            <span>العصر</span>
+                            <span>15:30</span>
+                        </div>
+                    </li>
+                    <li class="nav-bar__menu-item weather-condition">
+                        <svg width="45" height="45" class="weather-condition__icon"><use xlink:href="././src/images/svg-icons.svg#icon-weather"></use></svg>
+                        <div class="weather-condition__text">
+                            <span>مشمس جزئيا</span>
+                            <span>°26 <strong>°36</strong></span>
+                        </div>
+                    </li>
+                    <li class="nav-bar__menu-item">
+                        <svg width="65" height="45"><use xlink:href="././src/images/svg-icons.svg#icon-vision2030"></use></svg>
+                    </li>
                 </ul>
             </nav>
         </div>
-        
     </header>
     <main>
-        <!-- main content goes here -->
+        <section class="l-home-section">
+            <div class="welcome__video">
+                <img src="./src/images/aseer-mountains.jpg" alt="Aseer mountains">
+            </div>
+            <div class="welcome">
+                <div class="container welcome__container">
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-1">
+                            <div class="welcome__key-messages">
+                                <h2 class="typo-display3 welcome__messages-title">اكتشف منطقة عسير</h2>
+                                <h3 class="typo-display1 welcome__messages-subtitle">"عسير تراث ,تاريخ ,معالم"</h3>
+                                <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول المنبسطة</p>
+                                <div class="welcome__messages-actions">
+                                    <a href="#0" class="button button--primary button--rounded button--lg">إكتشف عسير</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="welcome-links__wrapper">
+                                <a href="#0" class="welcome-links">
+                                    <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-services"></use></svg>
+                                    <span class="welcome-links__title">
+                                        الخدمات <strong>الإلكترونية</strong>
+                                    </span>
+                                </a>
+                                <a href="#0" class="welcome-links">
+                                    <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-telescope"></use></svg>
+                                    <span class="welcome-links__title">
+                                        <strong>إكتشف</strong> منطقة عسير
+                                    </span>
+                                </a>
+                                <a href="#0" class="welcome-links welcome-links--lg">
+                                    <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-idea"></use></svg>
+                                    <span class="welcome-links__title">
+                                        <strong>شاركنا القرار</strong> "منصة الأفكار"
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card card--horizontal welcome__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/img1.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">مشروع تطوير وتأهيلوسط ابها</div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card card--horizontal welcome__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/img1.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">مشروع تطوير وتأهيلوسط ابها</div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-3">
+                            asd
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="l-home-section">
+            cccccccc
+        </section>
+        <section class="l-home-section">
+            cccccccc
+        </section>
+        <section class="l-home-section">
+            cccccccc
+        </section>
+        <section class="l-home-section">
+            cccccccc
+        </section>
     </main>
     <footer class="main-footer">
         <div class="main-footer__top">
@@ -74,22 +163,22 @@
                     <ul class="socials-bar">
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="src/images/svg-icons.svg#icon-facebook"></use></svg>
+                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-facebook"></use></svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="src/images/svg-icons.svg#icon-twitter"></use></svg>
+                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-twitter"></use></svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="src/images/svg-icons.svg#icon-google-plus"></use></svg>
+                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-google-plus"></use></svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="src/images/svg-icons.svg#icon-linkedin"></use></svg>
+                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-linkedin"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -131,7 +220,7 @@
             ddd
         </div>
     </footer>
-    <!-- <script src="/src/scripts/scripts.js"></script> -->
+    <!-- <script src="/./src/scripts/scripts.js"></script> -->
 </body>
 
 </html>

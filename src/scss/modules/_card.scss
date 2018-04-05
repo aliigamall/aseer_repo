@@ -1,0 +1,26 @@
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card__image{
+    // width: 100%;
+    // height: 100%;
+    overflow: hidden;
+    > img{
+        min-width: 100%;
+    }
+}
+.card__content{
+    background-color: #fff;
+    color: #4e4e4e;
+    padding: 1em;
+}
+
+
+.card--horizontal{
+    flex-direction: row;
+    
+    .card__image > img {
+        min-height: 100%;
+    }
+}
