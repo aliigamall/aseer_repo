@@ -44,6 +44,8 @@
 @import "./modules/buttons";
 @import "./layouts/grids";
 
+@import "./layouts/l-home";
+
 @import "./modules/main-header";
 @import "./modules/main-footer";
 @import "./modules/nav-bar";
@@ -54,5 +56,5 @@
 @import "./modules/weather-condition";
 @import "./modules/welcome";
 @import "./modules/welcome-links";
-
-@import "./layouts/l-home";
+@import "./modules/fab";
+@import "./modules/home-title";

@@ -1,3 +1,5 @@
+'use strict';
+
 // document.querySelector('.main-header__responsive-icon').addEventListener('click', function(){
 //     document.querySelector('.main-header').classList.toggle('main-header--open');
 // });
@@ -7,10 +9,11 @@
 // });
 
 // fab button
-const fabComponent = document.querySelector('.fab');
-const fabButton = document.querySelector('.fab__trigger');
-if(fabComponent){
-    fabButton.addEventListener('click', ()=>{
+var fabComponent = document.querySelector('.fab');
+var fabButton = document.querySelector('.fab__trigger');
+if (fabComponent) {
+    fabButton.addEventListener('click', function () {
         fabComponent.classList.toggle('is-opened');
     });
 };
+//# sourceMappingURL=scripts.js.map

@@ -9,6 +9,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const replace = require('gulp-replace');
+const babel = require('gulp-babel');
 // const cwebp = require('gulp-cwebp');
 const browserSync = require('browser-sync').create();
 
@@ -17,13 +18,13 @@ const distPath  = "./dist/";
 
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass:watch', 'babel:watch'], function() {
 
     browserSync.init({
         server: "./"
     });    
 
-    gulp.watch(srcPath + 'scss/**/*.scss', ['sass']);
+    // gulp.watch(srcPath + 'scss/**/*.scss', ['sass']);
     gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
@@ -62,6 +63,24 @@ gulp.task('DeployCssmin', function () {
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest(distPath + 'css/'))
         ;
+});
+
+// babel 
+gulp.task('babel', () =>
+    gulp.src(srcPath+ 'scripts/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(concat('scripts.js'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream())
+);
+
+// babel watch
+gulp.task('babel:watch', function () {
+    gulp.watch(srcPath+ 'scripts/*.js', ['babel']);
 });
 
 // scripts

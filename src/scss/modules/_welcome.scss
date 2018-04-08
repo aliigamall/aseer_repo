@@ -1,3 +1,6 @@
+.welcome{
+    padding: 0;
+}
 .welcome__video{
     position: absolute;
     left: 0;
@@ -14,7 +17,7 @@
 }
 .welcome__container{
     color: #fff;
-    padding-top: 120px;
+    padding: 150px 0 50px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,13 +37,8 @@
 // cards
 .welcome__card{
     height: 135px;
-    .card__image,
-    .card__content{
-        flex: 0 0 50%;
-    }
-    .card__content{
-        background-color: rgba(#4f4f4f, .5);
-        box-shadow: 0.035px 0.999px 40px 0px rgba(0, 0, 0, 0.29);
-        color: #fff;
+    .card__image{
+        flex: 0 0 47%;
     }
 }
+

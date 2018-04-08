@@ -14,26 +14,9 @@ $links-margin : 10px !default;
     flex: 1 0 auto;
     flex-wrap: wrap;
     align-items: center;
-    &:before{
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(12, 12, 12, 0.15);
-        z-index: -1;
-        @include scale(0);
-        @include transition();
-    }
 
     &:hover{
         text-decoration: none;
-        &:before{
-            @include scale(1.5);
-            opacity: 0.5;
-        }
     }
 }
 

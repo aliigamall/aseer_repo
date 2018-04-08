@@ -87,7 +87,12 @@ body {
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;
-  text-align: $txt-direction; // 3
+  @supports (text-align: start) {
+    text-align: start; // 3
+  }
+  @supports not (text-align: start) {
+    text-align: $txt-direction; // 3
+  }
   background-color: $body-bg; // 2
 }
 
