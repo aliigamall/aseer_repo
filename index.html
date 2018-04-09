@@ -8,7 +8,52 @@
     <meta name="theme-color" content="#000" />
     <link id="favicon" rel="shortcut icon" href="./src/images/favico.png" type="image/png">
     <title>عسير الصفحة الرئيسية</title>
+
     <link rel="stylesheet" href="./src/css/style.css">
+    <style>
+        .swiper-slide {
+            /* width: 80%; */
+            width: auto;
+            /* Center slide text vertically */
+        }
+
+        /* .swiper-slide:nth-child(2n) {
+      width: 60%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 40%;
+    } */
+
+        /* .tab-item{
+        display: flex;
+        margin: 0 -15px;
+    }
+    .tab-item .card{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        margin: 0 15px;
+    } */
+
+        .events__card-details {
+            position: absolute;
+            right: 0;
+            width: 400px;
+            background: #fff;
+            padding: 10px;
+            top: 140px;
+            z-index: 10;
+            display: none;
+        }
+
+        /* .swiper-slide-active .card {
+            padding-right: 200px;
+            transition: all 0.3s ease;
+        } */
+
+        .swiper-slide-active .events__card-details {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,43 +61,57 @@
         <div class="container main-header__container">
             <div class="vertical-nav">
                 <a href="#0" class="icon vertical-nav__icon">
-                    <svg><use xlink:href="././src/images/svg-icons.svg#icon-menu"></use></svg>
+                    <svg>
+                        <use xlink:href="././src/images/svg-icons.svg#icon-menu"></use>
+                    </svg>
                 </a>
             </div>
             <h1 class="main-header__logo">
                 <span class="sr-only">Aseer Logo</span>
                 <a href="/">
-                    <img src="././src/images/logo.png" alt="Aseer Logo" /> 
+                    <img src="././src/images/logo.png" alt="Aseer Logo" />
                 </a>
             </h1>
             <nav class="nav-bar nav-bar--sm nav-bar__secondary-menu">
                 <h3 class="sr-only">Aseer secondary menu</h3>
                 <ul class="nav-bar__menu">
                     <li class="nav-bar__menu-item">
-                        <svg width="24" height="24"><use xlink:href="././src/images/svg-icons.svg#icon-search"></use></svg>
+                        <svg width="24" height="24">
+                            <use xlink:href="././src/images/svg-icons.svg#icon-search"></use>
+                        </svg>
                     </li>
                     <li class="nav-bar__menu-item">
-                        <svg width="24" height="24"><use xlink:href="././src/images/svg-icons.svg#icon-language"></use></svg>
+                        <svg width="24" height="24">
+                            <use xlink:href="././src/images/svg-icons.svg#icon-language"></use>
+                        </svg>
                         <a href="#0" class="nav-bar__menu-link">
                             English
                         </a>
                     </li>
                     <li class="nav-bar__menu-item weather-condition">
-                        <svg width="32" height="32" class="weather-condition__icon"><use xlink:href="././src/images/svg-icons.svg#icon-masjed"></use></svg>
+                        <svg width="32" height="32" class="weather-condition__icon">
+                            <use xlink:href="././src/images/svg-icons.svg#icon-masjed"></use>
+                        </svg>
                         <div class="weather-condition__text">
                             <span>العصر</span>
                             <span>15:30</span>
                         </div>
                     </li>
                     <li class="nav-bar__menu-item weather-condition">
-                        <svg width="45" height="45" class="weather-condition__icon"><use xlink:href="././src/images/svg-icons.svg#icon-weather"></use></svg>
+                        <svg width="45" height="45" class="weather-condition__icon">
+                            <use xlink:href="././src/images/svg-icons.svg#icon-weather"></use>
+                        </svg>
                         <div class="weather-condition__text">
                             <span>مشمس جزئيا</span>
-                            <span>°26 <strong>°36</strong></span>
+                            <span>°26
+                                <strong>°36</strong>
+                            </span>
                         </div>
                     </li>
                     <li class="nav-bar__menu-item">
-                        <svg width="65" height="45"><use xlink:href="././src/images/svg-icons.svg#icon-vision2030"></use></svg>
+                        <svg width="65" height="45">
+                            <use xlink:href="././src/images/svg-icons.svg#icon-vision2030"></use>
+                        </svg>
                     </li>
                 </ul>
             </nav>
@@ -69,7 +128,9 @@
                         <div class="welcome__key-messages">
                             <h2 class="typo-display3 welcome__messages-title">اكتشف منطقة عسير</h2>
                             <h3 class="typo-display1 welcome__messages-subtitle">"عسير تراث ,تاريخ ,معالم"</h3>
-                            <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول المنبسطة</p>
+                            <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول
+                                المنبسطة
+                            </p>
                             <div class="welcome__messages-actions">
                                 <a href="#0" class="button button--primary button--rounded button--lg">إكتشف عسير</a>
                             </div>
@@ -78,19 +139,26 @@
                     <div class="col-sm-5">
                         <div class="welcome-links__wrapper">
                             <a href="#0" class="welcome-links">
-                                <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-services"></use></svg>
+                                <svg class="welcome-links__icon">
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-services"></use>
+                                </svg>
                                 <span class="welcome-links__title">
-                                    الخدمات <strong>الإلكترونية</strong>
+                                    الخدمات
+                                    <strong>الإلكترونية</strong>
                                 </span>
                             </a>
                             <a href="#0" class="welcome-links">
-                                <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-telescope"></use></svg>
+                                <svg class="welcome-links__icon">
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-telescope"></use>
+                                </svg>
                                 <span class="welcome-links__title">
                                     <strong>إكتشف</strong> منطقة عسير
                                 </span>
                             </a>
                             <a href="#0" class="welcome-links welcome-links--lg">
-                                <svg class="welcome-links__icon"><use xlink:href="./src/images/svg-icons.svg#icon-idea"></use></svg>
+                                <svg class="welcome-links__icon">
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-idea"></use>
+                                </svg>
                                 <span class="welcome-links__title">
                                     <strong>شاركنا القرار</strong> "منصة الأفكار"
                                 </span>
@@ -107,7 +175,9 @@
                                         <img src="./src/images/tmp/img1.jpg" alt="aseer image">
                                     </div>
                                     <div class="card__content">
-                                        <div class="card__title"><a href="#0">مشروع تطوير وتأهيل وسط ابها</a></div>
+                                        <div class="card__title">
+                                            <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                        </div>
                                         <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
                                     </div>
                                 </div>
@@ -118,8 +188,10 @@
                                         <img src="./src/images/tmp/img1.jpg" alt="aseer image">
                                     </div>
                                     <div class="card__content">
-                                        <div class="card__title"><a href="#0">التنمية المستدامة</a></div>
-                                        <div class="card__brief">التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر   </div>
+                                        <div class="card__title">
+                                            <a href="#0">التنمية المستدامة</a>
+                                        </div>
+                                        <div class="card__brief">التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر </div>
                                     </div>
                                 </div>
                             </div>
@@ -128,17 +200,31 @@
                     <div class="col-sm-3">
                         <div class="fab">
                             <div class="fab__trigger fab__button button--fab">
-                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-more-vert"></use></svg>
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-more-vert"></use>
+                                </svg>
                             </div>
                             <ul class="fab__actions">
                                 <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button"><svg><use xlink:href="./src/images/svg-icons.svg#icon-bell"></use></svg></a>
+                                    <a href="#0" class="fab__button">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-bell"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button"><svg><use xlink:href="./src/images/svg-icons.svg#icon-info"></use></svg></a>
+                                    <a href="#0" class="fab__button">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-info"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button"><svg><use xlink:href="./src/images/svg-icons.svg#icon-mail"></use></svg></a>
+                                    <a href="#0" class="fab__button">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-mail"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -149,12 +235,240 @@
         <section class="l-home-section">
             <div class="container">
                 <div class="l-home-title">
-                    <h2 class="home-title">المركز الاعلامى</h2>
+                    <h2 class="main-title">المركز الاعلامى</h2>
+                    <ul class="tab-bar">
+                        <li class="tab-bar__item tab-bar__item--active">
+                            <a href="#eventsTab" class="tab-bar__link">الفعاليات</a>
+                        </li>
+                        <li class="tab-bar__item">
+                            <a href="#newsTab" class="tab-bar__link">الأخبار</a>
+                        </li>
+                        <li class="tab-bar__item">
+                            <a href="#twitterTab" class="tab-bar__link">تويتر الأمانة</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-content">
+                    <div id="eventsTab" class="tab-item tab-item--active">
+                        <div id="eventsSlider" class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events1.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card--absolute events__card">
+                                        <div class="card__image">
+                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__title">
+                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                            </div>
+                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                        </div>
+                                        <div class="events__card-details">
+                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
+                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div id="newsTab" class="tab-item">
+                    news
+                </div>
+                <div id="twitterTab" class="tab-item">
+                    twitter
                 </div>
             </div>
+            </div>
         </section>
-        <section class="l-home-section">
-            cccccccc
+        <section class="l-home-section l-discover-aseer">
+            <div class="container">
+                <div class="l-home-title l-home-title--center">
+                    <h2 class="main-title main-title--light main-title--no-underline">
+                        اكتشف منطقة عسير
+                        <p>تقع منطقة عسير في وسط الجزء الجنوبي الغربي من المملكة</p>
+                    </h2>
+                </div>
+            </div>
+            <div id="discoverSlider" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card card--absolute card--center">
+                            <div class="card__image">
+                                <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+                                    <a href="#0">عسير فى سطور</a>
+                                </div>
+                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
+                                    الطبيعية. </div>
+                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card--absolute card--center">
+                            <div class="card__image">
+                                <img src="./src/images/tmp/discover2.jpg" alt="aseer image">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+                                    <a href="#0">عسير فى سطور</a>
+                                </div>
+                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
+                                    الطبيعية. </div>
+                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card--absolute card--center">
+                            <div class="card__image">
+                                <img src="./src/images/tmp/discover3.jpg" alt="aseer image">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+                                    <a href="#0">عسير فى سطور</a>
+                                </div>
+                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
+                                    الطبيعية. </div>
+                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card--absolute card--center">
+                            <div class="card__image">
+                                <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+                                    <a href="#0">عسير فى سطور</a>
+                                </div>
+                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
+                                    الطبيعية. </div>
+                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="l-discover__bottom swiper-grap-nav">
+                <div class="swiper-grap-nav__item swiper-grap-nav__prev">
+                    <svg><use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
+                </div>
+                <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
+                    <svg><use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
+                </div>
+                <div class="swiper-grap-nav__item swiper-grap-nav__next">
+                    <svg><use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
+                </div>
+            </div>
         </section>
         <section class="l-home-section">
             cccccccc
@@ -168,33 +482,47 @@
             <div class="container main-footer__container">
                 <div>
                     <svg viewBox="0 0 183 56" class="brand brand--dark brand--xs">
-                        <path id="Fill-1" class="st0" d="M2.7,33.3c0.6-0.8,1.7-1,2.5-0.4c3.2,2.2,6.3,3.5,9.9,3.5c4.4,0,6.5-2.1,6.5-4.9  c0-3.4-4.4-4.9-8.7-6.5C7.4,23,1.4,19.9,1.4,13.1C1.4,6,7.1,0.9,16.3,0.9c4.8,0,8.8,1.7,12,3.8c0.9,0.6,1.1,1.8,0.5,2.6l-2.2,2.9  c-0.6,0.7-1.6,0.9-2.4,0.4c-2.4-1.5-4.9-2.5-7.6-2.5c-4.1,0-6,1.9-6,4.5c0,3.1,4.1,4.5,8.5,6.1c5.6,2.1,11.7,4.7,11.7,12.4  c0,7-5.6,12.6-15.9,12.6c-4.9,0-10.1-1.9-14-4.5c-0.8-0.6-1.1-1.7-0.4-2.6L2.7,33.3z"/>
-                        <path id="Fill-4" class="st0" d="M37.3,1.9h5.9c1,0,1.8,0.8,1.8,1.8v37.1c0,1-0.8,1.8-1.8,1.8h-5.9c-1,0-1.8-0.8-1.8-1.8V3.7  C35.5,2.7,36.3,1.9,37.3,1.9"/>
-                        <path id="Fill-6" class="st0" d="M75.3,18.7c1.1,0,1.9-0.9,1.8-2c-0.5-5.3-3.2-8.4-8.2-8.4c-4.3,0-8,2.8-9.4,8.1  c-0.3,1.1,0.6,2.3,1.8,2.3H75.3z M68.7,0.9c11.1,0,16.9,8,16.9,19.3c0,1-0.1,2-0.1,2.9c-0.1,0.9-0.9,1.6-1.8,1.6H61.3  c-1.2,0-2,1.1-1.8,2.2c1.4,6,5.8,9.3,11.7,9.3c2.9,0,5.4-0.7,7.9-2.1c0.9-0.5,2-0.1,2.4,0.7l1.5,2.8c0.5,0.9,0.2,1.9-0.7,2.4  c-3.6,2.1-7.9,3.5-12.5,3.5c-11.3,0-20.1-7.9-20.1-21.3C49.9,9.1,59.1,0.9,68.7,0.9L68.7,0.9z"/>
-                        <path id="Fill-8" class="st0" d="M92.2,1.9h4.4c0.9,0,1.7,0.7,1.8,1.6L98.9,9c0,0.1,0.1,0.2,0.2,0.2h0c0.1,0,0.1,0,0.2-0.1  c2.9-5.2,7.2-8.1,11.5-8.1c1.2,0,2.1,0.1,3,0.3c1,0.2,1.6,1.2,1.4,2.1l-1,4.9c-0.2,1-1.1,1.6-2.1,1.4c-0.7-0.1-1.5-0.2-2.5-0.2  c-3.2,0-7,2.2-9.5,8c-0.1,0.2-0.1,0.5-0.1,0.7v22.7c0,1-0.8,1.8-1.8,1.8h-5.9c-1,0-1.8-0.8-1.8-1.8V3.7C90.4,2.7,91.2,1.9,92.2,1.9"/>
-                        <path id="Fill-10" class="st0" d="M130.9,36.2c3.1,0,5.6-1.4,8.3-3.9c0.4-0.3,0.6-0.8,0.6-1.3v-6.2c0-1.1-1-2-2.1-1.8  c-9.4,1.5-12.6,4.3-12.6,8.1C125,34.6,127.4,36.2,130.9,36.2 M138,16.8c1-0.1,1.7-1.1,1.6-2.1c-0.6-3.4-2.6-6.1-7.2-6.1  c-3.5,0-6.8,1.3-9.9,3.1c-0.9,0.5-2,0.2-2.5-0.7l-1.8-3.2c-0.5-0.9-0.2-1.9,0.7-2.4c4.2-2.4,9.4-4.4,15.2-4.4  c10.2,0,15.2,6.2,15.2,17.6v22.3c0,1-0.8,1.8-1.8,1.8H143c-0.9,0-1.6-0.6-1.8-1.5l-0.5-2.8c0-0.1-0.1-0.2-0.2-0.2c0,0-0.1,0-0.1,0  c-3.6,3-7.8,5.4-12.6,5.4c-7.2,0-12.1-4.8-12.1-11.9C115.7,23.3,122.5,18.8,138,16.8"/>
-                        <path id="Fill-12" class="st0" d="M157.1,0.4h6c1,0,1.8,0.8,1.8,1.8v38.2c0,8.6-3.3,15-13,15c-2,0-3.6-0.2-4.9-0.5  c-1-0.2-1.6-1.2-1.3-2.2l1-3.7c0.2-0.9,1.2-1.5,2.1-1.3c0.6,0.1,1.2,0.2,1.8,0.2c3.7,0,4.7-2.6,4.7-7.3V2.2  C155.3,1.2,156.1,0.4,157.1,0.4"/>
-                        <circle class="st0" cx="176.3" cy="37.1" r="5.8"/>
+                        <path id="Fill-1" class="st0" d="M2.7,33.3c0.6-0.8,1.7-1,2.5-0.4c3.2,2.2,6.3,3.5,9.9,3.5c4.4,0,6.5-2.1,6.5-4.9  c0-3.4-4.4-4.9-8.7-6.5C7.4,23,1.4,19.9,1.4,13.1C1.4,6,7.1,0.9,16.3,0.9c4.8,0,8.8,1.7,12,3.8c0.9,0.6,1.1,1.8,0.5,2.6l-2.2,2.9  c-0.6,0.7-1.6,0.9-2.4,0.4c-2.4-1.5-4.9-2.5-7.6-2.5c-4.1,0-6,1.9-6,4.5c0,3.1,4.1,4.5,8.5,6.1c5.6,2.1,11.7,4.7,11.7,12.4  c0,7-5.6,12.6-15.9,12.6c-4.9,0-10.1-1.9-14-4.5c-0.8-0.6-1.1-1.7-0.4-2.6L2.7,33.3z"
+                        />
+                        <path id="Fill-4" class="st0" d="M37.3,1.9h5.9c1,0,1.8,0.8,1.8,1.8v37.1c0,1-0.8,1.8-1.8,1.8h-5.9c-1,0-1.8-0.8-1.8-1.8V3.7  C35.5,2.7,36.3,1.9,37.3,1.9"
+                        />
+                        <path id="Fill-6" class="st0" d="M75.3,18.7c1.1,0,1.9-0.9,1.8-2c-0.5-5.3-3.2-8.4-8.2-8.4c-4.3,0-8,2.8-9.4,8.1  c-0.3,1.1,0.6,2.3,1.8,2.3H75.3z M68.7,0.9c11.1,0,16.9,8,16.9,19.3c0,1-0.1,2-0.1,2.9c-0.1,0.9-0.9,1.6-1.8,1.6H61.3  c-1.2,0-2,1.1-1.8,2.2c1.4,6,5.8,9.3,11.7,9.3c2.9,0,5.4-0.7,7.9-2.1c0.9-0.5,2-0.1,2.4,0.7l1.5,2.8c0.5,0.9,0.2,1.9-0.7,2.4  c-3.6,2.1-7.9,3.5-12.5,3.5c-11.3,0-20.1-7.9-20.1-21.3C49.9,9.1,59.1,0.9,68.7,0.9L68.7,0.9z"
+                        />
+                        <path id="Fill-8" class="st0" d="M92.2,1.9h4.4c0.9,0,1.7,0.7,1.8,1.6L98.9,9c0,0.1,0.1,0.2,0.2,0.2h0c0.1,0,0.1,0,0.2-0.1  c2.9-5.2,7.2-8.1,11.5-8.1c1.2,0,2.1,0.1,3,0.3c1,0.2,1.6,1.2,1.4,2.1l-1,4.9c-0.2,1-1.1,1.6-2.1,1.4c-0.7-0.1-1.5-0.2-2.5-0.2  c-3.2,0-7,2.2-9.5,8c-0.1,0.2-0.1,0.5-0.1,0.7v22.7c0,1-0.8,1.8-1.8,1.8h-5.9c-1,0-1.8-0.8-1.8-1.8V3.7C90.4,2.7,91.2,1.9,92.2,1.9"
+                        />
+                        <path id="Fill-10" class="st0" d="M130.9,36.2c3.1,0,5.6-1.4,8.3-3.9c0.4-0.3,0.6-0.8,0.6-1.3v-6.2c0-1.1-1-2-2.1-1.8  c-9.4,1.5-12.6,4.3-12.6,8.1C125,34.6,127.4,36.2,130.9,36.2 M138,16.8c1-0.1,1.7-1.1,1.6-2.1c-0.6-3.4-2.6-6.1-7.2-6.1  c-3.5,0-6.8,1.3-9.9,3.1c-0.9,0.5-2,0.2-2.5-0.7l-1.8-3.2c-0.5-0.9-0.2-1.9,0.7-2.4c4.2-2.4,9.4-4.4,15.2-4.4  c10.2,0,15.2,6.2,15.2,17.6v22.3c0,1-0.8,1.8-1.8,1.8H143c-0.9,0-1.6-0.6-1.8-1.5l-0.5-2.8c0-0.1-0.1-0.2-0.2-0.2c0,0-0.1,0-0.1,0  c-3.6,3-7.8,5.4-12.6,5.4c-7.2,0-12.1-4.8-12.1-11.9C115.7,23.3,122.5,18.8,138,16.8"
+                        />
+                        <path id="Fill-12" class="st0" d="M157.1,0.4h6c1,0,1.8,0.8,1.8,1.8v38.2c0,8.6-3.3,15-13,15c-2,0-3.6-0.2-4.9-0.5  c-1-0.2-1.6-1.2-1.3-2.2l1-3.7c0.2-0.9,1.2-1.5,2.1-1.3c0.6,0.1,1.2,0.2,1.8,0.2c3.7,0,4.7-2.6,4.7-7.3V2.2  C155.3,1.2,156.1,0.4,157.1,0.4"
+                        />
+                        <circle class="st0" cx="176.3" cy="37.1" r="5.8" />
                     </svg>
                     <ul class="socials-bar">
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-facebook"></use></svg>
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-facebook"></use>
+                                </svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-twitter"></use></svg>
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-twitter"></use>
+                                </svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-google-plus"></use></svg>
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-google-plus"></use>
+                                </svg>
                             </a>
                         </li>
                         <li class="socials-bar__item">
                             <a href="#0" class="socials-bar__icon icon">
-                                <svg><use xlink:href="./src/images/svg-icons.svg#icon-linkedin"></use></svg>
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-linkedin"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
@@ -236,6 +564,33 @@
             ddd
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
     <script src="./dist/scripts.js"></script>
+    <script>
+        var swiper = new Swiper('#eventsSlider', {
+            // slidesPerView: 3,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            // centeredSlides: true,
+            // slidesPerView: 'auto',
+            pagination: {
+                el: '#eventsSlider .swiper-pagination',
+                clickable: true,
+            }
+        });
+        var swiper = new Swiper('#discoverSlider', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            centeredSlides: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.l-discover__bottom .swiper-grap-nav__next',
+                prevEl: '.l-discover__bottom .swiper-grap-nav__prev',
+            },
+            // centeredSlides: true,
+            // slidesPerView: 'auto',
+        });
+    </script>
 </body>
+
 </html>

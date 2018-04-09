@@ -29,7 +29,7 @@
     }
 
     &--outline{
-        border: 1px solid ;
+        border: 2px solid ;
     }
 
     &--raised {
@@ -45,12 +45,12 @@
     }
 
     &--light{
-        color: #c2c2c1;
+        color: #fefefe;
     }
-
+    
     &--primary {
         background-color: $color-primary;
-        color: #0e0e0e;
+        color: $color-text;
     }
 
     &--secondary {

@@ -1,0 +1,16 @@
+.l-discover-aseer{
+    background: url('#{$img-path}/aseer landscape.jpg') no-repeat center center;
+    background-size: cover;
+    padding-bottom: 4vh;
+    .swiper-slide{
+        @include scale(0.8);
+        @include transition();
+    } 
+    
+    .swiper-slide-active{
+        @include scale(1.1);
+    }
+}
+.l-discover__bottom{
+    margin-top: auto;
+}

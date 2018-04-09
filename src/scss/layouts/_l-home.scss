@@ -2,6 +2,9 @@
     height: 100vh;
     position: relative;
     padding: 6vh 0;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
 }
 .l-welcome-buttom{
    display: flex; 
@@ -10,4 +13,10 @@
 
 .l-home-title{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    &--center{
+        justify-content: center;
+    }
 }

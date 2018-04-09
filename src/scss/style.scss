@@ -38,6 +38,8 @@
 // @import "./vendors/bootstrap/popover";
 // @import "./vendors/bootstrap/carousel";
 
+@import "./vendors/swiper";
+
 @import "./vendors/bootstrap/utilities";
 @import "./base/utilities";
 
@@ -45,6 +47,7 @@
 @import "./layouts/grids";
 
 @import "./layouts/l-home";
+@import "./layouts/l-discover-aseer";
 
 @import "./modules/main-header";
 @import "./modules/main-footer";
@@ -57,4 +60,8 @@
 @import "./modules/welcome";
 @import "./modules/welcome-links";
 @import "./modules/fab";
-@import "./modules/home-title";
+@import "./modules/main-title";
+@import "./modules/tabs";
+
+
+

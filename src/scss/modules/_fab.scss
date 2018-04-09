@@ -20,6 +20,12 @@ $fab-button-size: 5.0px !default;
         width: 24px;
         height: 24px;
         fill: #fff;
+        @include transition();
+    }
+    &:hover{
+        > svg{
+            fill: $color-primary;
+        }
     }
 }
 

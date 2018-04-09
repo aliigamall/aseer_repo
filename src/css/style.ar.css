@@ -37,7 +37,7 @@ html {
 
 @media (min-width: 1600px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -81,6 +81,10 @@ body {
   body {
     text-align: right;
   }
+}
+
+:focus {
+  outline: none;
 }
 
 [tabindex="-1"]:focus {

@@ -1,0 +1,23 @@
+.main-title {
+    font-size: rem(52);
+    color: $color-text;
+    margin-bottom: 0;
+    text-align: center;
+    &--light{
+        color: #fff;
+    }
+    &:not(&--no-underline){
+        &:after{
+            content: '';
+            width: 40%;
+            height: 8px;
+            background: $color-primary;
+            display: block;
+            border-radius: 1em;
+            margin-top: 15px;
+        }
+    }
+    > p{
+        font-size: .4em;
+    }
+}
