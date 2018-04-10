@@ -55,19 +55,34 @@
 
     &--secondary {
         background-color: $color-secondary;
-        color: rgba(#000, .87)
+        color: rgba(#000, .87);
+    }
+
+    &--dark{
+        background-color: #262626;
+        color: #fff;
     }
 
     &--rounded{
         border-radius: 5em;
     }
 
+    &--md{
+        font-size: rem(18);
+        padding: 0.35em 1.8em;
+        min-width: rem(200);
+        font-weight: 700;
+    }
+
     &--lg{
         font-size: rem(18);
         padding: 0.5em 2em;
         min-width: rem(220);
+        font-weight: 700;
     }
-
+    &--block{
+        display: block;
+    }
     &:hover{
         background-color: $color-primary;
         color: #fff;

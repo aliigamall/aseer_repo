@@ -65,10 +65,11 @@
     overflow: hidden;
     position: relative;
     .card__content{
-        background: linear-gradient( 0, rgba(42,42,42,0.5) 0%, rgba(42,42,42,0) 100%);
+        background: linear-gradient( 0, rgba(42,42,42,0.8) 0%, rgba(42,42,42,0) 100%);
         position: absolute;
         height: 100%;
         width: 100%;
+        top: 0;
         padding: 12% 6%;
         color: #fff;
         display: flex; 
@@ -95,4 +96,19 @@
     .card__action{
         margin-top: auto;
     }
+}
+
+.card__content--hover{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover{
+    .card__content--hover{
+        opacity: 1;
+        visibility: visible;
+        max-height: 600px;
+    }   
 }

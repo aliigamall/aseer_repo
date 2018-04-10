@@ -1,0 +1,34 @@
+.l-featured-pages{
+    background: url("#{$img-path}/mountains-opacity.jpg") no-repeat #{$left} bottom;
+    .l-home-section{
+        padding-top: 15vh;
+    }
+    .l-home-title{
+        margin-bottom: 6vh;
+    }
+}
+.l-featured__images{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-height: 90vh;
+}
+.l-featured__primary-image{
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.14);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.l-featured__secondary-image{
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    bottom: 0;
+    #{$right}: 0;
+    max-width: 400px;
+    max-height: 225px;
+    transform: translate(-30%, 20%);
+}
+
+.l-featured__bottom{
+    margin-top: auto;
+}

@@ -18,5 +18,9 @@
     margin-bottom: 30px;
     &--center{
         justify-content: center;
+        text-align: center;
+    }
+    &--col{
+        flex-direction: column;
     }
 }

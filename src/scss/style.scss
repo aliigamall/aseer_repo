@@ -48,6 +48,9 @@
 
 @import "./layouts/l-home";
 @import "./layouts/l-discover-aseer";
+@import "./layouts/l-ideas";
+@import "./layouts/l-tourism";
+@import "./layouts/l-featured-pages";
 
 @import "./modules/main-header";
 @import "./modules/main-footer";
@@ -62,6 +65,5 @@
 @import "./modules/fab";
 @import "./modules/main-title";
 @import "./modules/tabs";
-
-
-
+@import "./modules/idea";
+@import "./modules/article";

@@ -706,8 +706,8 @@ button.swiper-pagination-bullet {
 
 .swiper-grap-nav {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	
 	svg{
 		max-width: 100%;
 		max-height: 100%;
@@ -715,9 +715,21 @@ button.swiper-pagination-bullet {
 		height: 27px;
 		fill: rgba(#fff, .5);
 	}
+	&--center{
+		justify-content: center;
+	}
+	&:hover{
+		.swiper-grap-nav__cursor{
+			border-color: rgba($color-primary, .5);
+			svg{
+				fill: rgba($color-primary, .5);
+			}
+		}
+	}
 }
 .swiper-grap-nav__item{
 	margin: 0 5px;
+	display: flex;
 }
 .swiper-grap-nav__cursor{
 	border: 1px solid rgba(#fff, .5);
@@ -735,5 +747,14 @@ button.swiper-pagination-bullet {
 	&.swiper-button-disabled{
 		cursor: default;
 		opacity: .5;
+	}
+}
+
+.swiper-grap--dark{
+	svg{
+		fill: rgba(#000, .35);
+	}
+	.swiper-grap-nav__cursor{
+		border-color: rgba(#000, .35);
 	}
 }
