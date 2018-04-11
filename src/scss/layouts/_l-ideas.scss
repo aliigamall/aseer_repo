@@ -3,9 +3,21 @@
     background-size: auto 97%, auto;
     padding-top: 10vh;
 }
+.l-ideas__title{
+    font-size: rem(38);
+    color: $color-text;
+    margin-bottom: 20px;
+    &--light{
+        color: #fff;
+    }
+}
 .l-ideas__description{
     font-size: rem(16);
     color: $color-text;
+    line-height: 1.6;
+    &--light{
+        color: #fff;
+    }
 }
 .l-ideas__actions{
     margin-top: 5vh;
