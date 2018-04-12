@@ -6,6 +6,7 @@
 }
 .main-footer__bottom{
     background: $footer-bottom-bg;
+    padding: 15px 0;
 }
 .main-footer__container{
     display: flex;
@@ -17,6 +18,10 @@
     margin-bottom: 0;
     padding: 0;
     list-style: none;
+    margin-top: rem(40);
+    li{
+        padding: 0 10px;
+    }
     >.col {
         @include breakpoint(isMobile) {
             margin-bottom: 30px;
@@ -26,8 +31,9 @@
 .main-footer__link {
     display: block;
     font-size: rem(16);
-    color: rgba(0,0,0,0.54);
+    color: #606060;
     white-space: pre;
+    font-weight: 700;
     @include transition();
 
     + .main-footer__link {
@@ -41,5 +47,46 @@
     &:hover {
         text-decoration: none;
         color: $color-secondary;
+    }
+}
+
+.main-footer__vision{
+    fill: rgba(#606060, .8);
+    width: 150px;
+    height: 100px;
+}
+
+.main-footer__quick-links{
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    li{
+        padding: 0 10px;
+        + li{
+            @supports (border-inline-start: 1px){
+                border-inline-start: 1px solid #787878;
+            }
+            @supports not (border-inline-start: 1px){
+                border-#{$left}: 1px solid #787878;
+            }
+        }
+    }
+    a{
+        color: #787878;
+        font-size: rem(14);
+        transition: color 0.3s ease-in-out;
+        &:hover{
+            text-decoration: none;
+            color: $color-secondary;
+        }
+    }
+}
+.main-footer__emblem{
+    @supports (margin-inline-end: 35px){
+        margin-inline-end: rem(35);
+    }
+    @supports not (margin-inline-end: 35px){
+        margin-#{$right}: rem(35);        
     }
 }

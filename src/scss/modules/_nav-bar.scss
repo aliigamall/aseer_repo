@@ -70,7 +70,7 @@
         margin-inline-start: auto;
     }
     @supports not (margin-inline-start: auto) {
-        margin-#{$right}: auto;
+        margin-#{$left}: auto;
     }
     @include breakpoint(isMobile){
         display: none;

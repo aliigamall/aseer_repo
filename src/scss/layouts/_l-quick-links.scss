@@ -1,0 +1,28 @@
+.l-quick-links{
+    background: url("#{$img-path}/mountains-gradient.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.quick-links{
+    color: #fff;
+    fill: #fff;
+    font-size: rem(25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    @include transition();
+    &:hover{
+        text-decoration: none;
+        color: $color-primary;
+        fill: $color-primary;
+    }
+}
+
+.quick-links__icon{
+    width: rem(70);
+    height: rem(70);
+    fill: inherit;
+    margin-bottom: 15px;
+}
