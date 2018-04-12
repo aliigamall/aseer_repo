@@ -4524,6 +4524,14 @@ button.swiper-pagination-bullet {
   }
 }
 
+.l-full-page--auto-height {
+  height: auto !important;
+}
+
+.l-full-page--auto-height .fp-tableCell {
+  height: auto !important;
+}
+
 .nav-bar {
   background-color: transparent;
   padding: 0;

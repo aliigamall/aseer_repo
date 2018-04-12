@@ -90,3 +90,9 @@
         margin-#{$right}: rem(35);        
     }
 }
+.l-full-page--auto-height{
+    height: auto !important;
+    .fp-tableCell{
+        height: auto !important;
+    }
+}

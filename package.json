@@ -32,6 +32,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
+    "fullpage.js": "^2.9.7",
     "node-sass": "^4.8.3"
   }
 }

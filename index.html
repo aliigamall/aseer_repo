@@ -57,895 +57,921 @@
 </head>
 
 <body>
-    <header class="main-header main-header--absolute main-header--light">
-        <div class="container main-header__container">
-            <div class="vertical-nav">
-                <a href="#0" class="icon vertical-nav__icon">
-                    <svg>
-                        <use xlink:href="././src/images/svg-icons.svg#icon-menu"></use>
-                    </svg>
-                </a>
+    <div id="homePage">
+        <header class="main-header main-header--absolute main-header--light">
+            <div class="container main-header__container">
+                <div class="vertical-nav">
+                    <a href="#0" class="icon vertical-nav__icon">
+                        <svg>
+                            <use xlink:href="././src/images/svg-icons.svg#icon-menu"></use>
+                        </svg>
+                    </a>
+                </div>
+                <h1 class="main-header__logo">
+                    <span class="sr-only">Aseer Logo</span>
+                    <a href="/">
+                        <img src="././src/images/logo.png" alt="Aseer Logo" />
+                    </a>
+                </h1>
+                <nav class="nav-bar nav-bar--sm nav-bar__secondary-menu">
+                    <h3 class="sr-only">Aseer secondary menu</h3>
+                    <ul class="nav-bar__menu">
+                        <li class="nav-bar__menu-item">
+                            <svg width="24" height="24">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-search"></use>
+                            </svg>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <svg width="24" height="24">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-language"></use>
+                            </svg>
+                            <a href="#0" class="nav-bar__menu-link">
+                                English
+                            </a>
+                        </li>
+                        <li class="nav-bar__menu-item weather-condition">
+                            <svg width="32" height="32" class="weather-condition__icon">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-masjed"></use>
+                            </svg>
+                            <div class="weather-condition__text">
+                                <span>العصر</span>
+                                <span>15:30</span>
+                            </div>
+                        </li>
+                        <li class="nav-bar__menu-item weather-condition">
+                            <svg width="45" height="45" class="weather-condition__icon">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-weather"></use>
+                            </svg>
+                            <div class="weather-condition__text">
+                                <span>مشمس جزئيا</span>
+                                <span>°26
+                                    <strong>°36</strong>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <svg width="65" height="45">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-vision2030"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <h1 class="main-header__logo">
-                <span class="sr-only">Aseer Logo</span>
-                <a href="/">
-                    <img src="././src/images/logo.png" alt="Aseer Logo" />
-                </a>
-            </h1>
-            <nav class="nav-bar nav-bar--sm nav-bar__secondary-menu">
-                <h3 class="sr-only">Aseer secondary menu</h3>
-                <ul class="nav-bar__menu">
-                    <li class="nav-bar__menu-item">
-                        <svg width="24" height="24">
-                            <use xlink:href="././src/images/svg-icons.svg#icon-search"></use>
-                        </svg>
-                    </li>
-                    <li class="nav-bar__menu-item">
-                        <svg width="24" height="24">
-                            <use xlink:href="././src/images/svg-icons.svg#icon-language"></use>
-                        </svg>
-                        <a href="#0" class="nav-bar__menu-link">
-                            English
-                        </a>
-                    </li>
-                    <li class="nav-bar__menu-item weather-condition">
-                        <svg width="32" height="32" class="weather-condition__icon">
-                            <use xlink:href="././src/images/svg-icons.svg#icon-masjed"></use>
-                        </svg>
-                        <div class="weather-condition__text">
-                            <span>العصر</span>
-                            <span>15:30</span>
+        </header>
+            <div class="l-full-page">
+                <section class="l-home-section welcome">
+                    <div class="welcome__video">
+                        <img src="./src/images/aseer-mountains.jpg" alt="Aseer mountains">
+                    </div>
+                    <div class="container welcome__container">
+                        <div class="row">
+                            <div class="col-sm-6 offset-sm-1">
+                                <div class="welcome__key-messages">
+                                    <h2 class="typo-display3 welcome__messages-title">اكتشف منطقة عسير</h2>
+                                    <h3 class="typo-display1 welcome__messages-subtitle">"عسير تراث ,تاريخ ,معالم"</h3>
+                                    <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة
+                                        والسهول المنبسطة
+                                    </p>
+                                    <div class="welcome__messages-actions">
+                                        <a href="#0" class="button button--primary button--rounded button--lg">إكتشف عسير</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="welcome-links__wrapper">
+                                    <a href="#0" class="welcome-links">
+                                        <svg class="welcome-links__icon">
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-services"></use>
+                                        </svg>
+                                        <span class="welcome-links__title">
+                                            الخدمات
+                                            <strong>الإلكترونية</strong>
+                                        </span>
+                                    </a>
+                                    <a href="#0" class="welcome-links">
+                                        <svg class="welcome-links__icon">
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-telescope"></use>
+                                        </svg>
+                                        <span class="welcome-links__title">
+                                            <strong>إكتشف</strong> منطقة عسير
+                                        </span>
+                                    </a>
+                                    <a href="#0" class="welcome-links welcome-links--lg">
+                                        <svg class="welcome-links__icon">
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-idea"></use>
+                                        </svg>
+                                        <span class="welcome-links__title">
+                                            <strong>شاركنا القرار</strong> "منصة الأفكار"
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li class="nav-bar__menu-item weather-condition">
-                        <svg width="45" height="45" class="weather-condition__icon">
-                            <use xlink:href="././src/images/svg-icons.svg#icon-weather"></use>
-                        </svg>
-                        <div class="weather-condition__text">
-                            <span>مشمس جزئيا</span>
-                            <span>°26
-                                <strong>°36</strong>
-                            </span>
-                        </div>
-                    </li>
-                    <li class="nav-bar__menu-item">
-                        <svg width="65" height="45">
-                            <use xlink:href="././src/images/svg-icons.svg#icon-vision2030"></use>
-                        </svg>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="l-home-section welcome">
-            <div class="welcome__video">
-                <img src="./src/images/aseer-mountains.jpg" alt="Aseer mountains">
-            </div>
-            <div class="container welcome__container">
-                <div class="row">
-                    <div class="col-sm-6 offset-sm-1">
-                        <div class="welcome__key-messages">
-                            <h2 class="typo-display3 welcome__messages-title">اكتشف منطقة عسير</h2>
-                            <h3 class="typo-display1 welcome__messages-subtitle">"عسير تراث ,تاريخ ,معالم"</h3>
-                            <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول
-                                المنبسطة
-                            </p>
-                            <div class="welcome__messages-actions">
-                                <a href="#0" class="button button--primary button--rounded button--lg">إكتشف عسير</a>
+                        <div class="row l-welcome-buttom">
+                            <div class="col-sm-9">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card card--horizontal card--dark welcome__card">
+                                            <div class="card__image">
+                                                <img src="./src/images/tmp/img1.jpg" alt="aseer image">
+                                            </div>
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                </div>
+                                                <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card card--horizontal card--dark welcome__card">
+                                            <div class="card__image">
+                                                <img src="./src/images/tmp/img1.jpg" alt="aseer image">
+                                            </div>
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">التنمية المستدامة</a>
+                                                </div>
+                                                <div class="card__brief">التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="fab">
+                                    <div class="fab__trigger fab__button button--fab">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-more-vert"></use>
+                                        </svg>
+                                    </div>
+                                    <ul class="fab__actions">
+                                        <li class="fab__actions-item">
+                                            <a href="#0" class="fab__button">
+                                                <svg>
+                                                    <use xlink:href="./src/images/svg-icons.svg#icon-bell"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="fab__actions-item">
+                                            <a href="#0" class="fab__button">
+                                                <svg>
+                                                    <use xlink:href="./src/images/svg-icons.svg#icon-info"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="fab__actions-item">
+                                            <a href="#0" class="fab__button">
+                                                <svg>
+                                                    <use xlink:href="./src/images/svg-icons.svg#icon-mail"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="welcome-links__wrapper">
-                            <a href="#0" class="welcome-links">
-                                <svg class="welcome-links__icon">
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-services"></use>
-                                </svg>
-                                <span class="welcome-links__title">
-                                    الخدمات
-                                    <strong>الإلكترونية</strong>
-                                </span>
-                            </a>
-                            <a href="#0" class="welcome-links">
-                                <svg class="welcome-links__icon">
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-telescope"></use>
-                                </svg>
-                                <span class="welcome-links__title">
-                                    <strong>إكتشف</strong> منطقة عسير
-                                </span>
-                            </a>
-                            <a href="#0" class="welcome-links welcome-links--lg">
-                                <svg class="welcome-links__icon">
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-home-section">
+                    <div class="container">
+                        <div class="l-home-title">
+                            <h2 class="main-title">المركز الاعلامى</h2>
+                            <ul class="tab-bar">
+                                <li class="tab-bar__item tab-bar__item--active">
+                                    <a href="#eventsTab" class="tab-bar__link">الفعاليات</a>
+                                </li>
+                                <li class="tab-bar__item">
+                                    <a href="#newsTab" class="tab-bar__link">الأخبار</a>
+                                </li>
+                                <li class="tab-bar__item">
+                                    <a href="#twitterTab" class="tab-bar__link">تويتر الأمانة</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-content">
+                            <div id="eventsTab" class="tab-item tab-item--active">
+                                <div id="eventsSlider" class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events1.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card card--absolute events__card">
+                                                <div class="card__image">
+                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__title">
+                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    </div>
+                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                </div>
+                                                <div class="events__card-details">
+                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
+                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div id="newsTab" class="tab-item">
+                            news
+                        </div>
+                        <div id="twitterTab" class="tab-item">
+                            twitter
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-home-section l-discover-aseer">
+                    <div class="container">
+                        <div class="l-home-title l-home-title--center">
+                            <h2 class="main-title main-title--light main-title--no-underline">
+                                اكتشف منطقة عسير
+                                <p>تقع منطقة عسير في وسط الجزء الجنوبي الغربي من المملكة</p>
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="discoverSlider" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card card--absolute card--center">
+                                    <div class="card__image">
+                                        <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="card__title">
+                                            <a href="#0">عسير فى سطور</a>
+                                        </div>
+                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
+                                            بألوانها الطبيعية. </div>
+                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card--absolute card--center">
+                                    <div class="card__image">
+                                        <img src="./src/images/tmp/discover2.jpg" alt="aseer image">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="card__title">
+                                            <a href="#0">عسير فى سطور</a>
+                                        </div>
+                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
+                                            بألوانها الطبيعية. </div>
+                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card--absolute card--center">
+                                    <div class="card__image">
+                                        <img src="./src/images/tmp/discover3.jpg" alt="aseer image">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="card__title">
+                                            <a href="#0">عسير فى سطور</a>
+                                        </div>
+                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
+                                            بألوانها الطبيعية. </div>
+                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card--absolute card--center">
+                                    <div class="card__image">
+                                        <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="card__title">
+                                            <a href="#0">عسير فى سطور</a>
+                                        </div>
+                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
+                                            بألوانها الطبيعية. </div>
+                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-discover__bottom swiper-grap-nav swiper-grap-nav--center">
+                        <div class="swiper-grap-nav__item swiper-grap-nav__prev">
+                            <svg>
+                                <use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
+                        </div>
+                        <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
+                            <svg>
+                                <use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
+                        </div>
+                        <div class="swiper-grap-nav__item swiper-grap-nav__next">
+                            <svg>
+                                <use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-home-section l-ideas">
+                    <div class="container">
+                        <div class="l-home-title">
+                            <div class="main-title--icon">
+                                <svg>
                                     <use xlink:href="./src/images/svg-icons.svg#icon-idea"></use>
                                 </svg>
-                                <span class="welcome-links__title">
-                                    <strong>شاركنا القرار</strong> "منصة الأفكار"
-                                </span>
-                            </a>
+                                <h2 class="main-title main-title--no-underline">
+                                    شاركنا القرار
+                                    <p>"منصة الأفكار"</p>
+                                </h2>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row l-welcome-buttom">
-                    <div class="col-sm-9">
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="card card--horizontal card--dark welcome__card">
-                                    <div class="card__image">
-                                        <img src="./src/images/tmp/img1.jpg" alt="aseer image">
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                        </div>
-                                        <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                    </div>
+                                <div class="l-ideas__description">
+                                    لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات التطويرية أحد الأركان الرئيسية لتحسين أي عمل يتطلب التفاعل بين
+                                    الأطراف المعنية المرتبطة بهذا العمل، ومن هذا المنطلق، أهمية مشاركة الجمهور في كل الأعمال
+                                    التي تنفذها وكل الخدمات التي تقدمها
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card card--horizontal card--dark welcome__card">
-                                    <div class="card__image">
-                                        <img src="./src/images/tmp/img1.jpg" alt="aseer image">
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">التنمية المستدامة</a>
+                                <div class="l-ideas__actions">
+                                    <a href="#0" class="button button--primary button--rounded button--md">التقديم على فكرة</a>
+                                    <a href="#0" class="button button--dark button--rounded button--md">عرض الافكار التى تحت المراجعة </a>
+                                </div>
+                                <div class="l-ideas__details">
+                                    <div class="idea">
+                                        <div class="idea__number">
+                                            <span>05</span>
+                                            فكرة
                                         </div>
-                                        <div class="card__brief">التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر </div>
+                                        <div class="idea__details">
+                                            <div class="idea__title">تم تنفيذها</div>
+                                            <div class="idea__description">
+                                                لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="idea">
+                                        <div class="idea__number">
+                                            <span>12</span>
+                                            فكرة
+                                        </div>
+                                        <div class="idea__details">
+                                            <div class="idea__title">تحت المراجعة</div>
+                                            <div class="idea__description">
+                                                لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="fab">
-                            <div class="fab__trigger fab__button button--fab">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-more-vert"></use>
-                                </svg>
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-home-section l-tourism">
+                    <div class="container">
+                        <div class="l-home-title l-home-title--center l-home-title--col">
+                            <h2 class="main-title main-title--light main-title--no-underline">
+                                السياحة فى عسير
+                                <p>"لوحة ساحرة بألوانها الطبيعية"</p>
+                            </h2>
+                            <p class="main-title__brief">
+                                من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول المنبسطة، وسواحلها البحرية
+                                الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها الطبيعية.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-tourism__bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card--absolute card__image">
+                                            <img src="./src/images/tmp/tourism1.jpg" alt="aseer image">
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">مدينة أبها</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__content card__content--hover">
+                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
+                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card--absolute card__image">
+                                            <img src="./src/images/tmp/tourism2.jpg" alt="aseer image">
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">المحميات الطبيعية</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__content card__content--hover">
+                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
+                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card--absolute card__image">
+                                            <img src="./src/images/tmp/tourism3.jpg" alt="aseer image">
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">جولات جبلية</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__content card__content--hover">
+                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
+                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card--absolute card__image">
+                                            <img src="./src/images/tmp/tourism4.jpg" alt="aseer image">
+                                            <div class="card__content">
+                                                <div class="card__title">
+                                                    <a href="#0">منتزه السحاب</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__content card__content--hover">
+                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
+                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="fab__actions">
-                                <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button">
-                                        <svg>
-                                            <use xlink:href="./src/images/svg-icons.svg#icon-bell"></use>
-                                        </svg>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-featured-pages">
+                    <div id="featuredSwiper" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="l-featured__images">
+                                                <img src="./src/images/tmp/agriculture.jpg" class="l-featured__primary-image" alt="agriculture">
+                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 l-home-section">
+                                            <div class="l-home-title">
+                                                <h2 class="main-title">التنمية المستدامة</h2>
+                                            </div>
+                                            <div class="row justify-content-sm-end">
+                                                <div class="col-sm-9">
+                                                    <article class="article">
+                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
+                                                        <div class="article__content">
+                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
+                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
+                                                            المعيشة
+                                                        </div>
+                                                        <div class="article__action">
+                                                            <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="l-featured__images">
+                                                <img src="./src/images/tmp/business.jpg" class="l-featured__primary-image" alt="agriculture">
+                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 l-home-section">
+                                            <div class="l-home-title">
+                                                <h2 class="main-title">الخدمات الإلكترونية</h2>
+                                            </div>
+                                            <div class="row justify-content-sm-end">
+                                                <div class="col-sm-9">
+                                                    <article class="article">
+                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
+                                                        <div class="article__content">
+                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
+                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
+                                                            المعيشة
+                                                        </div>
+                                                        <div class="article__action">
+                                                            <a href="#0" class="button button--primary button--rounded button--lg">الخدمات الإلكترونية</a>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="l-featured__images">
+                                                <img src="./src/images/tmp/social.jpg" class="l-featured__primary-image" alt="agriculture">
+                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 l-home-section">
+                                            <div class="l-home-title">
+                                                <h2 class="main-title">المشاركة الإجتماعية</h2>
+                                            </div>
+                                            <div class="row justify-content-sm-end">
+                                                <div class="col-sm-9">
+                                                    <article class="article">
+                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
+                                                        <div class="article__content">
+                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
+                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
+                                                            المعيشة
+                                                        </div>
+                                                        <div class="article__action">
+                                                            <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="l-featured__bottom">
+                        <div class="container">
+                            <div class="row justify-content-sm-end">
+                                <div class="col-sm-6">
+                                    <div class="row justify-content-sm-end">
+                                        <div class="col-sm-9">
+                                            <div class="swiper-grap-nav swiper-grap--dark">
+                                                <div class="swiper-grap-nav__item swiper-grap-nav__prev">
+                                                    <svg>
+                                                        <use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
+                                                </div>
+                                                <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
+                                                    <svg>
+                                                        <use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
+                                                </div>
+                                                <div class="swiper-grap-nav__item swiper-grap-nav__next">
+                                                    <svg>
+                                                        <use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="l-full-page">
+                <section class="l-home-section l-projects">
+                    <div class="container">
+                        <div class="l-home-title">
+                            <div class="main-title--icon">
+                                <svg>
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-projects"></use>
+                                </svg>
+                                <h2 class="main-title main-title--light main-title--no-underline">
+                                    أحدث المشاريع
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5 offset-sm-2">
+                                <div class="l-ideas__title l-ideas__title--light">مشروع تطوير وتأهيل وسط ابها</div>
+                                <div class="l-ideas__description l-ideas__description--light">
+                                    يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها كاستعمالات ترفيهية وسياحية على وادى ابها كما يشمل المشروع القرى
+                                    التراثية الثلاثة المفتاحة – النصب – البسطة
+                                    <p>وتبلغ المساحة الاجمالية للمشروع حوالى
+                                        <strong>2.621</strong> متر مربع</p>
+                                </div>
+                                <div class="l-ideas__actions">
+                                    <a href="#0" class="button button--primary button--rounded button--md">تفاصيل المشروع</a>
+                                    <a href="#0" class="button button--outline button--light button--rounded button--md">عرض مشاريع الأمانة </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="l-projects__charts">
+                                    <div>
+                                        <div id="achievementPercent" class="project-chart" data-percent="65">
+                                            <div class="project-chart__num">
+                                                <span class="project-chart__percent"></span>
+                                                <label>%</label>
+                                            </div>
+                                        </div>
+                                        <div class="project-chart__title">
+                                            نسبة الانجاز حتى الان
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="daysCount" class="project-chart" data-percent="80">
+                                            <div class="project-chart__num project-chart__num--vertical">
+                                                <span class="project-chart__percent"></span>
+                                                <label>يوم</label>
+                                            </div>
+                                        </div>
+                                        <div class="project-chart__title">
+                                            متبقى على موعد الانتهاء
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-projects-bottom">
+                        <div class="container">
+                            <ul class="l-projects-tabs">
+                                <li class="l-projects-tabs__items">
+                                    <a href="#0" class="l-projects-tabs__link l-projects-tabs__link--active">
+                                        <div class="l-projects-tabs__num">01</div>
+                                        <div class="l-projects-tabs__title">مشروع تطوير وتأهيل وسط ابها</div>
                                     </a>
                                 </li>
-                                <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button">
-                                        <svg>
-                                            <use xlink:href="./src/images/svg-icons.svg#icon-info"></use>
-                                        </svg>
+                                <li class="l-projects-tabs__items">
+                                    <a href="#0" class="l-projects-tabs__link">
+                                        <div class="l-projects-tabs__num">02</div>
+                                        <div class="l-projects-tabs__title">مشروع المركز الحضرى بأبها </div>
                                     </a>
                                 </li>
-                                <li class="fab__actions-item">
-                                    <a href="#0" class="fab__button">
-                                        <svg>
-                                            <use xlink:href="./src/images/svg-icons.svg#icon-mail"></use>
-                                        </svg>
+                                <li class="l-projects-tabs__items">
+                                    <a href="#0" class="l-projects-tabs__link">
+                                        <div class="l-projects-tabs__num">03</div>
+                                        <div class="l-projects-tabs__title">حديقة مطار أبها .. المرحلة الاولى</div>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-        <section class="l-home-section">
-            <div class="container">
-                <div class="l-home-title">
-                    <h2 class="main-title">المركز الاعلامى</h2>
-                    <ul class="tab-bar">
-                        <li class="tab-bar__item tab-bar__item--active">
-                            <a href="#eventsTab" class="tab-bar__link">الفعاليات</a>
-                        </li>
-                        <li class="tab-bar__item">
-                            <a href="#newsTab" class="tab-bar__link">الأخبار</a>
-                        </li>
-                        <li class="tab-bar__item">
-                            <a href="#twitterTab" class="tab-bar__link">تويتر الأمانة</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tabs-content">
-                    <div id="eventsTab" class="tab-item tab-item--active">
-                        <div id="eventsSlider" class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events1.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
+            <div class="l-full-page l-full-page--auto-height">
+                <section class="l-quick-links">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <a href="#" class="quick-links">
+                                    <svg class="quick-links__icon">
+                                        <use xlink:href="./src/images/svg-icons.svg#icon-images"></use>
+                                    </svg>
+                                    <div class="quick-links__title">
+                                        مكتبة الصور
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card--absolute events__card">
-                                        <div class="card__image">
-                                            <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                        </div>
-                                        <div class="card__content">
-                                            <div class="card__title">
-                                                <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                            </div>
-                                            <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                        </div>
-                                        <div class="events__card-details">
-                                            <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال
-                                                القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-                <div id="newsTab" class="tab-item">
-                    news
-                </div>
-                <div id="twitterTab" class="tab-item">
-                    twitter
-                </div>
-            </div>
-            </div>
-        </section>
-        <section class="l-home-section l-discover-aseer">
-            <div class="container">
-                <div class="l-home-title l-home-title--center">
-                    <h2 class="main-title main-title--light main-title--no-underline">
-                        اكتشف منطقة عسير
-                        <p>تقع منطقة عسير في وسط الجزء الجنوبي الغربي من المملكة</p>
-                    </h2>
-                </div>
-            </div>
-            <div id="discoverSlider" class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card card--absolute card--center">
-                            <div class="card__image">
-                                <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                            <div class="col">
+                                <a href="#" class="quick-links">
+                                    <svg class="quick-links__icon">
+                                        <use xlink:href="./src/images/svg-icons.svg#icon-videos"></use>
+                                    </svg>
+                                    <div class="quick-links__title">
+                                        مكتبة الفيديو
+                                    </div>
+                                </a>
                             </div>
-                            <div class="card__content">
-                                <div class="card__title">
-                                    <a href="#0">عسير فى سطور</a>
-                                </div>
-                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
-                                    الطبيعية. </div>
-                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
+                            <div class="col">
+                                <a href="#" class="quick-links">
+                                    <svg class="quick-links__icon">
+                                        <use xlink:href="./src/images/svg-icons.svg#icon-questionnaire"></use>
+                                    </svg>
+                                    <div class="quick-links__title">
+                                        إستبيانات
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="quick-links">
+                                    <svg class="quick-links__icon">
+                                        <use xlink:href="./src/images/svg-icons.svg#icon-envelop-open"></use>
+                                    </svg>
+                                    <div class="quick-links__title">
+                                        المرصد الحضرى
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card card--absolute card--center">
-                            <div class="card__image">
-                                <img src="./src/images/tmp/discover2.jpg" alt="aseer image">
-                            </div>
-                            <div class="card__content">
-                                <div class="card__title">
-                                    <a href="#0">عسير فى سطور</a>
-                                </div>
-                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
-                                    الطبيعية. </div>
-                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card card--absolute card--center">
-                            <div class="card__image">
-                                <img src="./src/images/tmp/discover3.jpg" alt="aseer image">
-                            </div>
-                            <div class="card__content">
-                                <div class="card__title">
-                                    <a href="#0">عسير فى سطور</a>
-                                </div>
-                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
-                                    الطبيعية. </div>
-                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card card--absolute card--center">
-                            <div class="card__image">
-                                <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
-                            </div>
-                            <div class="card__content">
-                                <div class="card__title">
-                                    <a href="#0">عسير فى سطور</a>
-                                </div>
-                                <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها
-                                    الطبيعية. </div>
-                                <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="l-discover__bottom swiper-grap-nav swiper-grap-nav--center">
-                <div class="swiper-grap-nav__item swiper-grap-nav__prev">
-                    <svg>
-                        <use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
-                </div>
-                <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
-                    <svg>
-                        <use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
-                </div>
-                <div class="swiper-grap-nav__item swiper-grap-nav__next">
-                    <svg>
-                        <use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
-                </div>
-            </div>
-        </section>
-        <section class="l-home-section l-ideas">
-            <div class="container">
-                <div class="l-home-title">
-                    <div class="main-title--icon">
-                        <svg>
-                            <use xlink:href="./src/images/svg-icons.svg#icon-idea"></use>
-                        </svg>
-                        <h2 class="main-title main-title--no-underline">
-                            شاركنا القرار
-                            <p>"منصة الأفكار"</p>
-                        </h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="l-ideas__description">
-                            لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات التطويرية أحد الأركان الرئيسية لتحسين أي عمل يتطلب التفاعل بين
-                            الأطراف المعنية المرتبطة بهذا العمل، ومن هذا المنطلق، أهمية مشاركة الجمهور في كل الأعمال التي
-                            تنفذها وكل الخدمات التي تقدمها
-                        </div>
-                        <div class="l-ideas__actions">
-                            <a href="#0" class="button button--primary button--rounded button--md">التقديم على فكرة</a>
-                            <a href="#0" class="button button--dark button--rounded button--md">عرض الافكار التى تحت المراجعة </a>
-                        </div>
-                        <div class="l-ideas__details">
-                            <div class="idea">
-                                <div class="idea__number">
-                                    <span>05</span>
-                                    فكرة
-                                </div>
-                                <div class="idea__details">
-                                    <div class="idea__title">تم تنفيذها</div>
-                                    <div class="idea__description">
-                                        لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="idea">
-                                <div class="idea__number">
-                                    <span>12</span>
-                                    فكرة
-                                </div>
-                                <div class="idea__details">
-                                    <div class="idea__title">تحت المراجعة</div>
-                                    <div class="idea__description">
-                                        لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="l-home-section l-tourism">
-            <div class="container">
-                <div class="l-home-title l-home-title--center l-home-title--col">
-                    <h2 class="main-title main-title--light main-title--no-underline">
-                        السياحة فى عسير
-                        <p>"لوحة ساحرة بألوانها الطبيعية"</p>
-                    </h2>
-                    <p class="main-title__brief">
-                        من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة والسهول المنبسطة، وسواحلها البحرية
-                        الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة بألوانها الطبيعية.
-                    </p>
-                </div>
-            </div>
-            <div class="l-tourism__bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card--absolute card__image">
-                                    <img src="./src/images/tmp/tourism1.jpg" alt="aseer image">
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">مدينة أبها</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card__content card__content--hover">
-                                    يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                    عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card--absolute card__image">
-                                    <img src="./src/images/tmp/tourism2.jpg" alt="aseer image">
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">المحميات الطبيعية</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card__content card__content--hover">
-                                    يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                    عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card--absolute card__image">
-                                    <img src="./src/images/tmp/tourism3.jpg" alt="aseer image">
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">جولات جبلية</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card__content card__content--hover">
-                                    يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                    عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card--absolute card__image">
-                                    <img src="./src/images/tmp/tourism4.jpg" alt="aseer image">
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">منتزه السحاب</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card__content card__content--hover">
-                                    يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                    عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="l-featured-pages">
-            <div id="featuredSwiper" class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="l-featured__images">
-                                        <img src="./src/images/tmp/agriculture.jpg" class="l-featured__primary-image" alt="agriculture">
-                                        <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 l-home-section">
-                                    <div class="l-home-title">
-                                        <h2 class="main-title">التنمية المستدامة</h2>
-                                    </div>
-                                    <div class="row justify-content-sm-end">
-                                        <div class="col-sm-9">
-                                            <article class="article">
-                                                <h3 class="article__title">فرص الأجيال القادمة</h3>
-                                                <div class="article__content">
-                                                    التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                    وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة المعيشة
-                                                </div>
-                                                <div class="article__action">
-                                                    <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="l-featured__images">
-                                        <img src="./src/images/tmp/business.jpg" class="l-featured__primary-image" alt="agriculture">
-                                        <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 l-home-section">
-                                    <div class="l-home-title">
-                                        <h2 class="main-title">الخدمات الإلكترونية</h2>
-                                    </div>
-                                    <div class="row justify-content-sm-end">
-                                        <div class="col-sm-9">
-                                            <article class="article">
-                                                <h3 class="article__title">فرص الأجيال القادمة</h3>
-                                                <div class="article__content">
-                                                    التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                    وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة المعيشة
-                                                </div>
-                                                <div class="article__action">
-                                                    <a href="#0" class="button button--primary button--rounded button--lg">الخدمات الإلكترونية</a>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="l-featured__images">
-                                        <img src="./src/images/tmp/social.jpg" class="l-featured__primary-image" alt="agriculture">
-                                        <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 l-home-section">
-                                    <div class="l-home-title">
-                                        <h2 class="main-title">المشاركة الإجتماعية</h2>
-                                    </div>
-                                    <div class="row justify-content-sm-end">
-                                        <div class="col-sm-9">
-                                            <article class="article">
-                                                <h3 class="article__title">فرص الأجيال القادمة</h3>
-                                                <div class="article__content">
-                                                    التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                    وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة المعيشة
-                                                </div>
-                                                <div class="article__action">
-                                                    <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="l-featured__bottom">
-                <div class="container">
-                    <div class="row justify-content-sm-end">
-                        <div class="col-sm-6">
-                            <div class="row justify-content-sm-end">
-                                <div class="col-sm-9">
-                                    <div class="swiper-grap-nav swiper-grap--dark">
-                                        <div class="swiper-grap-nav__item swiper-grap-nav__prev">
-                                            <svg>
-                                                <use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
-                                        </div>
-                                        <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
-                                            <svg>
-                                                <use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
-                                        </div>
-                                        <div class="swiper-grap-nav__item swiper-grap-nav__next">
-                                            <svg>
-                                                <use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="l-home-section l-projects">
-            <div class="container">
-                <div class="l-home-title">
-                    <div class="main-title--icon">
-                        <svg>
-                            <use xlink:href="./src/images/svg-icons.svg#icon-projects"></use>
-                        </svg>
-                        <h2 class="main-title main-title--light main-title--no-underline">
-                            أحدث المشاريع
-                        </h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5 offset-sm-2">
-                        <div class="l-ideas__title l-ideas__title--light">مشروع تطوير وتأهيل وسط ابها</div>
-                        <div class="l-ideas__description l-ideas__description--light">
-                            يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها كاستعمالات ترفيهية وسياحية على وادى ابها كما يشمل المشروع القرى
-                            التراثية الثلاثة المفتاحة – النصب – البسطة
-                            <p>وتبلغ المساحة الاجمالية للمشروع حوالى
-                                <strong>2.621</strong> متر مربع</p>
-                        </div>
-                        <div class="l-ideas__actions">
-                            <a href="#0" class="button button--primary button--rounded button--md">تفاصيل المشروع</a>
-                            <a href="#0" class="button button--outline button--light button--rounded button--md">عرض مشاريع الأمانة </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="l-projects__charts">
+                </section>
+                <footer class="main-footer">
+                    <div class="main-footer__top">
+                        <div class="container main-footer__container">
                             <div>
-                                <div id="achievementPercent" class="project-chart" data-percent="65">
-                                    <div class="project-chart__num">
-                                        <span class="project-chart__percent"></span>
-                                        <label>%</label>
-                                    </div>
-                                </div>
-                                <div class="project-chart__title">
-                                    نسبة الانجاز حتى الان
-                                </div>
+                                <ul class="socials-bar">
+                                    <li class="socials-bar__item">
+                                        <a href="#0" class="socials-bar__icon icon">
+                                            <svg>
+                                                <use xlink:href="./src/images/svg-icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-bar__item">
+                                        <a href="#0" class="socials-bar__icon icon">
+                                            <svg>
+                                                <use xlink:href="./src/images/svg-icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-bar__item">
+                                        <a href="#0" class="socials-bar__icon icon">
+                                            <svg>
+                                                <use xlink:href="./src/images/svg-icons.svg#icon-google-plus"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-bar__item">
+                                        <a href="#0" class="socials-bar__icon icon">
+                                            <svg>
+                                                <use xlink:href="./src/images/svg-icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-bar__item">
+                                        <a href="#0" class="socials-bar__icon icon">
+                                            <svg>
+                                                <use xlink:href="./src/images/svg-icons.svg#icon-youtube"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <nav>
+                                    <ul class="main-footer__links row">
+                                        <li class=" ">
+                                            <a href="#/" class="main-footer__link">منطقة عسير</a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="#/" class="main-footer__link">عن الأمانة</a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="#/" class="main-footer__link">المركز الإعلامي</a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="#/" class="main-footer__link">الخدمات الإلكترونية</a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                             <div>
-                                <div id="daysCount" class="project-chart" data-percent="80">
-                                    <div class="project-chart__num project-chart__num--vertical">
-                                        <span class="project-chart__percent"></span>
-                                        <label>يوم</label>
-                                    </div>
-                                </div>
-                                <div class="project-chart__title">
-                                    متبقى على موعد الانتهاء
-                                </div>
+                                <svg class="main-footer__vision">
+                                    <use xlink:href="./src/images/svg-icons.svg#icon-vision2030"></use>
+                                </svg>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="l-projects-bottom">
-                <div class="container">
-                    <ul class="l-projects-tabs">
-                        <li class="l-projects-tabs__items">
-                            <a href="#0" class="l-projects-tabs__link l-projects-tabs__link--active">
-                                <div class="l-projects-tabs__num">01</div>
-                                <div class="l-projects-tabs__title">مشروع تطوير وتأهيل وسط ابها</div>
-                            </a>
-                        </li>
-                        <li class="l-projects-tabs__items">
-                            <a href="#0" class="l-projects-tabs__link">
-                                <div class="l-projects-tabs__num">02</div>
-                                <div class="l-projects-tabs__title">مشروع المركز الحضرى بأبها </div>
-                            </a>
-                        </li>
-                        <li class="l-projects-tabs__items">
-                            <a href="#0" class="l-projects-tabs__link">
-                                <div class="l-projects-tabs__num">03</div>
-                                <div class="l-projects-tabs__title">حديقة مطار أبها .. المرحلة الاولى</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="l-quick-links">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="quick-links">
-                            <svg class="quick-links__icon">
-                                <use xlink:href="./src/images/svg-icons.svg#icon-images"></use>
-                            </svg>
-                            <div class="quick-links__title">
-                                مكتبة الصور
+                    <div class="main-footer__bottom">
+                        <div class="container">
+                            <div class="row justify-content-sm-between align-items-sm-center">
+                                <div class="col">
+                                    <img src="./src/images/emblem.png" alt="aseer emblem" class="main-footer__emblem" /> جميع الحقوق محفوظة 2018 - أمانة المنطقة
+                                </div>
+                                <ul class="main-footer__quick-links">
+                                    <li>
+                                        <a href="#0">خريطة الموقع</a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">الأسئلة الشائعة</a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">سياسة الخصوصية</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col">
-                        <a href="#" class="quick-links">
-                            <svg class="quick-links__icon">
-                                <use xlink:href="./src/images/svg-icons.svg#icon-videos"></use>
-                            </svg>
-                            <div class="quick-links__title">
-                                مكتبة الفيديو
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#" class="quick-links">
-                            <svg class="quick-links__icon">
-                                <use xlink:href="./src/images/svg-icons.svg#icon-questionnaire"></use>
-                            </svg>
-                            <div class="quick-links__title">
-                                إستبيانات
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#" class="quick-links">
-                            <svg class="quick-links__icon">
-                                <use xlink:href="./src/images/svg-icons.svg#icon-envelop-open"></use>
-                            </svg>
-                            <div class="quick-links__title">
-                                المرصد الحضرى
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                </footer>
             </div>
-        </section>
-    </main>
-    <footer class="main-footer">
-        <div class="main-footer__top">
-            <div class="container main-footer__container">
-                <div>
-                    <ul class="socials-bar">
-                        <li class="socials-bar__item">
-                            <a href="#0" class="socials-bar__icon icon">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socials-bar__item">
-                            <a href="#0" class="socials-bar__icon icon">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socials-bar__item">
-                            <a href="#0" class="socials-bar__icon icon">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-google-plus"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socials-bar__item">
-                            <a href="#0" class="socials-bar__icon icon">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socials-bar__item">
-                            <a href="#0" class="socials-bar__icon icon">
-                                <svg>
-                                    <use xlink:href="./src/images/svg-icons.svg#icon-youtube"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <nav>
-                        <ul class="main-footer__links row">
-                            <li class=" ">
-                                <a href="#/" class="main-footer__link">منطقة عسير</a>
-                            </li>
-                            <li class=" ">
-                                <a href="#/" class="main-footer__link">عن الأمانة</a>
-                            </li>
-                            <li class=" ">
-                                <a href="#/" class="main-footer__link">المركز الإعلامي</a>
-                            </li>
-                            <li class=" ">
-                                <a href="#/" class="main-footer__link">الخدمات الإلكترونية</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <svg class="main-footer__vision">
-                        <use xlink:href="./src/images/svg-icons.svg#icon-vision2030"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="main-footer__bottom">
-            <div class="container">
-                <div class="row justify-content-sm-between align-items-sm-center">
-                    <div class="col">
-                        <img src="./src/images/emblem.png" alt="aseer emblem" class="main-footer__emblem" />
-                        جميع الحقوق محفوظة 2018 - أمانة المنطقة
-                    </div>
-                    <ul class="main-footer__quick-links">
-                        <li><a href="#0">خريطة الموقع</a></li>
-                        <li><a href="#0">الأسئلة الشائعة</a></li>
-                        <li><a href="#0">سياسة الخصوصية</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
     <script src="./src/scripts/easypiechart.min.js"></script>
+    <script src="./src/scripts/jquery.fullpage.min.js"></script>
     <script src="./dist/scripts.js"></script>
     <script>
         var swiper = new Swiper('#eventsSlider', {
@@ -998,6 +1024,12 @@
                 onStep: function (from, to, percent) {
                     this.el.children[0].children[0].innerHTML = Math.round(percent);
                 }
+            });
+        });
+
+        $(document).ready(function () {
+            $('#homePage').fullpage({
+                sectionSelector: '.l-full-page',
             });
         });
     </script>
