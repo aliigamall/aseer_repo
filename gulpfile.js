@@ -12,7 +12,8 @@ const replace = require('gulp-replace');
 const babel = require('gulp-babel');
 // const cwebp = require('gulp-cwebp');
 const browserSync = require('browser-sync').create();
-
+const base64 = require('gulp-base64');
+ 
 const srcPath   = "./src/";
 const distPath  = "./dist/";
 
@@ -127,6 +128,37 @@ gulp.task('deployHtml', function() {
 
     .pipe(gulp.dest(distPath));
 });
+
+
+//basic example 
+gulp.task('base64', function () {
+    return gulp.src(srcPath + 'css/**/*.css')
+        .pipe(base64({
+            baseDir: './src/css',
+            // extensions: ['svg', 'png', /\.jpg#datauri$/i],
+            // exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
+            maxImageSize: 8*1024, // bytes 
+            debug: true
+        }))
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest(distPath + 'css/'));
+});
+// //example with options 
+// gulp.task('build', function () {
+//     return gulp.src('./css/*.css')
+//         .pipe(base64({
+//             baseDir: 'public',
+//             extensions: ['svg', 'png', /\.jpg#datauri$/i],
+//             exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
+//             maxImageSize: 8*1024, // bytes 
+//             debug: true
+//         }))
+//         .pipe(concat('main.css'))
+//         .pipe(gulp.dest('./public/css'));
+// });
+
+
+
 
 gulp.task('lint', () => {
     // ESLint ignores files with "node_modules" paths.

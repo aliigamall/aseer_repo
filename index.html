@@ -10,6 +10,7 @@
     <title>عسير الصفحة الرئيسية</title>
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <!-- <link rel="stylesheet" href="./dist/css/main.css"> -->
     <style>
         .swiper-slide {
             /* width: 80%; */
@@ -234,7 +235,7 @@
                     </div>
                 </section>
             </div>
-            <div class="l-full-page">
+            <div class="l-full-page l-full-page--dark">
                 <section class="l-home-section">
                     <div class="container">
                         <div class="l-home-title">
@@ -478,7 +479,7 @@
                     </div>
                 </section>
             </div>
-            <div class="l-full-page">
+            <div class="l-full-page l-full-page--dark">
                 <section class="l-home-section l-ideas">
                     <div class="container">
                         <div class="l-home-title">
@@ -620,7 +621,7 @@
                     </div>
                 </section>
             </div>
-            <div class="l-full-page">
+            <div class="l-full-page l-full-page--dark">
                 <section class="l-featured-pages">
                     <div id="featuredSwiper" class="swiper-container">
                         <div class="swiper-wrapper">
@@ -966,7 +967,7 @@
                     </div>
                 </footer>
             </div>
-    </div>
+        </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
@@ -1030,6 +1031,14 @@
         $(document).ready(function () {
             $('#homePage').fullpage({
                 sectionSelector: '.l-full-page',
+                navigation: true,
+                onLeave: function(index, nextIndex, direction){
+                    if($(".l-full-page").eq(nextIndex-1).hasClass('l-full-page--dark')){
+                        $("#fp-nav").addClass('fp-nav--is-dark');
+                    } else{
+                        $("#fp-nav").removeClass('fp-nav--is-dark');
+                    }
+                },
             });
         });
     </script>
