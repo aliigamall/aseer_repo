@@ -127,14 +127,19 @@
                     <div class="container welcome__container">
                         <div class="row">
                             <div class="col-sm-6 offset-sm-1">
-                                <div class="welcome__key-messages">
-                                    <h2 class="typo-display3 welcome__messages-title">اكتشف منطقة عسير</h2>
-                                    <h3 class="typo-display1 welcome__messages-subtitle">"عسير تراث ,تاريخ ,معالم"</h3>
-                                    <p class="typo-body1 welcome__messages-brief">من فوق أكتاف السحاب ننتقل من الحقيقة للخيال، فالتنوع في تضاريس عسير يتمثل في الجبال الشاهقة
-                                        والسهول المنبسطة
-                                    </p>
-                                    <div class="welcome__messages-actions">
-                                        <a href="#0" class="button button--primary button--rounded button--lg">إكتشف عسير</a>
+                                <div id="keyMessages" class="welcome__key-messages">
+                                    <div v-if="isLoading == false" v-for="item in items">
+                                        <h2 class="typo-display3 welcome__messages-title">
+                                            {{item.title}}
+                                        </h2>
+                                        <h3 class="typo-display1 welcome__messages-subtitle">
+                                            "{{item.subTitle}}"</h3>
+                                        <p class="typo-body1 welcome__messages-brief">
+                                            {{item.brief}}
+                                        </p>
+                                        <div class="welcome__messages-actions">
+                                            <a :href="item.link.split(',')[1]" class="button button--primary button--rounded button--lg">{{item.link.split(",")[0]}}</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -170,33 +175,20 @@
                         </div>
                         <div class="row l-welcome-buttom">
                             <div class="col-sm-9">
-                                <div class="row">
-                                    <div class="col-sm-6">
+                                <div id="welcomeSlider" class="row">
+                                    <div v-for="item in items" class="col-sm-6">
                                         <div class="card card--horizontal card--dark welcome__card">
                                             <div class="card__image">
-                                                <img src="./src/images/tmp/img1.jpg" alt="aseer image">
+                                                <img :src="item.imgSrc" :alt="item.title">
                                             </div>
                                             <div class="card__content">
                                                 <div class="card__title">
-                                                    <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                    <a :href="item.link">{{item.title}}</a>
                                                 </div>
-                                                <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
+                                                <div class="card__brief">{{item.brief}}</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="card card--horizontal card--dark welcome__card">
-                                            <div class="card__image">
-                                                <img src="./src/images/tmp/img1.jpg" alt="aseer image">
-                                            </div>
-                                            <div class="card__content">
-                                                <div class="card__title">
-                                                    <a href="#0">التنمية المستدامة</a>
-                                                </div>
-                                                <div class="card__brief">التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                             <div class="col-sm-3">
@@ -973,8 +965,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
     <script src="./src/scripts/easypiechart.min.js"></script>
     <script src="./src/scripts/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./dist/scripts.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script>
+        var vueMessages = new Vue({
+            el: '#keyMessages',    
+            isLoading : true,        
+            mounted: function() {
+                var self = this;
+                var endPoint = './src/data/key-messages.js';
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+                    url: endPoint,
+                    dataType: 'json',
+                    async: true,
+                    cache: false,
+                    beforeSend: function (xhr) {
+                        // targetElem.addClass('is-loading');
+                    },
+                    success: function (data) {
+                        // this.data = e;
+                        self.items = data;
+                        self.isLoading = false;
+                    },                        
+                });
+            },
+            data: function() {    
+                return {
+                    items: []
+                }
+            },
+        });
+        var vueWelcome = new Vue({
+            el: "#welcomeSlider",
+            isLoading : true, 
+            mounted: function() {
+                var self = this;
+                var endPoint = './src/data/welcome-slider.js';
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json",
+                    url: endPoint,
+                    dataType: 'json',
+                    async: true,
+                    cache: false,
+                    beforeSend: function (xhr) {
+                        // targetElem.addClass('is-loading');
+                    },
+                    success: function (data) {
+                        // this.data = e;
+                        self.items = data;
+                        self.isLoading = false;
+                    },                        
+                });
+            },
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+
+        });
+
+
         var swiper = new Swiper('#eventsSlider', {
             slidesPerView: 'auto',
             spaceBetween: 30,

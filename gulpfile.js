@@ -68,7 +68,7 @@ gulp.task('DeployCssmin', function () {
 
 // babel 
 gulp.task('babel', () =>
-    gulp.src(srcPath+ 'scripts/*.js')
+    gulp.src(srcPath+ 'scripts/scripts.js')
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['env']
