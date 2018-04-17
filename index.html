@@ -128,17 +128,17 @@
                         <div class="row">
                             <div class="col-sm-6 offset-sm-1">
                                 <div id="keyMessages" class="welcome__key-messages">
-                                    <div v-if="isLoading == false" v-for="item in items">
+                                    <div>
                                         <h2 class="typo-display3 welcome__messages-title">
-                                            {{item.title}}
+                                            {{items[0].title}}
                                         </h2>
                                         <h3 class="typo-display1 welcome__messages-subtitle">
-                                            "{{item.subTitle}}"</h3>
+                                            "{{items[0].subTitle}}"</h3>
                                         <p class="typo-body1 welcome__messages-brief">
-                                            {{item.brief}}
+                                            {{items[0].brief}}                                            
                                         </p>
                                         <div class="welcome__messages-actions">
-                                            <a :href="item.link.split(',')[1]" class="button button--primary button--rounded button--lg">{{item.link.split(",")[0]}}</a>
+                                            <a :href="items[0].link.split(',')[1]" class="button button--primary button--rounded button--lg">{{items[0].link.split(",")[0]}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                                     <div v-for="item in items" class="col-sm-6">
                                         <div class="card card--horizontal card--dark welcome__card">
                                             <div class="card__image">
-                                                <img :src="item.imgSrc" :alt="item.title">
+                                                <img :src="item.imgSrc" :alt="item.title" />
                                             </div>
                                             <div class="card__content">
                                                 <div class="card__title">
@@ -392,67 +392,22 @@
                         </div>
                     </div>
                     <div id="discoverSlider" class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div id="discoverAseer" class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="item in items">
                                 <div class="card card--absolute card--center">
                                     <div class="card__image">
-                                        <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
+                                        <img :src="item.imgSrc" :alt="item.title" />
                                     </div>
                                     <div class="card__content">
                                         <div class="card__title">
-                                            <a href="#0">عسير فى سطور</a>
+                                            <a href="#0">{{item.title}}</a>
                                         </div>
-                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
-                                            بألوانها الطبيعية. </div>
+                                        <div class="card__brief"> {{item.brief}} </div>
                                         <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="card card--absolute card--center">
-                                    <div class="card__image">
-                                        <img src="./src/images/tmp/discover2.jpg" alt="aseer image">
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">عسير فى سطور</a>
-                                        </div>
-                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
-                                            بألوانها الطبيعية. </div>
-                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card card--absolute card--center">
-                                    <div class="card__image">
-                                        <img src="./src/images/tmp/discover3.jpg" alt="aseer image">
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">عسير فى سطور</a>
-                                        </div>
-                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
-                                            بألوانها الطبيعية. </div>
-                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card card--absolute card--center">
-                                    <div class="card__image">
-                                        <img src="./src/images/tmp/discover1.jpg" alt="aseer image">
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__title">
-                                            <a href="#0">عسير فى سطور</a>
-                                        </div>
-                                        <div class="card__brief"> وسواحلها البحرية الجميلة والغنية بالمناظر الطبيعية الخلابة، فهي بالفعل لوحة ساحرة
-                                            بألوانها الطبيعية. </div>
-                                        <a href="#0" class="button button--outline button--light button--rounded button--lg card__action">إكتشف منطقة عسير</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="l-discover__bottom swiper-grap-nav swiper-grap-nav--center">
@@ -480,17 +435,15 @@
                                     <use xlink:href="./src/images/svg-icons.svg#icon-idea"></use>
                                 </svg>
                                 <h2 class="main-title main-title--no-underline">
-                                    شاركنا القرار
-                                    <p>"منصة الأفكار"</p>
+                                    {{items[0].title}}
+                                    <p>"{{items[0].subTitle}}"</p>
                                 </h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="l-ideas__description">
-                                    لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات التطويرية أحد الأركان الرئيسية لتحسين أي عمل يتطلب التفاعل بين
-                                    الأطراف المعنية المرتبطة بهذا العمل، ومن هذا المنطلق، أهمية مشاركة الجمهور في كل الأعمال
-                                    التي تنفذها وكل الخدمات التي تقدمها
+                                        {{items[0].brief}}
                                 </div>
                                 <div class="l-ideas__actions">
                                     <a href="#0" class="button button--primary button--rounded button--md">التقديم على فكرة</a>
@@ -499,11 +452,11 @@
                                 <div class="l-ideas__details">
                                     <div class="idea">
                                         <div class="idea__number">
-                                            <span>05</span>
+                                            <span>{{items[0].receivedIdeas}}</span>
                                             فكرة
                                         </div>
                                         <div class="idea__details">
-                                            <div class="idea__title">تم تنفيذها</div>
+                                            <div class="idea__title">تم إستقبالها</div>
                                             <div class="idea__description">
                                                 لتقديم مقترح او فكرة ​​عسير تمثل المشاركة بالآراء والمقترحات
                                             </div>
@@ -511,7 +464,7 @@
                                     </div>
                                     <div class="idea">
                                         <div class="idea__number">
-                                            <span>12</span>
+                                            <span>{{items[0].reviewingIdeas}}</span>
                                             فكرة
                                         </div>
                                         <div class="idea__details">
@@ -543,68 +496,19 @@
                     </div>
                     <div class="l-tourism__bottom">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-sm-3">
+                            <div id="tourismData" class="row">
+                                <div v-for="item in items" class="col-sm-3">
                                     <div class="card">
                                         <div class="card--absolute card__image">
-                                            <img src="./src/images/tmp/tourism1.jpg" alt="aseer image">
+                                            <img :src="item.imgSrc" :alt="item.title">
                                             <div class="card__content">
                                                 <div class="card__title">
-                                                    <a href="#0">مدينة أبها</a>
+                                                    <a :href="item.link">{{item.title}}</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card__content card__content--hover">
-                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card">
-                                        <div class="card--absolute card__image">
-                                            <img src="./src/images/tmp/tourism2.jpg" alt="aseer image">
-                                            <div class="card__content">
-                                                <div class="card__title">
-                                                    <a href="#0">المحميات الطبيعية</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card__content card__content--hover">
-                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card">
-                                        <div class="card--absolute card__image">
-                                            <img src="./src/images/tmp/tourism3.jpg" alt="aseer image">
-                                            <div class="card__content">
-                                                <div class="card__title">
-                                                    <a href="#0">جولات جبلية</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card__content card__content--hover">
-                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card">
-                                        <div class="card--absolute card__image">
-                                            <img src="./src/images/tmp/tourism4.jpg" alt="aseer image">
-                                            <div class="card__content">
-                                                <div class="card__title">
-                                                    <a href="#0">منتزه السحاب</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card__content card__content--hover">
-                                            يعد منتزه السحاب من أبرز المنتزهات الجميلة السياحية في مدينة أبها وذلك لمكانها الرائع حيث أنها على تقع على جبل ذو أرتفاع
-                                            عال ومع وجود الغيوم والضباب على مدينة أبها وهطول الأمطار
+                                            {{item.brief}}
                                         </div>
                                     </div>
                                 </div>
@@ -617,94 +521,28 @@
                 <section class="l-featured-pages">
                     <div id="featuredSwiper" class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div v-for="item in items" class="swiper-slide">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="l-featured__images">
-                                                <img src="./src/images/tmp/agriculture.jpg" class="l-featured__primary-image" alt="agriculture">
-                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
+                                                <img :src="item.mainImage" class="l-featured__primary-image" :alt="item.title">
+                                                <img :src="item.rollupImage" class="l-featured__secondary-image" :alt="item.title">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 l-home-section">
                                             <div class="l-home-title">
-                                                <h2 class="main-title">التنمية المستدامة</h2>
+                                                <h2 class="main-title">{{item.title}}</h2>
                                             </div>
                                             <div class="row justify-content-sm-end">
                                                 <div class="col-sm-9">
                                                     <article class="article">
-                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
+                                                        <h3 class="article__title">{{item.subTitle}}</h3>
                                                         <div class="article__content">
-                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
-                                                            المعيشة
+                                                            {{item.brief}}
                                                         </div>
                                                         <div class="article__action">
-                                                            <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
-                                                        </div>
-                                                    </article>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="l-featured__images">
-                                                <img src="./src/images/tmp/business.jpg" class="l-featured__primary-image" alt="agriculture">
-                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 l-home-section">
-                                            <div class="l-home-title">
-                                                <h2 class="main-title">الخدمات الإلكترونية</h2>
-                                            </div>
-                                            <div class="row justify-content-sm-end">
-                                                <div class="col-sm-9">
-                                                    <article class="article">
-                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
-                                                        <div class="article__content">
-                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
-                                                            المعيشة
-                                                        </div>
-                                                        <div class="article__action">
-                                                            <a href="#0" class="button button--primary button--rounded button--lg">الخدمات الإلكترونية</a>
-                                                        </div>
-                                                    </article>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="l-featured__images">
-                                                <img src="./src/images/tmp/social.jpg" class="l-featured__primary-image" alt="agriculture">
-                                                <img src="./src/images/tmp/saudi flags.jpg" class="l-featured__secondary-image" alt="saudi flags">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 l-home-section">
-                                            <div class="l-home-title">
-                                                <h2 class="main-title">المشاركة الإجتماعية</h2>
-                                            </div>
-                                            <div class="row justify-content-sm-end">
-                                                <div class="col-sm-9">
-                                                    <article class="article">
-                                                        <h3 class="article__title">فرص الأجيال القادمة</h3>
-                                                        <div class="article__content">
-                                                            التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.
-                                                            وبمعنى آخر تحقيق تنمية تغذي الاقتصاد وتبني الأجيال وتحسن جودة
-                                                            المعيشة
-                                                        </div>
-                                                        <div class="article__action">
-                                                            <a href="#0" class="button button--primary button--rounded button--lg">التنمية المستدامة</a>
+                                                            <a :href="item.link.split(',')[1]" class="button button--primary button--rounded button--lg">{{item.link.split(",")[0]}}</a>
                                                         </div>
                                                     </article>
                                                 </div>
@@ -745,7 +583,7 @@
                 </section>
             </div>
             <div class="l-full-page">
-                <section class="l-home-section l-projects">
+                <section id="projectsData" class="l-home-section l-projects">
                     <div class="container">
                         <div class="l-home-title">
                             <div class="main-title--icon">
@@ -757,24 +595,25 @@
                                 </h2>
                             </div>
                         </div>
-                        <div class="row">
+                        <div v-for="(item, index) in items" class="project-details row" :class="{ 'project-details--active': index === 0 }" :id="'proj'+index">
                             <div class="col-sm-5 offset-sm-2">
-                                <div class="l-ideas__title l-ideas__title--light">مشروع تطوير وتأهيل وسط ابها</div>
+                                <div class="l-ideas__title l-ideas__title--light">{{item.title}}</div>
                                 <div class="l-ideas__description l-ideas__description--light">
-                                    يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها كاستعمالات ترفيهية وسياحية على وادى ابها كما يشمل المشروع القرى
+                                    {{item.brief}}
+                                    <!-- يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح اقامتها كاستعمالات ترفيهية وسياحية على وادى ابها كما يشمل المشروع القرى
                                     التراثية الثلاثة المفتاحة – النصب – البسطة
                                     <p>وتبلغ المساحة الاجمالية للمشروع حوالى
-                                        <strong>2.621</strong> متر مربع</p>
+                                        <strong>2.621</strong> متر مربع</p> -->
                                 </div>
                                 <div class="l-ideas__actions">
-                                    <a href="#0" class="button button--primary button--rounded button--md">تفاصيل المشروع</a>
+                                    <a :href="item.link" class="button button--primary button--rounded button--md">تفاصيل المشروع</a>
                                     <a href="#0" class="button button--outline button--light button--rounded button--md">عرض مشاريع الأمانة </a>
                                 </div>
                             </div>
                             <div class="col-sm-5">
                                 <div class="l-projects__charts">
                                     <div>
-                                        <div id="achievementPercent" class="project-chart" data-percent="65">
+                                        <div id="achievementPercent" class="project-chart" :data-percent="item.progress">
                                             <div class="project-chart__num">
                                                 <span class="project-chart__percent"></span>
                                                 <label>%</label>
@@ -785,7 +624,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div id="daysCount" class="project-chart" data-percent="80">
+                                        <div id="daysCount" class="project-chart" :data-percent="item.remaining">
                                             <div class="project-chart__num project-chart__num--vertical">
                                                 <span class="project-chart__percent"></span>
                                                 <label>يوم</label>
@@ -802,22 +641,10 @@
                     <div class="l-projects-bottom">
                         <div class="container">
                             <ul class="l-projects-tabs">
-                                <li class="l-projects-tabs__items">
-                                    <a href="#0" class="l-projects-tabs__link l-projects-tabs__link--active">
-                                        <div class="l-projects-tabs__num">01</div>
-                                        <div class="l-projects-tabs__title">مشروع تطوير وتأهيل وسط ابها</div>
-                                    </a>
-                                </li>
-                                <li class="l-projects-tabs__items">
-                                    <a href="#0" class="l-projects-tabs__link">
-                                        <div class="l-projects-tabs__num">02</div>
-                                        <div class="l-projects-tabs__title">مشروع المركز الحضرى بأبها </div>
-                                    </a>
-                                </li>
-                                <li class="l-projects-tabs__items">
-                                    <a href="#0" class="l-projects-tabs__link">
-                                        <div class="l-projects-tabs__num">03</div>
-                                        <div class="l-projects-tabs__title">حديقة مطار أبها .. المرحلة الاولى</div>
+                                <li v-for="(item, index) in items" class="l-projects-tabs__items">
+                                    <a :href="'#proj'+index" class="l-projects-tabs__link" :class="{ 'l-projects-tabs__link--active': index === 0 }">
+                                        <div class="l-projects-tabs__num">0{{ index+1 }}</div>
+                                        <div class="l-projects-tabs__title">{{item.title}}</div>
                                     </a>
                                 </li>
                             </ul>
@@ -963,35 +790,44 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
-    <script src="./src/scripts/easypiechart.min.js"></script>
+    <script src="./src/scripts/jquery.easypiechart.min.js"></script>
     <script src="./src/scripts/jquery.fullpage.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./dist/scripts.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script>
+
+        function getData(elem, target){
+            var self = elem;
+            var endPoint = target;
+            $.ajax({
+                type: "GET",
+                contentType: "application/json",
+                url: endPoint,
+                dataType: 'json',
+                async: true,
+                cache: false,
+                beforeSend: function (xhr) {
+                },
+                success: function (data) {
+                    self.items = data;
+                    self.isLoading = false;
+                },
+                complete: function(){
+                    
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert('error')
+                }                        
+            });
+        };
+
         var vueMessages = new Vue({
             el: '#keyMessages',    
             isLoading : true,        
-            mounted: function() {
-                var self = this;
-                var endPoint = './src/data/key-messages.js';
-                $.ajax({
-                    type: "GET",
-                    contentType: "application/json",
-                    url: endPoint,
-                    dataType: 'json',
-                    async: true,
-                    cache: false,
-                    beforeSend: function (xhr) {
-                        // targetElem.addClass('is-loading');
-                    },
-                    success: function (data) {
-                        // this.data = e;
-                        self.items = data;
-                        self.isLoading = false;
-                    },                        
-                });
-            },
+            mounted: function(){
+                getData(this, './src/data/key-messages.js');
+            }, 
             data: function() {    
                 return {
                     items: []
@@ -1001,24 +837,31 @@
         var vueWelcome = new Vue({
             el: "#welcomeSlider",
             isLoading : true, 
-            mounted: function() {
-                var self = this;
-                var endPoint = './src/data/welcome-slider.js';
-                $.ajax({
-                    type: "GET",
-                    contentType: "application/json",
-                    url: endPoint,
-                    dataType: 'json',
-                    async: true,
-                    cache: false,
-                    beforeSend: function (xhr) {
-                        // targetElem.addClass('is-loading');
+            mounted: function(){
+                getData(this, './src/data/welcome-slider.js');
+            },  
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+        });
+        var vueDiscover = new Vue({
+            el: "#discoverAseer",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/discover-aseer.js');
+            },            
+            updated: function () {
+                var swiper2 = new Swiper('#discoverSlider', {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    grabCursor: true,
+                    navigation: {
+                        nextEl: '.l-discover__bottom .swiper-grap-nav__next',
+                        prevEl: '.l-discover__bottom .swiper-grap-nav__prev',
                     },
-                    success: function (data) {
-                        // this.data = e;
-                        self.items = data;
-                        self.isLoading = false;
-                    },                        
                 });
             },
             data: function(){
@@ -1026,10 +869,101 @@
                     items: []
                 }
             },
-
+        });
+        var vueIdeas = new Vue({
+            el: ".l-ideas",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/ideas.js');
+            },  
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+        });
+        var vueTourism = new Vue({
+            el: "#tourismData",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/tourism.js');
+            },  
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+        });
+        var vueFeatured = new Vue({
+            el: "#featuredSwiper",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/featuredPages.js');
+            },  
+            updated: function(){
+                var swiper3 = new Swiper('#featuredSwiper', {
+                    grabCursor: true,
+                    navigation: {
+                        nextEl: '.l-featured__bottom .swiper-grap-nav__next',
+                        prevEl: '.l-featured__bottom .swiper-grap-nav__prev',
+                    },
+                });
+            },
+            data: function(){
+                return{
+                    items: []
+                }
+            },
         });
 
+        var vueProjects = new Vue({
+            el: "#projectsData",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/projects.js');
+            },  
+            updated: function(){
+                appluPieChart();
 
+                $(".l-projects-tabs__link").on('click', function(event){
+                    event.preventDefault();
+                    var _target = $(this).attr('href');
+                    $(".l-projects-tabs__link").removeClass('l-projects-tabs__link--active');
+                    $(this).addClass('l-projects-tabs__link--active');
+
+                    $(".project-details").removeClass('project-details--active');
+                    $(_target).addClass('project-details--active');
+                    appluPieChart();
+                });
+            },
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+        });
+        
+        function appluPieChart(){
+            $('.project-details--active .l-projects__charts > div').each(function(i){
+                if(i === 0)
+                    var barColor = '#5cbab1';
+                else{
+                    var barColor = '#fcb465';
+                }
+                $(this).find('.project-chart').easyPieChart({
+                    easing: 'easeOutBounce',
+                    barColor: barColor,
+                    trackColor: 'rgba(255,255,255,0.2)',
+                    scaleColor: false,
+                    size: 180,
+                    lineWidth: 5,
+                    lineCap: 'butt',
+                    onStep: function (from, to, percent) {
+                        this.el.children[0].children[0].innerHTML = Math.round(percent);
+                    }
+                });
+            }); 
+        }
         var swiper = new Swiper('#eventsSlider', {
             slidesPerView: 'auto',
             spaceBetween: 30,
@@ -1038,49 +972,11 @@
                 clickable: true,
             }
         });
-        var swiper = new Swiper('#discoverSlider', {
-            slidesPerView: 3,
-            spaceBetween: 0,
-            centeredSlides: true,
-            grabCursor: true,
-            navigation: {
-                nextEl: '.l-discover__bottom .swiper-grap-nav__next',
-                prevEl: '.l-discover__bottom .swiper-grap-nav__prev',
-            },
-        });
-        var swiper = new Swiper('#featuredSwiper', {
-            grabCursor: true,
-            navigation: {
-                nextEl: '.l-featured__bottom .swiper-grap-nav__next',
-                prevEl: '.l-featured__bottom .swiper-grap-nav__prev',
-            },
-        });
+        
+        
 
         document.addEventListener('DOMContentLoaded', function () {
-            var chart = window.chart = new EasyPieChart(document.querySelector('#achievementPercent'), {
-                easing: 'easeOutBounce',
-                barColor: '#5cbab1',
-                trackColor: 'rgba(255,255,255,0.2)',
-                scaleColor: false,
-                size: 180,
-                lineWidth: 5,
-                lineCap: 'butt',
-                onStep: function (from, to, percent) {
-                    this.el.children[0].children[0].innerHTML = Math.round(percent);
-                }
-            });
-            var chart2 = window.chart = new EasyPieChart(document.querySelector('#daysCount'), {
-                easing: 'easeOutBounce',
-                barColor: '#fcb465',
-                trackColor: 'rgba(255,255,255,0.2)',
-                scaleColor: false,
-                size: 180,
-                lineWidth: 5,
-                lineCap: 'butt',
-                onStep: function (from, to, percent) {
-                    this.el.children[0].children[0].innerHTML = Math.round(percent);
-                }
-            });
+            
         });
 
         $(document).ready(function () {

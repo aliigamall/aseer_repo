@@ -14,3 +14,16 @@
 .l-discover__bottom{
     margin-top: auto;
 }
+
+
+.l-discover-aseer{
+    .swiper-slide:not(.swiper-slide-active){
+        .card__content{
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+        .card__brief,.card__action{
+            display: none;
+        }
+    }
+}

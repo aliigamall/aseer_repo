@@ -58,6 +58,9 @@
 .l-projects__charts{
     display: flex;
 }
+.project-details:not(.project-details--active){
+    display: none;
+}
 .project-chart{
     width: 180px;
     height: 180px;

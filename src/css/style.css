@@ -4039,6 +4039,19 @@ button.swiper-pagination-bullet {
   margin-top: auto;
 }
 
+.l-discover-aseer .swiper-slide:not(.swiper-slide-active) .card__content {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.l-discover-aseer .swiper-slide:not(.swiper-slide-active) .card__brief, .l-discover-aseer .swiper-slide:not(.swiper-slide-active) .card__action {
+  display: none;
+}
+
 .l-ideas {
   background: url("../images/ideas-bg.png") no-repeat left bottom, url("../images/ideas-pattern.png") no-repeat right top;
   background-size: auto 97%, auto;
@@ -4278,6 +4291,10 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.project-details:not(.project-details--active) {
+  display: none;
 }
 
 .project-chart {
