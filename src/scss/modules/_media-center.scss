@@ -1,0 +1,42 @@
+.media-center__card{
+    .card__image{
+        max-height: calc(100vh - 280px);
+    }
+    .card__content{
+        padding: 6%;
+    }
+    .card__brief{
+        margin-bottom: 10px;
+    }
+}
+.card__date{
+    display: flex;
+    font-size: rem(16);
+}
+.card__day{
+    font-size: 2em;
+    @supports (margin-inline-end: 10px){
+        margin-inline-end: 10px;
+    }
+    @supports not (margin-inline-end: 10px){
+        margin-#{$right}: 10px;
+    }
+    line-height: 1.2;
+    position: relative;
+    &:after{
+        content: "";
+        width: 100%;
+        height: 4px;
+        background: $color-primary;
+        display: flex;
+        border-radius: 2em;
+    }
+}
+.card__month{
+    display: flex;
+    flex-direction: column;
+}
+.l-media-center__bottom{
+    margin-top: 20px;
+}
+

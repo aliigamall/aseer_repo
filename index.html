@@ -11,50 +11,6 @@
 
     <link rel="stylesheet" href="./src/css/style.css">
     <!-- <link rel="stylesheet" href="./dist/css/main.css"> -->
-    <style>
-        .swiper-slide {
-            /* width: 80%; */
-            width: auto;
-            /* Center slide text vertically */
-        }
-
-        /* .swiper-slide:nth-child(2n) {
-      width: 60%;
-    }
-    .swiper-slide:nth-child(3n) {
-      width: 40%;
-    } */
-
-        /* .tab-item{
-        display: flex;
-        margin: 0 -15px;
-    }
-    .tab-item .card{
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-        margin: 0 15px;
-    } */
-
-        .events__card-details {
-            position: absolute;
-            right: 0;
-            width: 400px;
-            background: #fff;
-            padding: 10px;
-            top: 140px;
-            z-index: 10;
-            display: none;
-        }
-
-        /* .swiper-slide-active .card {
-            padding-right: 200px;
-            transition: all 0.3s ease;
-        } */
-
-        .swiper-slide-active .events__card-details {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
@@ -247,129 +203,40 @@
                         <div class="tabs-content">
                             <div id="eventsTab" class="tab-item tab-item--active">
                                 <div id="eventsSlider" class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
+                                    <div class="swiper-wrapper media-center">
+                                        <div v-for="item in items" class="swiper-slide">
+                                            <div class="card card--absolute media-center__card">
                                                 <div class="card__image">
-                                                    <img src="./src/images/tmp/events1.jpg" alt="aseer image">
+                                                    <img :src="item.imgSrc" alt="item.title">
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
+                                                        <a :href="item.link">{{item.title}}</a>
                                                     </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
+                                                    <div class="card__brief">موقع الفعالية: {{item.eventLocation}} </div>
+                                                    <div class="card__date">
+                                                        <span class="card__day">{{item.eventDate.split(" ")[0]}}</span>
+                                                        <span class="card__month">{{item.eventDate.split(" ")[1]}}  <span>{{item.eventDate.split(" ")[2]}}</span></span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events2.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card card--absolute events__card">
-                                                <div class="card__image">
-                                                    <img src="./src/images/tmp/events3.jpg" alt="aseer image">
-                                                </div>
-                                                <div class="card__content">
-                                                    <div class="card__title">
-                                                        <a href="#0">مشروع تطوير وتأهيل وسط ابها</a>
-                                                    </div>
-                                                    <div class="card__brief">يشمل المشروع وسط أبها بالاضافة الى الحدائق المقترح </div>
-                                                </div>
-                                                <div class="events__card-details">
-                                                    <p>التنمية المستدامة للوصول إلى تنمية تحقق متطلبات الحاضر بكفاءة دون تهديد
-                                                        فرص الأجيال القادمة بتحقيق احتياجاتهم وتطلعاتهم.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
+                                <div class="l-media-center__bottom swiper-grap-nav swiper-grap--dark swiper-grap-nav--center">
+                                    <div class="swiper-grap-nav__item swiper-grap-nav__prev">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-prev"></use>
+                                    </div>
+                                    <div class="swiper-grap-nav__item swiper-grap-nav__cursor">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-grap"></use>
+                                    </div>
+                                    <div class="swiper-grap-nav__item swiper-grap-nav__next">
+                                        <svg>
+                                            <use xlink:href="./src/images/svg-icons.svg#icon-next"></use>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="newsTab" class="tab-item">
@@ -923,7 +790,7 @@
                 getData(this, './src/data/projects.js');
             },  
             updated: function(){
-                appluPieChart();
+                applyPieChart();
 
                 $(".l-projects-tabs__link").on('click', function(event){
                     event.preventDefault();
@@ -933,7 +800,7 @@
 
                     $(".project-details").removeClass('project-details--active');
                     $(_target).addClass('project-details--active');
-                    appluPieChart();
+                    applyPieChart();
                 });
             },
             data: function(){
@@ -942,8 +809,33 @@
                 }
             },
         });
+        var vueEvents = new Vue({
+            el: "#eventsSlider",
+            isLoading : true, 
+            mounted: function(){
+                getData(this, './src/data/events.js');
+            },  
+            updated: function(){
+                var swiper = new Swiper('#eventsSlider', {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    grabCursor: true,
+                    navigation: {
+                        nextEl: '#eventsTab .swiper-grap-nav__next',
+                        prevEl: '#eventsTab .swiper-grap-nav__prev',
+                    },
+                });
+            },
+            data: function(){
+                return{
+                    items: []
+                }
+            },
+        });
+
         
-        function appluPieChart(){
+        
+        function applyPieChart(){
             $('.project-details--active .l-projects__charts > div').each(function(i){
                 if(i === 0)
                     var barColor = '#5cbab1';
@@ -964,20 +856,8 @@
                 });
             }); 
         }
-        var swiper = new Swiper('#eventsSlider', {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            pagination: {
-                el: '#eventsSlider .swiper-pagination',
-                clickable: true,
-            }
-        });
         
         
-
-        document.addEventListener('DOMContentLoaded', function () {
-            
-        });
 
         $(document).ready(function () {
             $('#homePage').fullpage({
