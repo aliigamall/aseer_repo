@@ -26,6 +26,7 @@
     > .button + .button{
         @supports (margin-inline-start: 20px){
             margin-inline-end: 20px;
+            color: #fff;
         }
         @supports (margin-inline-start: 20px){
             margin-#{$left}: 20px;

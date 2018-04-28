@@ -406,6 +406,7 @@ template {
   letter-spacing: -0.02em;
   line-height: 3.5rem;
   margin: -8px 0 64px -0.07em;
+  font-family: inherit;
 }
 
 .typo-display2 {
@@ -415,6 +416,7 @@ template {
   letter-spacing: normal;
   line-height: 3rem;
   margin: -0.5rem 0 4rem -0.07em;
+  font-family: inherit;
 }
 
 .typo-display1 {
@@ -424,6 +426,7 @@ template {
   letter-spacing: normal;
   line-height: 2.5rem;
   margin: -0.5rem 0 4rem -0.07em;
+  font-family: inherit;
 }
 
 .typo-headline {
@@ -4090,6 +4093,7 @@ button.swiper-pagination-bullet {
     -webkit-margin-end: 20px;
     -moz-margin-end: 20px;
     margin-inline-end: 20px;
+    color: #fff;
   }
 }
 
@@ -4385,6 +4389,15 @@ button.swiper-pagination-bullet {
   height: 4.375rem;
   fill: inherit;
   margin-bottom: 15px;
+}
+
+#s4-workspace {
+  overflow: hidden;
+  height: auto !important;
+}
+
+a:visited {
+  color: inherit;
 }
 
 .main-header {
@@ -5045,6 +5058,11 @@ button.swiper-pagination-bullet {
   justify-content: space-between;
 }
 
+.welcome__container .welcome__messages-title,
+.welcome__container .welcome__messages-subtitle {
+  color: #fff;
+}
+
 .welcome__messages-title {
   margin-bottom: 0.6em;
 }
@@ -5272,6 +5290,9 @@ button.swiper-pagination-bullet {
   font-size: 3.25rem;
   color: #0e0e0e;
   margin-bottom: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 .main-title--light {
