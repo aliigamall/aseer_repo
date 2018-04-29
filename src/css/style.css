@@ -101,6 +101,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: inherit;
 }
 
 p {
@@ -2482,6 +2483,15 @@ button.swiper-pagination-bullet {
   border-color: rgba(0, 0, 0, 0.35);
 }
 
+#s4-workspace {
+  overflow: hidden;
+  height: auto !important;
+}
+
+a:visited {
+  color: inherit;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -4431,7 +4441,7 @@ button.swiper-pagination-bullet {
 }
 
 .main-header__logo {
-  margin-bottom: 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5047,10 +5057,12 @@ button.swiper-pagination-bullet {
 
 .welcome__messages-title {
   margin-bottom: 0.6em;
+  color: inherit;
 }
 
 .welcome__messages-subtitle {
   margin-bottom: 0.6em;
+  color: inherit;
 }
 
 .welcome__messages-brief {
@@ -5271,7 +5283,7 @@ button.swiper-pagination-bullet {
 .main-title {
   font-size: 3.25rem;
   color: #0e0e0e;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .main-title--light {
