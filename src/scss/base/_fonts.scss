@@ -5,4 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'DinFont';
+    src: url('#{$font-path}/DINPro-Medium.eot');
+    src: local('?'), url('#{$font-path}/DINPro-Medium.woff') format('woff'), url('#{$font-path}/DINPro-Medium.ttf') format('truetype'), url('#{$font-path}/DINPro-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
   

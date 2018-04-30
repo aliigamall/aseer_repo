@@ -1,0 +1,44 @@
+.side-nav {
+    ul {
+        padding: 0;
+        li {
+            display: inline-block;
+            width: 100%;
+            
+            a {
+                color: #868686;
+                padding-bottom: 20px;
+                margin-bottom: 15px;
+                display: inline-block;
+                border-bottom: 1px solid #d8d2c4;
+                width: 70%;
+                font-size: 15px;
+                font-weight: 700;
+                transition: all .2s ease-in-out;
+            }
+            &.active {
+                a {
+                    color: #00864f;
+                    &::before {
+                        content: "\f0d9" !important;
+                        color: #fcbb0c;
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        float: $left;
+                        margin-top: 6px;
+                        margin-#{$right}: 10px;
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    color: #00864f;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

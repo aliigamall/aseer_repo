@@ -6,3 +6,17 @@
 a:visited {
     color: inherit;
 }
+
+body {
+    overflow: auto !important;
+    height: auto !important;
+}
+
+#pageStatusBar[class],
+.ms-status-msg {
+    margin-bottom: 0;
+}
+
+#s4-bodyContainer {
+    padding-bottom: 0;
+}
