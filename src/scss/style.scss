@@ -52,6 +52,7 @@
 @import "./layouts/l-projects";
 @import "./layouts/l-quick-links";
 @import "./layouts/l-inner-pages";
+@import "./layouts/l-sideImg";
 @import "./modules/main-header";
 @import "./modules/main-footer";
 @import "./modules/nav-bar";
@@ -71,3 +72,5 @@
 @import "./modules/idea";
 @import "./modules/article";
 @import "./modules/media-center";
+@import "./modules/sideLinks";
+@import "./base/m_p_helper";
