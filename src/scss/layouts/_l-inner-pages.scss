@@ -81,19 +81,21 @@
     width: 60%;
     margin: 0 auto;
     text-align: center;
+    margin-top: 50px;
     ul {
         padding: 0;
         margin: 0;
         li {
             display: block;
             text-align: center;
+            width: 80%;
+            float: $right;
             a {
                 border: 1px solid #d2d1d0;
                 display: block;
                 padding: 8px 0;
-                font-size: 28px;
+                font-size: 20px;
                 text-align: center;
-                width: 100%;
                 color: #c1bfbe;
                 transition: background-color .2s ease-in-out;
                 -webkit-transition: background-color .2s ease-in-out;

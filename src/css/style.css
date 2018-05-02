@@ -5437,6 +5437,14 @@ body {
   padding-bottom: 0;
 }
 
+.ms-ToolPaneOuter {
+  font-family: Segoe UI, Tahoma;
+  z-index: 10;
+  position: relative;
+  font-size: 13px;
+  left: 20px;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -7428,6 +7436,7 @@ body {
   width: 60%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 50px;
 }
 
 .sharing ul {
@@ -7438,15 +7447,16 @@ body {
 .sharing ul li {
   display: block;
   text-align: center;
+  width: 80%;
+  float: left;
 }
 
 .sharing ul li a {
   border: 1px solid #d2d1d0;
   display: block;
   padding: 8px 0;
-  font-size: 28px;
+  font-size: 20px;
   text-align: center;
-  width: 100%;
   color: #c1bfbe;
   transition: background-color .2s ease-in-out;
   -webkit-transition: background-color .2s ease-in-out;
@@ -8211,6 +8221,189 @@ body {
 .l-inner-details .details-content .event-date .news-date > div {
   display: inline-block;
   margin-left: 15px;
+}
+
+.events-list {
+  text-align: center;
+}
+
+.events-list .timeline-date {
+  position: relative;
+}
+
+.events-list .timeline-date label {
+  background: #fcbb0c;
+  width: 14%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 2px 0;
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.events-list .timeline-date:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(100% - 33%);
+  right: 47.5%;
+  background: #fcbb0c;
+  height: 2.3px;
+  width: 5%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+.events-list .timeline-date:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 2.3px;
+  width: 40%;
+  right: 50%;
+  top: calc(100%);
+  background: #fcbb0c;
+}
+
+.events-list .event-item {
+  position: relative;
+  margin: 0 auto 0;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+.events-list .event-item::before {
+  content: "";
+  width: 100%;
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #fcbb0c), color-stop(59%, #fcbb0c), color-stop(38%, #ffffff), color-stop(77%, #ffffff), color-stop(0, #fcbb0c), to(#fcbb0c));
+  background: linear-gradient(to right, #fcbb0c 40%, #fcbb0c 59%, #ffffff 38%, #ffffff 77%, #fcbb0c 0, #fcbb0c 100%);
+  background: -webkit-linear-gradient(to right, #fcbb0c 40%, #fcbb0c 59%, #ffffff 38%, #ffffff 77%, #fcbb0c 0, #fcbb0c 100%);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 40%;
+}
+
+.events-list .event-item::after {
+  content: "";
+  width: 80%;
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  background: #fcbb0c;
+  left: calc(100% - 90%);
+  bottom: 0;
+  z-index: 9999;
+}
+
+.events-list .event-item .event-description {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 30%;
+  min-height: 220px;
+  left: 10px;
+  -webkit-box-shadow: -15px 0px 40px -5px #f5f5f5;
+  box-shadow: -15px 0px 40px -5px #f5f5f5;
+  width: 30%;
+  padding: 40px 50px;
+  text-align: right;
+}
+
+.events-list .event-item .event-description .event-date {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.events-list .event-item .event-description .event-date span:after {
+  content: "";
+  background: #fcbb0c;
+  height: 8px;
+  width: 18%;
+  display: block;
+  border-radius: 7px;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.events-list .event-item .event-description p * {
+  font-size: 13px !important;
+  color: #000 !important;
+  margin-top: 20px;
+}
+
+.events-list .event-item figure {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.events-list .event-item figure a img {
+  width: auto;
+  max-width: 60%;
+  max-height: 100%;
+  height: auto;
+  -webkit-box-shadow: -10px 0px 20px 6px #f5f5f5;
+  box-shadow: -10px 0px 20px 6px #f5f5f5;
+  -webkit-transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.events-list .event-item figure a figcaption {
+  position: absolute;
+  width: 60%;
+  text-align: right;
+  bottom: 0;
+  right: 20%;
+  padding: 1rem 3rem 2.2rem;
+}
+
+.events-list .event-item figure a figcaption .event-title {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.events-list .event-item figure a figcaption .event-location {
+  color: #fff;
+  font-size: 17px;
+}
+
+.events-list .event-item figure a:hover img {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.events-list li[class*=item]:nth-child(even) .event-item::before {
+  left: 40%;
+  right: auto;
+}
+
+.events-list li[class*=item]:nth-child(even) .event-item .event-description {
+  right: 10px;
+  -webkit-box-shadow: 15px 0px 40px -5px #f5f5f5;
+  box-shadow: 15px 0px 40px -5px #f5f5f5;
+}
+
+.events-list li[class*=item]:nth-child(even) .event-item figcaption {
+  padding: 1rem 11rem 2.2rem 0;
+}
+
+.events-list li[class*=item]:last-child .event-item::before {
+  bottom: 40%;
+  background: -webkit-gradient(linear, left top, right top, from(#fcbb0c), color-stop(38%, #fcbb0c), color-stop(38%, #ffffff), color-stop(70%, #ffffff));
+  background: linear-gradient(to right, #fcbb0c 0%, #fcbb0c 38%, #ffffff 38%, #ffffff 70%);
+  background: -moz-linear-gradient(to right, #fcbb0c 0%, #fcbb0c 38%, #ffffff 38%, #ffffff 70%);
+}
+
+.events-list li[class*=item]:last-child .event-item::after {
+  display: none;
 }
 
 /*Rating Section*/
