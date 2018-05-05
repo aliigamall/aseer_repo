@@ -1,35 +1,3 @@
-.page-header {
-    border-top: 1px solid #d2d3d5;
-    padding-top: 7rem;
-    .top-banner {
-        border-top: 1px solid rgba(255, 255, 255, 0.38);
-        padding-top: 25px;
-    }
-    .subsite-title {
-        color: #fcbb0c;
-        font-size: 1.2rem;
-        font-weight: normal;
-        display: block;
-    }
-    .main-title {
-        color: #fff;
-    }
-}
-
-.page-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: -1;
-    max-height: 380px;
-    overflow: hidden;
-    img {
-        width: 100%;
-    }
-}
-
 .l-inner-details {
     clear: both;
     margin-top: 20px;
@@ -42,15 +10,15 @@
         float: $right;
         text-align: $right;
         li {
-            display: inline-block; 
+            display: inline-block;
             direction: rtl;
-            margin-#{$left}: 10px; 
+            margin-#{$left}: 10px;
             a {
                 color: rgba(0, 0, 0, 0.54);
                 font-size: 22px;
                 margin-#{$left}: 5px;
                 display: inline-block;
-                font-weight: 700; 
+                font-weight: 700;
             }
         }
     }
@@ -67,7 +35,7 @@
                 content: '';
                 width: 40%;
                 height: 8px;
-                background: #fecd08;
+                background: $color-primary;
                 display: block;
                 border-radius: 1em;
                 margin-top: 15px;
@@ -108,7 +76,7 @@
     .timeline-date {
         position: relative;
         label {
-            background: #fcbb0c;
+            background: $color-primary;
             width: 14%;
             margin: 0 auto;
             margin-top: 20px;
@@ -124,7 +92,7 @@
             position: absolute;
             top: calc(100% - 33%);
             #{$left}: 47.5%;
-            background: #fcbb0c;
+            background: $color-primary;
             height: 2.3px;
             width: 5%;
             transform: rotate(90deg);
@@ -138,7 +106,7 @@
             width: 40%;
             #{$left}: 50%;
             top: calc(100%);
-            background: #fcbb0c;
+            background: $color-primary;
         }
     }
     .event-item {
@@ -151,10 +119,10 @@
             width: 100%;
             display: inline-block;
             height: 2px;
-            position: absolute; // background: #fcbb0c;
-            background: linear-gradient(to right, #fcbb0c 40%, #fcbb0c 59%, #ffffff 38%, #ffffff 77%, #fcbb0c 0, #fcbb0c 100%);
-            background: -moz-linear-gradient(to right, #fcbb0c 40%, #fcbb0c 59%, #ffffff 38%, #ffffff 77%, #fcbb0c 0, #fcbb0c 100%);
-            background: -webkit-linear-gradient(to right, #fcbb0c 40%, #fcbb0c 59%, #ffffff 38%, #ffffff 77%, #fcbb0c 0, #fcbb0c 100%);
+            position: absolute; // background: $color-primary;
+            background: linear-gradient(to right, $color-primary 40%, $color-primary 59%, #ffffff 38%, #ffffff 77%, $color-primary 0, $color-primary 100%);
+            background: -moz-linear-gradient(to right, $color-primary 40%, $color-primary 59%, #ffffff 38%, #ffffff 77%, $color-primary 0, $color-primary 100%);
+            background: -webkit-linear-gradient(to right, $color-primary 40%, $color-primary 59%, #ffffff 38%, #ffffff 77%, $color-primary 0, $color-primary 100%);
             transform: rotate(90deg);
             #{$left}: 40%;
         }
@@ -164,7 +132,7 @@
             display: inline-block;
             height: 2px;
             position: absolute;
-            background: #fcbb0c;
+            background: $color-primary;
             #{$right}: calc(100% - 90%);
             bottom: 0;
             z-index: 9999;
@@ -186,7 +154,7 @@
                 span {
                     &:after {
                         content: "";
-                        background: #fcbb0c;
+                        background: $color-primary;
                         height: 8px;
                         width: 18%;
                         display: block;
@@ -196,7 +164,7 @@
                     }
                 }
             }
-            p * {
+            .event-summary * {
                 font-size: 13px !important;
                 color: #000 !important;
                 margin-top: 20px;
@@ -222,7 +190,6 @@
                     bottom: 0;
                     #{$left}: 20%;
                     padding: 1rem 3rem 2.2rem;
-                    
                     .event-title {
                         font-size: 25px;
                         color: #fff;
@@ -261,9 +228,9 @@
             .event-item {
                 &::before {
                     bottom: 40%;
-                    background: linear-gradient(to right, #fcbb0c 0%, #fcbb0c 38%, #ffffff 38%, #ffffff 70%);
-                    background: -webkit-linear-gradient(to right, #fcbb0c 0%, #fcbb0c 38%, #ffffff 38%, #ffffff 70%);
-                    background: -moz-linear-gradient(to right, #fcbb0c 0%, #fcbb0c 38%, #ffffff 38%, #ffffff 70%);
+                    background: linear-gradient(to right, $color-primary 0%, $color-primary 38%, #ffffff 38%, #ffffff 70%);
+                    background: -webkit-linear-gradient(to right, $color-primary 0%, $color-primary 38%, #ffffff 38%, #ffffff 70%);
+                    background: -moz-linear-gradient(to right, $color-primary 0%, $color-primary 38%, #ffffff 38%, #ffffff 70%);
                 }
                 &::after {
                     display: none;
@@ -316,7 +283,7 @@
 /* hover current star */
 
 .rating:not(:checked)>label:hover~label {
-    color: #FFD700;
+    color: $color-primary;
 }
 
 /* hover previous stars in list */
@@ -329,5 +296,5 @@
 /* lighten current selection */
 
 .rating>input:checked~label:hover~label {
-    color: #FFED85;
+    color: $color-primary;
 }

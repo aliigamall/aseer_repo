@@ -1,60 +1,51 @@
 // Colors
-        $color-primary: #fecd08;
-      $color-secondary: #00ca6c;
+$color-primary: #fecd08;
+$color-secondary: #00ca6c;
 $color-secondary--dark: #00864f;
-           $color-text: #0e0e0e;
-          $color-white: #fff;
-           $color-grey: #9E9E9E;
-       $color-grey-800: #424242;
-       $color-grey-900: #212121;
-
+$color-text: #0e0e0e;
+$color-white: #fff;
+$color-grey: #9E9E9E;
+$color-grey-800: #424242;
+$color-grey-900: #212121;
 // paths
- $img-path: '../images';
+$img-path: '../images';
 $font-path: '../fonts';
-
 //  selection background color
 $selection-color: #727272;
-
 //  header
-     $header-bg: transparent;
+$header-bg: transparent;
 $header-padding: 30px 0;
 $header-z-index: 10;
-
 // footer
-       $footer-bg: #fff;
+$footer-bg: #f9f9f9;
 $footer-bottom-bg: #e7e7e7;
-  $footer-padding: 50px 0;
-
+$footer-padding: 50px 0;
 //  brand
 //
 // brand--colors
-       $brand-fill: $color-primary;
+$brand-fill: $color-primary;
 $brand-fill--light: #fff;
- $brand-fill--dark: #000;
+$brand-fill--dark: #000;
 // brand--size
-      $brand-width: 140px !default;
-     $brand-height: auto;
-   $brand-xs-width: 80px !default;
-  $brand-xs-height: auto;
-   $brand-lg-width: 160px !default;
-  $brand-lg-height: auto;
-
-  //icons
+$brand-width: 140px !default;
+$brand-height: auto;
+$brand-xs-width: 80px !default;
+$brand-xs-height: auto;
+$brand-lg-width: 160px !default;
+$brand-lg-height: auto; //icons
 $icons-padding: 8px !default;
-
 // nav-bar
 //
-          $nav-bar--bg: transparent;
-     $nav-bar--padding: 0;
+$nav-bar--bg: transparent;
+$nav-bar--padding: 0;
 $nav-bar-space-between: 5px !default;
 // menu items
 $menu-link-color: #000;
 $menu-link-hover: $color-primary;
 // sub menu
-     $sub-menu--bg: $color-secondary;
+$sub-menu--bg: $color-secondary;
 $sub-menu--padding: 7px 3px;
 $overlay-z-index: 10;
-
 // // Typography
 // //
 // // Font, line-height, and color for body text, headings, and more.

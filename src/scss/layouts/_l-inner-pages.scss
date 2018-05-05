@@ -78,6 +78,60 @@
     }
 }
 
+.page-header {
+    border-top: 1px solid #d2d3d5;
+    padding-top: 7rem;
+    position: relative;
+    overflow: hidden;
+    .top-banner {
+        border-top: 1px solid rgba(255, 255, 255, 0.38);
+        padding-top: 25px;
+    }
+    .subsite-title {
+        color: #fcbb0c;
+        font-size: 1.2rem;
+        font-weight: normal;
+        display: block;
+        padding-right: 6rem;
+    }
+    .main-title {
+        color: #fff;
+        width: 100%;
+        position: relative;
+        font-weight: 700;
+        font-size: 3rem;
+        &:before {
+            content: '';
+            width: 5%;
+            height: 3px;
+            background: $color-primary;
+            display: inline-block;
+            border-radius: 1em;
+            margin-top: 0;
+            margin-#{$right}: 10px;
+            position: relative;
+            top: -15px;
+        }
+        &:after {
+            display: none !important;
+        }
+    }
+}
+
+.page-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    max-height: 380px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
 .sharing {
     width: 60%;
     margin: 0 auto;
@@ -172,7 +226,6 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-   
 }
 
 .details--header {

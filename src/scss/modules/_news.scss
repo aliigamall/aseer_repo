@@ -13,7 +13,7 @@
             position: relative;
             transition: all .3s ease-in-out;
             .card-header {
-                max-height: 260px;
+                max-height: 284px;
                 overflow: hidden;
                 figure {
                     img {
@@ -43,7 +43,7 @@
                     transition: all .3s ease-in-out;
                     &:after {
                         content: "";
-                        background: #fecd08;
+                        background: $color-primary;
                         height: 4px;
                         border-radius: 5px;
                         width: calc(100% - 65%);
@@ -56,11 +56,13 @@
                     font-size: 15px;
                     text-align: justify;
                     line-height: 25px;
+                    margin-bottom: 10px;
                 }
             }
         }
         a {
             color: inherit;
+            
             &:hover {
                 text-decoration: none;
                 .card {
