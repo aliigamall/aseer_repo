@@ -8511,8 +8511,10 @@ body {
   height: auto;
   -webkit-box-shadow: -10px 0px 20px 6px #f5f5f5;
   box-shadow: -10px 0px 20px 6px #f5f5f5;
-  -webkit-transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -8634,7 +8636,7 @@ body {
 }
 
 .news-list .news-item .card .card-header {
-  max-height: 284px;
+  max-height: 260px;
   overflow: hidden;
 }
 
@@ -8643,10 +8645,10 @@ body {
   width: auto;
   max-height: 100%;
   height: auto;
-  transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -moz-transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -ms-transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .news-list .news-item .card .card-content {
@@ -8764,6 +8766,110 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.MainCategory {
+  margin: 40px 0 30px;
+}
+
+.MainCategory .images-categories {
+  position: relative;
+}
+
+.MainCategory .images-categories a figure {
+  position: relative;
+  height: 28rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+}
+
+.MainCategory .images-categories a figure img {
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+}
+
+.MainCategory .images-categories a figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.MainCategory .images-categories a figure figcaption .image-icon {
+  position: relative;
+  top: -130px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  padding-top: 28px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+
+.MainCategory .images-categories a figure figcaption .image-icon svg {
+  fill: #fff;
+  width: 90px;
+  opacity: 0;
+  height: 90px;
+  transition: color 0.4s ease-in-out;
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  -ms-transition: color 0.4s ease-in-out;
+}
+
+.MainCategory .images-categories a figure figcaption h3 {
+  color: #fff;
+  font-size: 1.652rem;
+  padding: 15px 0;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.MainCategory .images-categories a figure figcaption h3:before {
+  content: '';
+  background: rgba(255, 255, 255, 0.21);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.MainCategory .images-categories a:hover figure img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+
+.MainCategory .images-categories a:hover figure figcaption .image-icon {
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.MainCategory .images-categories a:hover figure figcaption .image-icon svg {
+  opacity: 1;
+  fill: #fecd08;
+}
+
+.MainCategory .images-categories a:hover figure figcaption h3 {
+  color: #fecd08;
 }
 
 .welcome {
@@ -9276,16 +9382,21 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
 }
 
-.media-center #eventList .swiper-slide::before {
+.media-center #eventList .swiper-slide > a::before {
   content: "";
   background: rgba(0, 0, 0, 0.501961);
   width: 94%;
   height: 97%;
   display: inline-block;
   position: absolute;
-  z-index: 99;
+  z-index: 9;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+.media-center #eventList .swiper-slide > a:hover:before {
+  opacity: 0;
+  overflow: hidden;
 }
 
 .media-center #eventList .swiper-slide > a:hover .card--title {
@@ -9374,7 +9485,7 @@ body {
   right: -240px !important;
 }
 
-.media-center #eventList .swiper-slide-active:before {
+.media-center #eventList .swiper-slide-active > a:before {
   opacity: 0;
   overflow: hidden;
 }

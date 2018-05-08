@@ -26,18 +26,22 @@
             -ms-transform: translate(13rem);
             transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
-            &::before {
-                content: "";
-                background: rgba(0, 0, 0, 0.5019607843137255);
-                width: 94%;
-                height: 97%;
-                display: inline-block;
-                position: absolute;
-                z-index: 99;
-                transition: all .3s ease-in-out;
-            }
             >a {
+                &::before {
+                    content: "";
+                    background: rgba(0, 0, 0, 0.5019607843137255);
+                    width: 94%;
+                    height: 97%;
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 9;
+                    transition: all .3s ease-in-out;
+                }
                 &:hover {
+                    &:before {
+                        opacity: 0;
+                        overflow: hidden;
+                    }
                     .card--title {
                         color: $color-primary !important;
                     }
@@ -117,9 +121,11 @@
             }
         }
         .swiper-slide-active {
-            &:before {
-                opacity: 0;
-                overflow: hidden;
+            >a {
+                &:before {
+                    opacity: 0;
+                    overflow: hidden;
+                }
             }
             .card--center {
                 .card-content {
