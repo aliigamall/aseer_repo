@@ -8765,6 +8765,7 @@ body {
   flex-basis: 0;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  display: contents;
 }
 
 .pager br {
@@ -8781,6 +8782,7 @@ body {
 .pager div a,
 .pager div strong {
   margin-left: 10px;
+  margin-bottom: 20px;
   display: inline-block;
   border-radius: 50%;
   width: 35px;
