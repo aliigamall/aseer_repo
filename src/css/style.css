@@ -8661,6 +8661,10 @@ body {
   margin-bottom: 30px;
 }
 
+.news-list .news-item {
+  margin-bottom: 30px;
+}
+
 .news-list .news-item .card {
   background: #fff;
   -webkit-box-shadow: 0px 5px 16px 0px #eeeeee;
@@ -8744,6 +8748,62 @@ body {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   opacity: 0.6;
+}
+
+.pager {
+  width: 100%;
+  clear: both;
+  margin-top: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.pager br {
+  display: none;
+}
+
+.pager div {
+  width: 100%;
+  text-align: center;
+  direction: rtl;
+  margin: 0 auto;
+}
+
+.pager div a,
+.pager div strong {
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background: #00ca6c;
+  line-height: 35px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  transition: background-color .2s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out;
+}
+
+.pager div a:hover,
+.pager div strong:hover {
+  text-decoration: none;
+  background: #fecd08;
+}
+
+.pager div strong {
+  background: #fecd08;
 }
 
 .breadcrumb {
