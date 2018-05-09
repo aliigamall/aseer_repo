@@ -8807,7 +8807,8 @@ body {
 }
 
 .MainCategory {
-  margin: 40px 0 30px;
+  margin: 0 0 30px;
+  width: 100%;
 }
 
 .MainCategory .images-categories {
@@ -9390,7 +9391,7 @@ body {
 }
 
 .media-center section {
-  margin: 80px 0 50px;
+  margin: 0 0 50px;
 }
 
 .media-center section:last-child {
@@ -9560,6 +9561,10 @@ body {
   padding-right: 40px;
 }
 
+.media-center .media-gallery .images-gallery a:hover svg.quick-links__icon {
+  fill: #fecd08;
+}
+
 .media-center .media-gallery .images-gallery a svg.quick-links__icon {
   display: block;
   fill: #fff;
@@ -9586,6 +9591,13 @@ body {
   min-height: 250px;
   position: relative;
   padding-top: 37px;
+}
+
+.media-center .media-gallery .videos-gallery:hover svg.quick-links__icon,
+.media-center .media-gallery .document-library:hover svg.quick-links__icon,
+.media-center .media-gallery .aseer-ads:hover svg.quick-links__icon,
+.media-center .media-gallery .aseer-press:hover svg.quick-links__icon {
+  fill: #fecd08;
 }
 
 .media-center .media-gallery .videos-gallery svg.quick-links__icon,

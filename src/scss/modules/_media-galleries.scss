@@ -1,5 +1,6 @@
 .MainCategory {
-    margin: 40px 0 30px;
+    margin: 0 0 30px;
+    width: 100%;
     .images-categories {
         position: relative;
         a {
@@ -87,13 +88,10 @@
                                 opacity: 1;
                                 fill: $color-primary;
                             }
-                            
                         }
-
                         h3 {
                             color: $color-primary;
                         }
-
                     }
                 }
             }

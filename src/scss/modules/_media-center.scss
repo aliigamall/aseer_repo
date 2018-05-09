@@ -1,6 +1,6 @@
 .media-center {
     section {
-        margin: 80px 0 50px;
+        margin: 0 0 50px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -158,6 +158,11 @@
                 position: absolute;
                 bottom: 60px;
                 padding-#{$left}: 40px;
+                &:hover {
+                    svg.quick-links__icon {
+                        fill: $color-primary;
+                    }
+                }
                 svg.quick-links__icon {
                     display: block;
                     fill: #fff;
@@ -183,6 +188,13 @@
             min-height: 250px;
             position: relative;
             padding-top: 37px;
+
+            &:hover {
+                svg.quick-links__icon {
+                    fill: $color-primary;
+                }
+            }
+
             svg.quick-links__icon {
                 margin: 0 auto 20px;
             }
