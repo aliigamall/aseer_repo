@@ -2928,6 +2928,10 @@ template {
   margin: 0 15px;
 }
 
+.u-pull-forword {
+  float: right;
+}
+
 .m-t-5 {
   margin-top: 5px !important;
 }
