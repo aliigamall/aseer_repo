@@ -7344,6 +7344,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.quick-links a:visited {
+  color: #fff;
+}
+
 .quick-links:hover {
   text-decoration: none;
   color: #fecd08;
@@ -9483,7 +9487,11 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
 }
 
-.media-center #eventList .swiper-slide > a::before {
+.media-center #eventList .swiper-slide > a, .media-center #eventList .swiper-slide a:visited {
+  color: #000;
+}
+
+.media-center #eventList .swiper-slide > a::before, .media-center #eventList .swiper-slide a:visited::before {
   content: "";
   background: rgba(0, 0, 0, 0.501961);
   width: 94%;
@@ -9495,12 +9503,12 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.media-center #eventList .swiper-slide > a:hover:before {
+.media-center #eventList .swiper-slide > a:hover:before, .media-center #eventList .swiper-slide a:visited:hover:before {
   opacity: 0;
   overflow: hidden;
 }
 
-.media-center #eventList .swiper-slide > a:hover .card--title {
+.media-center #eventList .swiper-slide > a:hover .card--title, .media-center #eventList .swiper-slide a:visited:hover .card--title {
   color: #fecd08 !important;
 }
 
@@ -9543,13 +9551,13 @@ body {
 .media-center #eventList .swiper-slide .card--center .card-content {
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
-  top: 15%;
-  min-height: 210px;
+  top: 5%;
+  min-height: 220px;
   right: -80px;
-  -webkit-box-shadow: 15px 0px 40px -5px #f5f5f5;
-  box-shadow: 15px 0px 40px -5px #f5f5f5;
+  -webkit-box-shadow: 8px 0px 17px -5px #eaeaea;
+  box-shadow: 8px 0px 17px -5px #eaeaea;
   width: 80%;
-  padding: 40px 50px 0;
+  padding: 30px 50px 0;
   text-align: right;
   opacity: 0;
   visibility: hidden;
@@ -9574,6 +9582,12 @@ body {
   border-radius: 7px;
   margin-top: 5px;
   margin-right: -10px;
+}
+
+.media-center #eventList .swiper-slide .card--center .card-content .card--brief {
+  font-size: 13px !important;
+  color: #000 !important;
+  margin-top: 20px;
 }
 
 .media-center #eventList .swiper-slide .card--center .card-content .card--brief * {

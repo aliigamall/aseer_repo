@@ -26,7 +26,9 @@
             -ms-transform: translate(13rem);
             transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
-            >a {
+            
+            > a,a:visited {
+                color: #000;
                 &::before {
                     content: "";
                     background: rgba(0, 0, 0, 0.5019607843137255);
@@ -77,12 +79,12 @@
                 .card-content {
                     background-color: rgba(255, 255, 255, 0.9);
                     position: absolute;
-                    top: 15%;
-                    min-height: 210px;
+                    top: 5%;
+                    min-height: 220px;
                     #{$left}: -80px;
-                    box-shadow: 15px 0px 40px -5px #f5f5f5;
+                    box-shadow: 8px 0px 17px -5px #eaeaea;
                     width: 80%;
-                    padding: 40px 50px 0;
+                    padding: 30px 50px 0;
                     text-align: $left;
                     opacity: 0;
                     visibility: hidden;
@@ -107,10 +109,15 @@
                             }
                         }
                     }
-                    .card--brief * {
+                    .card--brief {
                         font-size: 13px !important;
                         color: #000 !important;
                         margin-top: 20px;
+                        * {
+                            font-size: 13px !important;
+                            color: #000 !important;
+                            margin-top: 20px;
+                        }
                     }
                 }
             }
@@ -188,13 +195,11 @@
             min-height: 250px;
             position: relative;
             padding-top: 37px;
-
             &:hover {
                 svg.quick-links__icon {
                     fill: $color-primary;
                 }
             }
-
             svg.quick-links__icon {
                 margin: 0 auto 20px;
             }
