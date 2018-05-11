@@ -4,7 +4,9 @@
         margin-left: -16px;
     }
 }
-.button {
+.button,
+input[type].button,
+button.button, {
     color: rgba(#000, .54);
     min-width: 64px;
     padding: 0 1em;
@@ -22,6 +24,8 @@
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
+    font-family: $font-family;
+    margin: 0;
     @include transition();
     &[disabled] {
         color: rgba(0, 0, 0, .26);
@@ -38,6 +42,11 @@
             box-shadow: none;
             color: rgba(0, 0, 0, .26);
         }
+    }
+    &:hover{
+        background-color: $color-primary;
+        color: #fff;
+        text-decoration: none;
     }
 
     &--white {
@@ -56,12 +65,17 @@
     &--secondary {
         background-color: $color-secondary;
         color: rgba(#000, .87);
+        &:hover{
+            background-color: $color-secondary--dark;
+            color: rgba(#000, .87);
+        }
     }
 
     &--dark{
         background-color: #262626;
         color: #fff;
     }
+    
 
     &--rounded{
         border-radius: 5em;
@@ -83,12 +97,16 @@
     &--block{
         display: block;
     }
-    &:hover{
-        background-color: $color-primary;
-        color: #fff;
-        text-decoration: none;
-    }
     
+    &--cancel{
+        background-color: #ccc;
+        &:hover{
+            background-color: #c1c1c1;
+        }
+    }
+    + .button{
+        margin-#{$left}: 15px;
+    }
 }
 
 .button--icon{
@@ -118,3 +136,6 @@
         @include transition();
     }
 }
+
+
+

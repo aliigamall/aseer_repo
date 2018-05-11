@@ -1,79 +1,80 @@
 .news-list {
     position: relative;
     margin-top: 30px;
+    margin-bottom: 30px;    
+}
+
+.news-item {
     margin-bottom: 30px;
-    .news-item {
-        margin-bottom: 30px;
-        .card {
-            background: #fff;
-            box-shadow: 0px 5px 16px 0px #eeeeee;
-            min-height: calc(100%);
-            height: auto;
-            max-height: 100%;
-            position: relative;
-            transition: all .3s ease-in-out;
-            .card-header {
-                max-height: 260px;
-                overflow: hidden;
-                figure {
-                    img {
-                        max-width: calc(100%);
-                        width: auto;
-                        max-height: 100%;
-                        height: auto;
-                        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    }
-                }
-            }
-            .card-content {
-                padding: 30px 20px;
-                .card-date {
-                    color: #666666;
-                    font-size: 16px;
-                }
-                .card--title {
-                    color: #000;
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin-top: 15px;
-                    margin-bottom: 20px;
-                    transition: all .3s ease-in-out;
-                    &:after {
-                        content: "";
-                        background: $color-primary;
-                        height: 4px;
-                        border-radius: 5px;
-                        width: calc(100% - 65%);
-                        display: block;
-                        margin: 15px 0 0;
-                    }
-                }
-                .card--description {
-                    color: #000;
-                    font-size: 15px;
-                    text-align: justify;
-                    line-height: 25px;
-                    margin-bottom: 10px;
+    .card {
+        background: #fff;
+        box-shadow: 0px 5px 16px 0px #eeeeee;
+        min-height: calc(100%);
+        height: auto;
+        max-height: 100%;
+        position: relative;
+        transition: all .3s ease-in-out;
+        .card-header {
+            max-height: 260px;
+            overflow: hidden;
+            figure {
+                img {
+                    max-width: calc(100%);
+                    width: auto;
+                    max-height: 100%;
+                    height: auto;
+                    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
             }
         }
-        a {
-            color: inherit;
-            &:hover {
-                text-decoration: none;
-                .card {
-                    background: #f9f9f9;
-                    figure {
-                        img {
-                            transform: scale(1.1);
-                            -webkit-transform: scale(1.1);
-                            -moz-transform: scale(1.1);
-                            -ms-transform: scale(1.1);
-                            opacity: 0.6;
-                        }
+        .card-content {
+            padding: 30px 20px;
+            .card-date {
+                color: #666666;
+                font-size: 16px;
+            }
+            .card--title {
+                color: #000;
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                transition: all .3s ease-in-out;
+                &:after {
+                    content: "";
+                    background: $color-primary;
+                    height: 4px;
+                    border-radius: 5px;
+                    width: calc(100% - 65%);
+                    display: block;
+                    margin: 15px 0 0;
+                }
+            }
+            .card--description {
+                color: #000;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    a {
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+            .card {
+                background: #f9f9f9;
+                figure {
+                    img {
+                        transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        opacity: 0.6;
                     }
                 }
             }

@@ -189,14 +189,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #fecd08;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #b99401;
   text-decoration: underline;
 }
 
@@ -230,7 +230,7 @@ pre {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 img {

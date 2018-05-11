@@ -1,0 +1,39 @@
+.table {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(#000, .87);
+    text-transform: capitalize;
+    min-width: 600px;
+    tr{
+        border-bottom: 1px solid #e3e3e3;
+    }
+    th {
+        font-weight: 500;
+        padding: 7px 16px;
+        height: 49px;
+        border: 0;
+    }
+    td {
+        padding: 4px 16px;
+        height: 49px;
+        border: 0;
+        a{
+            vertical-align: middle;
+            color: $color-secondary;
+            @include transition();
+            &:hover{
+                color: $color-secondary--dark;
+                text-decoration: none;
+            }
+        }
+        
+    }
+}
+
+.text-danger{
+    color: #d62222;
+    font-size: 12px;
+}
