@@ -9187,6 +9187,10 @@ button.button + .button {
   margin-bottom: 30px;
 }
 
+.news-item {
+  margin-bottom: 30px;
+}
+
 .news-item .card {
   background: #fff;
   -webkit-box-shadow: 0px 5px 16px 0px #eeeeee;
