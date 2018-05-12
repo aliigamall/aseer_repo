@@ -8187,6 +8187,33 @@ button.button + .button {
   top: 5px;
 }
 
+.image-gallery-url {
+  margin-top: 20px;
+}
+
+.image-gallery-url .quick-links__icon {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+}
+
+.image-gallery-url a {
+  color: #333;
+}
+
+.image-gallery-url a:hover {
+  text-decoration: none;
+  color: #00710a;
+}
+
+.events-map {
+  clear: both;
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
 .l-sideImg {
   height: 525px;
   background-image: url("../images/sideBox-bg1.jpg");
