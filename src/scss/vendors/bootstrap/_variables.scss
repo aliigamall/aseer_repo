@@ -73,8 +73,8 @@ $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
+  "primary":    $color-primary,
+  "secondary":  $color-secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -360,7 +360,7 @@ $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten(theme-color("primary"), 25%) !default;
+$input-focus-border-color:              lighten(theme-color("secondary"), 25%) !default;
 $input-focus-color:                     $input-color !default;
 
 $input-placeholder-color:               $gray-600 !default;

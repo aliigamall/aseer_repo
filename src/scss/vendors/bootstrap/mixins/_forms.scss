@@ -17,11 +17,11 @@
     border-color: $input-focus-border-color;
     outline: none;
     // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: $input-box-shadow, $input-btn-focus-box-shadow;
-    } @else {
-      box-shadow: $input-btn-focus-box-shadow;
-    }
+    // @if $enable-shadows {
+    //   box-shadow: $input-box-shadow, $input-btn-focus-box-shadow;
+    // } @else {
+    //   box-shadow: $input-btn-focus-box-shadow;
+    // }
   }
 }
 
