@@ -7072,6 +7072,39 @@ input[type=text].form-control {
   float: right;
 }
 
+.empty-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.empty-state h3 {
+  font-weight: 700;
+  font-size: 2.375rem;
+  color: #575757;
+  margin: 20px 0 15px;
+}
+
+.empty-state h4 {
+  font-size: 1.5rem;
+  color: #8d8d8d;
+}
+
+.empty-state__image {
+  width: 200px;
+}
+
+.is-displayMode .hidden-in-display-mode {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .button-wrapper {
     margin-right: -16px;
@@ -9497,6 +9530,38 @@ button.button + .button {
 
 .MainCategory .images-categories a:hover figure figcaption h3 {
   color: #fecd08;
+}
+
+.video-thumb {
+  height: 250px;
+  padding: 0;
+  border: 4px solid #fff;
+  position: relative;
+}
+
+.video-thumb > img {
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumb svg {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  z-index: 10;
+  fill: red;
+  width: 70px;
+  height: 70px;
+}
+
+.video-thumb:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .welcome {
