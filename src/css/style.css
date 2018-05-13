@@ -7686,6 +7686,10 @@ button.button + .button {
   margin-bottom: 6vh;
 }
 
+.l-featured-pages .main-title, .l-featured-pages .article__title {
+  font-weight: 700;
+}
+
 .l-featured__images {
   position: relative;
   display: -webkit-box;
