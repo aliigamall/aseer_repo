@@ -278,3 +278,33 @@
         }
     }
 }
+
+.image-gallery-url {
+    margin-top: 20px;
+    .quick-links__icon {
+        width: 30px;
+        height: 30px;
+        float: $left;
+        margin-#{$right}: 10px;
+    }
+    a {
+        color: #333;
+        &:hover {
+            text-decoration: none;
+            color: #00710a;
+        }
+    }
+}
+
+.events-map {
+    clear: both;
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.SubSitesJs {
+    .news-item:nth-child(3n+1) {
+        clear: both;
+    }
+}
