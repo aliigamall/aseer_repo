@@ -7403,7 +7403,7 @@ button.button + .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10vh 0;
+  padding: 5vh 0;
 }
 
 .l-home-section {
@@ -8427,7 +8427,6 @@ button.button + .button {
   display: block;
   font-size: 1rem;
   color: #606060;
-  white-space: pre;
   font-weight: 700;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -11125,6 +11124,20 @@ button.button + .button {
 .text-danger {
   color: #d62222;
   font-size: 12px;
+}
+
+@media print {
+  .ribbon-wrapper,
+  .main-header,
+  .page-header,
+  .details--header,
+  .main-footer__top,
+  .main-footer__quick-links {
+    display: none !important;
+  }
+  .l-container {
+    padding: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */
