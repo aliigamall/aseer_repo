@@ -5,7 +5,8 @@
 .l-projects-bottom{
     margin-top: auto;
 }
-.l-projects-tabs{
+.l-projects-tabs,
+.l-projects-tabs ul.dfwp-column{
     display: flex;
     border-width: 1px 0;
     border-style: solid;
@@ -78,9 +79,9 @@
     transform: translate(0, -50%);
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     &--vertical{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     label{
         margin-bottom: 0;
@@ -95,4 +96,9 @@
     color: #fff;
     text-align: center;
     margin-top: 20px;
+}
+
+.project__start-date,
+.project__end-date{
+    display: none;
 }

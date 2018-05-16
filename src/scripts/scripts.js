@@ -10,24 +10,27 @@
 const fabComponent = document.querySelector('.fab');
 const fabButton = document.querySelector('.fab__trigger');
 
-if(fabComponent){
-    fabButton.addEventListener('click', ()=>{
+if (fabComponent) {
+    fabButton.addEventListener('click', () => {
         fabComponent.classList.toggle('is-opened');
     });
 };
 
-$(function(){
+$(function () {
     // tabs
     var tabsComponent = $('.tab-bar');
-    if(tabsComponent){
-        $('.tab-bar__link').on('click', function(event){
+    if (tabsComponent) {
+        $('.tab-bar__link').on('click', function (event) {
             event.preventDefault();
             var tabTarget = this.hash;
             $('.tab-bar__item').removeClass('tab-bar__item--active');
             $(this).parent().addClass('tab-bar__item--active');
-    
+
             $('.tab-item').removeClass('tab-item--active');
             $(tabTarget).addClass('tab-item--active');
         });
     }
 });
+
+
+

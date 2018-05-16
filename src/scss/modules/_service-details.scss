@@ -1,0 +1,219 @@
+.serviceDetails-section {
+    padding-bottom: 1.875rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.serviceDetails-section.serviceDetails-lastsection {
+    border-bottom: 0;
+}
+
+.serviceDetails-section.section-sm {
+    padding: 1.25rem 0;
+}
+
+.serviceDetails-section.section-sm:last-child {
+    border: 0;
+}
+
+.serviceDetails-section+.serviceDetails-section {
+    padding-top: 1.875rem;
+}
+
+.serviceDetails-title {
+    font-size: 1.75rem;
+    color: #25816d;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+}
+
+.serviceDetails-title.title-sm {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+}
+
+.serviceDetails-txt {
+    color: #2a2a2a;
+    font-size: 0.875rem;
+}
+
+.serviceDetails-txt.serviceDetails-moreTxt {
+    height: 50px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.serviceDetails-txt.is-autoHeight {
+    height: auto;
+}
+
+.serviceDetails-more {
+    font-size: 0.875rem;
+    color: #000;
+    font-weight: 700;
+    padding-left: 40px;
+    position: relative;
+}
+
+.serviceDetails-more:after {
+    content: "";
+    background: url("../../images/arrow-down.svg") no-repeat center center;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 4px);
+}
+
+.serviceDetails-more.is-active {
+    color: #25816d;
+}
+
+.serviceDetails-more.is-active:after {
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.btn.serviceDetails-btn,
+.serviceDetails-action a.btn {
+    margin-top: 1.875rem;
+}
+
+.btn.serviceDetails-btn:hover a,
+.serviceDetails-action a.btn:hover a {
+    color: #fff;
+}
+
+.serviceDetails-grid {
+    margin: 0 -8px;
+}
+
+.serviceDetails-grid ul {
+    counter-reset: section;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.serviceDetails-grid ul>li {
+    width: calc(100% - 16px);
+    border-bottom: 10px solid #28826f;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.18);
+    margin: 0 8px 15px;
+    padding: 55px 15px 15px 15px;
+    position: relative;
+    font-size: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+    .serviceDetails-grid ul>li {
+        width: calc(50% - 16px);
+    }
+}
+
+.serviceDetails-grid ul>li:before {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background: #9d8a70;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.serviceDetails-list ul {
+    counter-reset: section;
+}
+
+.serviceDetails-list ul>li {
+    position: relative;
+    padding-right: 35px;
+    font-size: 0.9375rem;
+}
+
+.serviceDetails-list ul>li:before {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: #25816d;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.serviceDetails-list ul>li+li {
+    margin-top: 0.9375rem;
+}
+
+.serviceDetails-list img {
+    max-width: 100%;
+}
+
+.serviceDetails-action a {
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 0.625rem 1.5625rem;
+    font-size: 0.9375rem;
+    min-width: 9.375rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    margin-top: 1.25rem;
+    background-color: #25816d;
+    border-color: #25816d;
+    color: #fff;
+}
+
+.serviceDetails-action a:visited,
+.serviceDetails-action a:hover {
+    color: #fff;
+}
+
+.serviceDetails-brief {
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.18);
+    padding: 0.625rem 1.5625rem;
+}
+
+.serviceDetails--briefTxt {
+    color: #63696c;
+    font-size: 0.8125rem;
+}
+
+.serviceDetails--briefTxt+.serviceDetails--briefTxt {
+    margin-top: 1.25rem;
+}
+
+.serviceDetails--meta {
+    margin: 0 -16px;
+    font-size: 0;
+}
