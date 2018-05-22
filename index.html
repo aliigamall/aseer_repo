@@ -58,11 +58,6 @@
 </head>
 
 <body>
-
-
-
-
-                    
     <div id="homePage">
         <header class="main-header main-header--absolute main-header--light">
             <div class="container main-header__container">
@@ -82,6 +77,32 @@
                 <nav class="nav-bar nav-bar--sm nav-bar__secondary-menu">
                     <h3 class="sr-only">Aseer secondary menu</h3>
                     <ul class="nav-bar__menu">
+                        <li class="nav-bar__menu-item">
+                            <div id="ctl00_MasterPageHeaderLinksUC_LILoggedIn" class="logged-in">
+                                <h2 id="userNameDDL" data-toggle="collapse" data-target="#UserLinks">
+                                    مرحبا:
+                                    <span id="ctl00_MasterPageHeaderLinksUC_lblUserName">agamal</span>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </h2>
+                                <ul class="collapse" id="UserLinks">
+                                    <li>
+                                        <a id="ctl00_MasterPageHeaderLinksUC_lnkPortalAdmin" href="javascript:__doPostBack('ctl00$MasterPageHeaderLinksUC$lnkPortalAdmin','')">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>إدارة البوابة</a>
+                                    </li>
+                                    <li>
+                                        <a id="ctl00_MasterPageHeaderLinksUC_lnkLogOut" href="javascript:__doPostBack('ctl00$MasterPageHeaderLinksUC$lnkLogOut','')">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>تسجيل الخروج</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <svg width="24" height="24">
+                                <use xlink:href="././src/images/svg-icons.svg#icon-lock"></use>
+                            </svg>
+                            <a href="#0" class="nav-bar__menu-link">تسجيل الدخول</a>
+                            <a href="#0" class="nav-bar__menu-link">مستخدم جديد</a>
+                        </li>
                         <li class="nav-bar__menu-item">
                             <svg width="24" height="24">
                                 <use xlink:href="././src/images/svg-icons.svg#icon-search"></use>
