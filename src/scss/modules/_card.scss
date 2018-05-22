@@ -35,6 +35,10 @@
         box-shadow: 0.035px 0.999px 40px 0px rgba(0, 0, 0, 0.29);
         color: #fff;
     }
+    .card__brief{
+        color: #fff !important;
+        text-decoration: none;
+    }
 }
 .card--horizontal{
     flex-direction: row;

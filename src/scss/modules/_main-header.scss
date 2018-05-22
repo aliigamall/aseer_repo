@@ -81,21 +81,4 @@
     }
 }
 
-.nav-bar__secondary-menu {
-    .nav-bar__menu-item {
-        display: flex;
-        align-items: center;
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .nav-bar__menu-item+.nav-bar__menu-item {
-        &:before {
-            content: "";
-            display: inline-flex;
-            width: 1px;
-            height: 25px;
-            margin: 0 15px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-    }
-}
+
