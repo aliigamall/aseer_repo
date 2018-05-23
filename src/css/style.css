@@ -8570,7 +8570,7 @@ button.button + .button {
 }
 
 .related-links {
-  padding: 11px 5px;
+  padding: 8px 10px;
   border-bottom: 1px solid #e7e7e7;
   width: 100%;
 }
@@ -8589,7 +8589,7 @@ button.button + .button {
 }
 
 .related-links a span {
-  font-size: 1.1rem;
+  font-size: 0.94rem;
   font-weight: 700;
 }
 
