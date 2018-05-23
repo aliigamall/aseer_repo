@@ -73,7 +73,7 @@ button.button, {
 
     &--dark{
         background-color: #262626;
-        color: #fff;
+        color: #fff !important; // to override SP styles 
     }
     
 

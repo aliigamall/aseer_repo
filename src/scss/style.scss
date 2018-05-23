@@ -21,8 +21,8 @@
 // @import "./vendors/bootstrap/button-group";
 // @import "./vendors/bootstrap/input-group";
 // @import "./vendors/bootstrap/custom-forms";
-// @import "./vendors/bootstrap/nav";
-// @import "./vendors/bootstrap/navbar";
+@import "./vendors/bootstrap/nav";
+@import "./vendors/bootstrap/navbar";
 // @import "./vendors/bootstrap/card";
 // @import "./vendors/bootstrap/breadcrumb";
 // @import "./vendors/bootstrap/pagination";
@@ -54,6 +54,7 @@
 @import "./layouts/l-inner-pages";
 @import "./layouts/l-sideImg";
 @import "./modules/main-header";
+@import "./modules/faq";
 @import "./modules/main-footer";
 @import "./modules/nav-bar";
 @import "./modules/vertical-nav";

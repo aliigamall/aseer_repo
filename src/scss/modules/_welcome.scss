@@ -48,3 +48,19 @@
     }
 }
 
+.welcome__navigation{
+    margin-bottom: 10px;
+    > .icon{
+        cursor: pointer;
+        background-color: rgba(#000, .25);
+        &.swiper-button-disabled{
+            cursor: default;
+            opacity: 0.5;
+        }
+        > svg{
+            fill: #fff;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

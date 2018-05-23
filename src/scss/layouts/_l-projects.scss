@@ -18,7 +18,8 @@
 .l-projects-tabs__items{
     flex: 1;
 }
-.l-projects-tabs__link{
+.l-projects-tabs__link,
+.l-projects-tabs__link:visited{
     padding: 30px 0;
     color: #fff;
     font-size: rem(26);
