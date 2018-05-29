@@ -1,20 +1,25 @@
-.idea{
+.idea {
     display: flex;
     color: $color-text;
+    @include breakpoint(isMobile) {
+        background: rgba(255, 255, 255, 0.87);
+        padding: 5px 20px 10px;
+    }
 }
-.idea__number{
+
+.idea__number {
     font-size: rem(35);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 700;
-    @supports (margin-inline-end: 20px){
+    @supports (margin-inline-end: 20px) {
         margin-inline-end: 20px;
     }
-    @supports (margin-inline-end: 20px){
+    @supports (margin-inline-end: 20px) {
         margin-#{$right}: 20px;
     }
-    > span{
+    >span {
         background-color: $color-secondary;
         border-radius: 50%;
         color: #fff;
@@ -25,10 +30,16 @@
         justify-content: center;
     }
 }
-.idea__details{
+
+.idea__details {
     padding-top: 3em;
+
+    @include breakpoint(isMobile) {
+        padding-top: 1em;
+    }
 }
-.idea__title{
+
+.idea__title {
     font-size: rem(26);
     margin-bottom: 10px;
     font-weight: 700;

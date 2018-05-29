@@ -1,6 +1,5 @@
 $tab-bg: $color-secondary;
-
-.tab-bar{
+.tab-bar {
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -9,48 +8,54 @@ $tab-bg: $color-secondary;
     border: 2px solid $tab-bg;
     border-radius: 2em;
     overflow: hidden;
+    @include breakpoint(isMobile) {
+        margin-top: 40px;
+        width: 98.8%;
+    }
 }
-.tab-bar__item{
+
+.tab-bar__item {
     display: inline-flex;
-    &--active{
-        .tab-bar__link{
+    &--active {
+        .tab-bar__link {
             background-color: $tab-bg;
             color: #fff;
         }
     }
-    + .tab-bar__item{
-        @supports (border-inline-start: 2px){
+    +.tab-bar__item {
+        @supports (border-inline-start: 2px) {
             border-inline-start: 2px solid $tab-bg;
         }
-        @supports not (border-inline-start: 2px){
+        @supports not (border-inline-start: 2px) {
             border-#{$left}: 2px solid $tab-bg;
         }
     }
 }
-.tab-bar__link{
+
+.tab-bar__link {
     font-size: rem(16);
     color: $color-text;
-    padding: 0.75em 3em;   
-    transition: background-color 0.2s ease, color  0.2s ease; 
-    &:hover{
+    padding: 0.75em 3em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    &:hover {
         color: #fff;
         background-color: rgba($tab-bg, .8);
         text-decoration: none;
     }
 }
 
-
-.tabs-content{
+.tabs-content {
     position: relative;
 }
-.tab-item{
+
+.tab-item {
     opacity: 0;
     visibility: hidden;
-    &:not(&--active){
+    &:not(&--active) {
         position: absolute;
         top: 0;
     }
-    &--active{
+    &--active {
         opacity: 1;
         visibility: visible;
     }

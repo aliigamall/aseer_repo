@@ -13,6 +13,10 @@
 }
 .l-discover__bottom{
     margin-top: auto;
+
+    @include breakpoint(isMobile){
+        margin-top: 50px;
+    }
 }
 
 

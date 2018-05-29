@@ -1,12 +1,12 @@
-.card{
+.card {
     display: flex;
     flex-direction: column;
 }
-.card__image{
-   
-    overflow: hidden; 
+
+.card__image {
+    overflow: hidden;
     position: relative;
-    &:after{
+    &:after {
         content: '';
         position: absolute;
         left: 5px;
@@ -15,11 +15,12 @@
         bottom: 5px;
         border: 1px solid rgba(#fff, .2);
     }
-    > img{
+    >img {
         min-width: 100%;
     }
 }
-.card__content{
+
+.card__content {
     background-color: #fff;
     color: #4e4e4e;
     padding: 1em;
@@ -29,90 +30,93 @@
     flex-direction: column;
 }
 
-.card--dark{
-    .card__content{
+.card--dark {
+    .card__content {
         background-color: rgba(#000, .4);
         box-shadow: 0.035px 0.999px 40px 0px rgba(0, 0, 0, 0.29);
         color: #fff;
     }
-    .card__brief{
+    .card__brief {
         color: #fff !important;
         text-decoration: none;
     }
 }
-.card--horizontal{
+
+.card--horizontal {
     flex-direction: row;
-    
-    .card__image > img {
+    .card__image>img {
         min-height: 100%;
     }
 }
 
-.card__title{
+.card__title {
     font-size: 1.2em;
     font-weight: 700;
     margin-bottom: 0.5em;
-    > a{
+    @include breakpoint(isMobile) {
+        font-size: 1.5em;
+    }
+    >a {
         color: inherit;
         text-decoration: none;
         @include transition();
-        &:hover{
+        &:hover {
             color: $color-primary;
         }
     }
 }
+
 // .card__brief{
 //     // margin-top: auto;
 // }
-
-.card--absolute{
+.card--absolute {
     overflow: hidden;
     position: relative;
-    .card__content{
-        background: linear-gradient( 0, rgba(42,42,42,0.8) 0%, rgba(42,42,42,0) 100%);
+    .card__content {
+        background: linear-gradient( 0, rgba(42, 42, 42, 0.8) 0%, rgba(42, 42, 42, 0) 100%);
         position: absolute;
         height: 100%;
         width: 100%;
         top: 0;
         padding: 12% 6%;
         color: #fff;
-        display: flex; 
+        display: flex;
         flex-direction: column;
         justify-content: flex-end;
         z-index: 1;
     }
 }
 
-.card--center{
-    .card__content{
+.card--center {
+    .card__content {
         align-items: center;
         justify-content: center;
     }
-    .card__brief{
+    .card__brief {
         font-size: rem(16);
         text-align: center;
         max-width: 80%;
     }
-    .card__title{
+    .card__title {
         font-size: rem(35);
         margin-top: 40px;
     }
-    .card__action{
+    .card__action {
         margin-top: auto;
     }
 }
 
-.card__content--hover{
+.card__content--hover {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
     transition: all 0.5s ease-in-out;
 }
 
-.card:hover{
-    .card__content--hover{
+.card:hover {
+    .card__content--hover {
         opacity: 1;
         visibility: visible;
         max-height: 600px;
-    }   
+    }
 }
