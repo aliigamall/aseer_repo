@@ -1,12 +1,14 @@
-.l-projects{
+.l-projects {
     background: url("#{$img-path}/projects.jpg") no-repeat center center;
     background-size: cover;
 }
-.l-projects-bottom{
+
+.l-projects-bottom {
     margin-top: auto;
 }
+
 .l-projects-tabs,
-.l-projects-tabs ul.dfwp-column{
+.l-projects-tabs ul.dfwp-column {
     display: flex;
     border-width: 1px 0;
     border-style: solid;
@@ -14,12 +16,17 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    @include breakpoint(isMobile) {
+        display: block;
+    }
 }
-.l-projects-tabs__items{
+
+.l-projects-tabs__items {
     flex: 1;
 }
+
 .l-projects-tabs__link,
-.l-projects-tabs__link:visited{
+.l-projects-tabs__link:visited {
     padding: 30px 0;
     color: #fff;
     font-size: rem(26);
@@ -27,23 +34,28 @@
     width: 70%;
     opacity: 0.5;
     @include transition();
-    &:hover{
+    @include breakpoint(isMobile) {
+        width: 90%;
+        padding: 0;
+    }
+    &:hover {
         text-decoration: none;
         opacity: 1;
         color: #fff;
     }
-    &--active{
+    &--active {
         opacity: 1;
-        .l-projects-tabs__num{
-            &:after{
+        .l-projects-tabs__num {
+            &:after {
                 background: $color-primary;
             }
         }
     }
 }
-.l-projects-tabs__num{
+
+.l-projects-tabs__num {
     font-size: 1.5em;
-    &:after{
+    &:after {
         content: '';
         display: block;
         width: 100%;
@@ -57,19 +69,38 @@
         padding-#{$right}: 20px;
     }
 }
-.l-projects__charts{
+
+.l-projects__charts {
     display: flex;
+    @include breakpoint(isMobile) {
+      margin-bottom: 30px;
+    }
 }
-.project-details:not(.project-details--active){
+
+.project-details:not(.project-details--active) {
     display: none;
 }
-.project-chart{
+
+.project-chart {
     width: 180px;
     height: 180px;
     position: relative;
     margin: 0 40px;
+    @include breakpoint(isMobile) {
+        margin: 10px 7px 0;
+        float: $left;
+        width: 140px;
+        height: 140px;
+    }
+    canvas {
+        @include breakpoint(isMobile) {
+            width: 140px !important;
+            height: 140px !important;
+        }
+    }
 }
-.project-chart__num{
+
+.project-chart__num {
     position: absolute;
     color: #fff;
     font-size: rem(50);
@@ -81,25 +112,30 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    &--vertical{
+    &--vertical {
         flex-direction: column-reverse;
     }
-    label{
+    label {
         margin-bottom: 0;
         font-size: 0.5em;
     }
 }
-.project-chart__percent{
+
+.project-chart__percent {
     line-height: 1;
 }
-.project-chart__title{
+
+.project-chart__title {
     font-size: rem(20);
     color: #fff;
     text-align: center;
     margin-top: 20px;
+    @include breakpoint(isMobile) {
+        display: inline-block;
+    }
 }
 
 .project__start-date,
-.project__end-date{
+.project__end-date {
     display: none;
 }

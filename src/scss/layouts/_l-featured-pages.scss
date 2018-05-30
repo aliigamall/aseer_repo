@@ -3,14 +3,16 @@
     position: relative;
     .l-home-section {
         padding-top: 15vh;
+        @include breakpoint(isMobile) {
+            padding-top: 2vh;
+        }
     }
     .l-home-title {
         margin-bottom: 6vh;
     }
-    
-    .main-title,.article__title{
+    .main-title,
+    .article__title {
         font-weight: 700;
-
     }
 }
 
@@ -19,6 +21,9 @@
     display: flex;
     justify-content: center;
     max-height: 90vh;
+    @include breakpoint(isMobile) {
+        max-height: 46vh;
+    }
 }
 
 .l-featured__primary-image {
@@ -37,6 +42,9 @@
     max-height: 225px;
     transform: translate(-30%, 20%);
     filter: grayscale(100%);
+    @include breakpoint(isMobile) {
+        display: none;
+    }
 }
 
 .l-featured__bottom {

@@ -2,6 +2,19 @@
     background: url("#{$img-path}/mountains-gradient.jpg") no-repeat center center;
     background-size: cover;
     padding: 50px 0;
+
+    @include breakpoint(isMobile){
+        display: inline-block;
+    }
+
+    .col{
+        @include breakpoint(isMobile){
+            max-width: 50%;
+            display: inline-block;
+            float: $left;
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .quick-links,

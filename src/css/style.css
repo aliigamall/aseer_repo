@@ -8077,8 +8077,10 @@ button.button + .button {
 
 @media (min-width: 0) and (max-width: 767px) {
   .l-home-section {
-    height: 107vh;
+    height: auto;
     padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
   }
 }
 
@@ -8295,7 +8297,7 @@ button.button + .button {
 @media (min-width: 0) and (max-width: 767px) {
   .l-ideas {
     padding-top: 4vh;
-    background-size: 100%;
+    background-size: 85%;
   }
 }
 
@@ -8446,11 +8448,18 @@ button.button + .button {
   padding-top: 15vh;
 }
 
+@media (min-width: 0) and (max-width: 767px) {
+  .l-featured-pages .l-home-section {
+    padding-top: 2vh;
+  }
+}
+
 .l-featured-pages .l-home-title {
   margin-bottom: 6vh;
 }
 
-.l-featured-pages .main-title, .l-featured-pages .article__title {
+.l-featured-pages .main-title,
+.l-featured-pages .article__title {
   font-weight: 700;
 }
 
@@ -8463,6 +8472,12 @@ button.button + .button {
   -ms-flex-pack: center;
   justify-content: center;
   max-height: 90vh;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .l-featured__images {
+    max-height: 46vh;
+  }
 }
 
 .l-featured__primary-image {
@@ -8486,6 +8501,12 @@ button.button + .button {
   transform: translate(-30%, 20%);
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .l-featured__secondary-image {
+    display: none;
+  }
 }
 
 .l-featured__bottom {
@@ -8518,6 +8539,13 @@ button.button + .button {
   margin: 0;
 }
 
+@media (min-width: 0) and (max-width: 767px) {
+  .l-projects-tabs,
+  .l-projects-tabs ul.dfwp-column {
+    display: block;
+  }
+}
+
 .l-projects-tabs__items {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -8536,6 +8564,14 @@ button.button + .button {
   opacity: 0.5;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .l-projects-tabs__link,
+  .l-projects-tabs__link:visited {
+    width: 90%;
+    padding: 0;
+  }
 }
 
 .l-projects-tabs__link:hover,
@@ -8587,6 +8623,12 @@ button.button + .button {
   display: flex;
 }
 
+@media (min-width: 0) and (max-width: 767px) {
+  .l-projects__charts {
+    margin-bottom: 30px;
+  }
+}
+
 .project-details:not(.project-details--active) {
   display: none;
 }
@@ -8596,6 +8638,22 @@ button.button + .button {
   height: 180px;
   position: relative;
   margin: 0 40px;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .project-chart {
+    margin: 10px 7px 0;
+    float: right;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .project-chart canvas {
+    width: 140px !important;
+    height: 140px !important;
+  }
 }
 
 .project-chart__num {
@@ -8643,6 +8701,12 @@ button.button + .button {
   margin-top: 20px;
 }
 
+@media (min-width: 0) and (max-width: 767px) {
+  .project-chart__title {
+    display: inline-block;
+  }
+}
+
 .project__start-date,
 .project__end-date {
   display: none;
@@ -8652,6 +8716,21 @@ button.button + .button {
   background: url("../images/mountains-gradient.jpg") no-repeat center center;
   background-size: cover;
   padding: 50px 0;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .l-quick-links {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .l-quick-links .col {
+    max-width: 50%;
+    display: inline-block;
+    float: right;
+    margin-bottom: 30px;
+  }
 }
 
 .quick-links,
@@ -9367,6 +9446,12 @@ div#accordion .groupheader:nth-child(1) {
 
 .main-footer__links li {
   padding: 0 10px;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .main-footer__links li {
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 0) and (max-width: 767px) {
@@ -10973,6 +11058,14 @@ div#accordion .groupheader:nth-child(1) {
   width: 90px;
   height: 90px;
   fill: #fecd08;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .main-title--icon > svg {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+  }
 }
 
 @supports ((-webkit-margin-end: 20px) or (-moz-margin-end: 20px) or (margin-inline-end: 20px)) {

@@ -21,6 +21,10 @@
     margin-top: rem(40);
     li{
         padding: 0 10px;
+
+        @include breakpoint(isMobile){
+            margin-bottom: 10px;
+        }
     }
     >.col {
         @include breakpoint(isMobile) {
