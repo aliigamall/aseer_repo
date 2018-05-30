@@ -28,7 +28,16 @@
     display: flex;
     flex-direction: column;
 }
-
+.card__icon{
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #e6e6e6;
+    svg{
+        fill: rgba(#000, .54);
+    }
+}
 .card--dark{
     .card__content{
         background-color: rgba(#000, .4);
@@ -39,6 +48,9 @@
         color: #fff !important;
         text-decoration: none;
     }
+}
+.card--raised{
+    box-shadow: 0.035px 0.999px 6px 0px rgba(0, 0, 0, 0.29);
 }
 .card--horizontal{
     flex-direction: row;
@@ -115,4 +127,15 @@
         visibility: visible;
         max-height: 600px;
     }   
+}
+
+.card-list{
+    .card{
+        + .card{
+            margin-top: 20px;
+        }
+    }
+    .card__title{
+        margin-bottom: 0;
+    }
 }

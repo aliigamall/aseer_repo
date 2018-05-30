@@ -8525,7 +8525,8 @@ button.button + .button {
   padding: 50px 0;
 }
 
-.quick-links {
+.quick-links,
+.quick-links:visited {
   color: #fff;
   fill: #fff;
   font-size: 1.5625rem;
@@ -8544,11 +8545,13 @@ button.button + .button {
   transition: all 0.2s ease-in-out;
 }
 
-.quick-links a:visited {
+.quick-links a:visited,
+.quick-links:visited a:visited {
   color: #fff;
 }
 
-.quick-links:hover {
+.quick-links:hover,
+.quick-links:visited:hover {
   text-decoration: none;
   color: #fecd08;
   fill: #fecd08;
@@ -9556,6 +9559,24 @@ div#accordion .groupheader:nth-child(1) {
   flex-direction: column;
 }
 
+.card__icon {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-left: 1px solid #e6e6e6;
+}
+
+.card__icon svg {
+  fill: rgba(0, 0, 0, 0.54);
+}
+
 .card--dark .card__content {
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0.035px 0.999px 40px 0px rgba(0, 0, 0, 0.29);
@@ -9566,6 +9587,11 @@ div#accordion .groupheader:nth-child(1) {
 .card--dark .card__brief {
   color: #fff !important;
   text-decoration: none;
+}
+
+.card--raised {
+  -webkit-box-shadow: 0.035px 0.999px 6px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 0.035px 0.999px 6px 0px rgba(0, 0, 0, 0.29);
 }
 
 .card--horizontal {
@@ -9659,6 +9685,14 @@ div#accordion .groupheader:nth-child(1) {
   opacity: 1;
   visibility: visible;
   max-height: 600px;
+}
+
+.card-list .card + .card {
+  margin-top: 20px;
+}
+
+.card-list .card__title {
+  margin-bottom: 0;
 }
 
 .icon {
@@ -10141,7 +10175,7 @@ div#accordion .groupheader:nth-child(1) {
 
 .news-item .card .card-content {
   padding: 30px 20px;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .news-item .card .card-content .card-date {
