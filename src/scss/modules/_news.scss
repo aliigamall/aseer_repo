@@ -34,7 +34,9 @@
         }
         .card-content {
             padding: 30px 20px;
-            min-height: 200px;
+            min-height: 275px;
+            overflow: hidden;
+            max-height: 275px;
             .card-date {
                 color: #666666;
                 font-size: 16px;
@@ -81,6 +83,14 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.SubSitesJs {
+    .card {
+        .card-content {
+            min-height: auto;
         }
     }
 }
