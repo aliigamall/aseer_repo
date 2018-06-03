@@ -2851,6 +2851,141 @@ select.form-control-lg:not([size]):not([multiple]) {
   color: #fff;
 }
 
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  font-weight: 700;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.alert-primary {
+  color: #846b04;
+  background-color: #fff5ce;
+  border-color: #fff1ba;
+}
+
+.alert-primary hr {
+  border-top-color: #ffeca1;
+}
+
+.alert-primary .alert-link {
+  color: #534303;
+}
+
+.alert-secondary {
+  color: #006938;
+  background-color: #ccf4e2;
+  border-color: #b8f0d6;
+}
+
+.alert-secondary hr {
+  border-top-color: #a3ecca;
+}
+
+.alert-secondary .alert-link {
+  color: #00361d;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-success hr {
+  border-top-color: #b1dfbb;
+}
+
+.alert-success .alert-link {
+  color: #0b2e13;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-info hr {
+  border-top-color: #abdde5;
+}
+
+.alert-info .alert-link {
+  color: #062c33;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-warning hr {
+  border-top-color: #ffe8a1;
+}
+
+.alert-warning .alert-link {
+  color: #533f03;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-danger hr {
+  border-top-color: #f1b0b7;
+}
+
+.alert-danger .alert-link {
+  color: #491217;
+}
+
+.alert-light {
+  color: #818182;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
+}
+
+.alert-light hr {
+  border-top-color: #ececf6;
+}
+
+.alert-light .alert-link {
+  color: #686868;
+}
+
+.alert-dark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+}
+
+.alert-dark hr {
+  border-top-color: #b9bbbe;
+}
+
+.alert-dark .alert-link {
+  color: #040505;
+}
+
 /**
  * Swiper 4.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -8718,8 +8853,6 @@ button.button + .button {
   padding: 50px 0;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 0) and (max-width: 767px) {
   .l-quick-links {
     display: inline-block;
@@ -8735,7 +8868,6 @@ button.button + .button {
   }
 }
 
->>>>>>> 189bcd0f854647930c60f5608358e9a17b6e4f60
 .quick-links,
 .quick-links:visited {
   color: #fff;
@@ -10398,13 +10530,10 @@ div#accordion .groupheader:nth-child(1) {
 
 .news-item .card .card-content {
   padding: 30px 20px;
-<<<<<<< HEAD
   min-height: 140px;
-=======
   min-height: 275px;
   overflow: hidden;
   max-height: 275px;
->>>>>>> 189bcd0f854647930c60f5608358e9a17b6e4f60
 }
 
 .news-item .card .card-content .card-date {
@@ -11290,6 +11419,9 @@ div#accordion .groupheader:nth-child(1) {
 
 .article {
   font-size: 1rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .article__title {
