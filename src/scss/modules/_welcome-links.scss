@@ -1,6 +1,5 @@
-
-$links-margin : 10px !default;
-.welcome-links{
+$links-margin: 10px !default;
+.welcome-links {
     box-shadow: 0px 7px 70px 0px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(#fff, .35);
     background-color: rgba(12, 12, 12, 0.15);
@@ -14,19 +13,21 @@ $links-margin : 10px !default;
     flex: 1 0 auto;
     flex-wrap: wrap;
     align-items: center;
-
-    &:hover{
+    @include breakpoint(isMobile) {
+        height: 100px;
+    }
+    &:hover {
         text-decoration: none;
     }
 }
 
-.welcome-links__wrapper{
+.welcome-links__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -#{$links-margin};
 }
 
-.welcome-links__icon{
+.welcome-links__icon {
     width: 55px;
     height: 55px;
     fill: $color-primary;
@@ -37,20 +38,20 @@ $links-margin : 10px !default;
         margin-#{$left}: 1em;
     }
 }
-  
-.welcome-links__title{
+
+.welcome-links__title {
     display: inline-flex;
     flex-direction: column;
     color: #fff;
     font-size: rem(20);
 }
 
-.welcome-links--lg{
+.welcome-links--lg {
     justify-content: center;
-    .welcome-links__title{
+    .welcome-links__title {
         font-size: rem(25);
     }
-    strong{
+    strong {
         font-size: rem(32);
     }
     .welcome-links__icon {

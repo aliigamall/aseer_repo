@@ -1,38 +1,67 @@
-.l-ideas{
-    background: url("#{$img-path}/ideas-bg.png") no-repeat #{$right} bottom, url("#{$img-path}/ideas-pattern.png") no-repeat #{$left} top;
+.l-ideas {
+    background: url("#{$img-path}/ideas-bg.png") no-repeat #{$right} bottom,
+    url("#{$img-path}/ideas-pattern.png") no-repeat #{$left} top;
     background-size: auto 97%, auto;
     padding-top: 10vh;
+    @include breakpoint(isMobile) {
+        padding-top: 4vh;
+        background-size: 85%;
+    }
 }
-.l-ideas__title{
+
+.l-ideas__title {
     font-size: rem(38);
     color: $color-text;
     margin-bottom: 20px;
-    &--light{
+    &--light {
         color: #fff;
     }
 }
-.l-ideas__description{
+
+.l-ideas__description {
     font-size: rem(16);
     color: $color-text;
     line-height: 1.6;
-    &--light{
+    &--light {
         color: #fff;
     }
 }
-.l-ideas__actions{
+
+.l-ideas__actions {
     margin-top: 5vh;
-    display: flex;
-    // justify-content: center;
-    > .button + .button{
-        @supports (margin-inline-start: 20px){
+    display: flex; // justify-content: center;
+
+    @include breakpoint(isMobile){
+        display: block;
+    }
+
+    >.button+.button {
+        @supports (margin-inline-start: 20px) {
             margin-inline-end: 20px;
         }
-        @supports (margin-inline-start: 20px){
+        @supports (margin-inline-start: 20px) {
             margin-#{$left}: 20px;
+            @include breakpoint(isMobile){
+                margin-#{$left}: 0;
+            }
+        }
+    }
+
+    a.button{
+        @include breakpoint(isMobile){
+            display: block;
+            width: 100%;
+            margin-#{$left}: 0;
+            margin-bottom: 15px;
+            font-size: 1.4rem
         }
     }
 }
-.l-ideas__details{
+
+.l-ideas__details {
     display: flex;
     margin-top: 10vh;
+    @include breakpoint(isMobile){
+        display: block;
+    }
 }

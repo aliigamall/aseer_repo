@@ -3,15 +3,18 @@
     color: $color-text;
     margin: 0;
     display: inline-block;
-    
-    &--light{
+    @include breakpoint(isMobile) {
+        margin-top: 30px;
+        font-size: 2.5rem;
+    }
+    &--light {
         color: #fff;
-        + .main-title__brief{
+        +.main-title__brief {
             color: #fff;
         }
     }
-    &:not(&--no-underline){
-        &:after{
+    &:not(&--no-underline) {
+        &:after {
             content: '';
             width: 40%;
             height: 8px;
@@ -21,28 +24,36 @@
             margin-top: 15px;
         }
     }
-    > p{
+    >p {
         font-size: .4em;
         margin-bottom: 0;
     }
 }
 
-.main-title--icon{
+.main-title--icon {
     display: flex;
     align-items: center;
-    > svg{
+    >svg {
         width: 90px;
         height: 90px;
         fill: $color-primary;
-        @supports (margin-inline-end: 20px){
+
+        @include breakpoint(isMobile){
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+        }
+
+        @supports (margin-inline-end: 20px) {
             margin-inline-end: 20px;
         }
-        @supports not (margin-inline-end: 20px){
+        @supports not (margin-inline-end: 20px) {
             margin-#{$right}: 20px;
         }
     }
 }
-.main-title__brief{
+
+.main-title__brief {
     margin-top: 4vh;
     margin-bottom: 0;
 }
