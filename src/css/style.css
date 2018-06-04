@@ -9121,6 +9121,11 @@ button.button + .button {
 
 .image-gallery-url {
   margin-top: 20px;
+  background: #fecd08;
+  display: inline-block;
+  padding: 10px;
+  height: 50px;
+  border-radius: 10px;
 }
 
 .image-gallery-url .quick-links__icon {
@@ -9132,6 +9137,7 @@ button.button + .button {
 
 .image-gallery-url a {
   color: #333;
+  font-weight: 700;
 }
 
 .image-gallery-url a:hover {
@@ -9547,6 +9553,12 @@ div#accordion .groupheader:nth-child(1) {
 
 .l-full-page--auto-height .fp-tableCell {
   height: auto !important;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .main-footer {
+    padding-bottom: 14.5rem;
+  }
 }
 
 .nav-bar {
@@ -10071,8 +10083,12 @@ div#accordion .groupheader:nth-child(1) {
 }
 
 .l-inner-details .details-content .details-description {
-  margin-top: 10px;
+  margin-top: 0;
   font-size: .98em;
+  display: inline-block;
+  line-height: 25px;
+  width: 56%;
+  text-align: justify;
 }
 
 .l-inner-details .details-content .details-description p {
@@ -10088,6 +10104,54 @@ div#accordion .groupheader:nth-child(1) {
 .l-inner-details .details-content .event-date .news-date > div {
   display: inline-block;
   margin-left: 15px;
+}
+
+.l-inner-details .details-content .event-date,
+.l-inner-details .details-content .event-location,
+.l-inner-details .details-content .event-registration,
+.l-inner-details .details-content .event-type,
+.l-inner-details .details-content .event-audience {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.l-inner-details .details-content .event-date > span,
+.l-inner-details .details-content .event-location > span,
+.l-inner-details .details-content .event-registration > span,
+.l-inner-details .details-content .event-type > span,
+.l-inner-details .details-content .event-audience > span {
+  font-weight: 700;
+}
+
+.l-inner-details .details-content .event-date i.fa,
+.l-inner-details .details-content .event-location i.fa,
+.l-inner-details .details-content .event-registration i.fa,
+.l-inner-details .details-content .event-type i.fa,
+.l-inner-details .details-content .event-audience i.fa {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.l-inner-details .details-content .event-date .event-startDate,
+.l-inner-details .details-content .event-date .event-endDate,
+.l-inner-details .details-content .event-location .event-startDate,
+.l-inner-details .details-content .event-location .event-endDate,
+.l-inner-details .details-content .event-registration .event-startDate,
+.l-inner-details .details-content .event-registration .event-endDate,
+.l-inner-details .details-content .event-type .event-startDate,
+.l-inner-details .details-content .event-type .event-endDate,
+.l-inner-details .details-content .event-audience .event-startDate,
+.l-inner-details .details-content .event-audience .event-endDate {
+  display: inline-block;
+}
+
+.l-inner-details .details-content .event-date .event-startDate,
+.l-inner-details .details-content .event-location .event-startDate,
+.l-inner-details .details-content .event-registration .event-startDate,
+.l-inner-details .details-content .event-type .event-startDate,
+.l-inner-details .details-content .event-audience .event-startDate {
+  margin-left: 20px;
 }
 
 .events-list {
@@ -10275,51 +10339,16 @@ div#accordion .groupheader:nth-child(1) {
   display: none;
 }
 
-/*Rating Section*/
-/****** Style Star Rating Widget *****/
-.rating {
-  border: none;
-  float: left;
-  direction: ltr;
-  margin-top: -10px;
-  margin-right: 10px;
-}
-
-.rating > input {
-  display: none;
-}
-
-.rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
+.rating-section > span {
   display: inline-block;
-  content: "\f005";
 }
 
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
+.rating-section .ms-comm-ratingSeparator {
+  border-left: 0;
 }
 
-.rating > label {
-  color: #ddd;
-  float: right;
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: #fecd08;
-}
-
-/* hover previous stars in list */
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label {
-  color: #fecd08;
+.rating-section .ms-comm-ratingCountContainer {
+  vertical-align: baseline;
 }
 
 .news-list {
@@ -10351,6 +10380,10 @@ div#accordion .groupheader:nth-child(1) {
 .news-item .card .card-header {
   height: 200px;
   overflow: hidden;
+}
+
+.news-item .card .card-header figure {
+  height: 200px;
 }
 
 .news-item .card .card-header figure img {
