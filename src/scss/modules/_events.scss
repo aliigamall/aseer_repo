@@ -52,8 +52,12 @@
             }
         }
         .details-description {
-            margin-top: 10px;
+            margin-top: 0;
             font-size: .98em;
+            display: inline-block;
+            line-height: 25px;
+            width: 56%;
+            text-align: justify;
             p {
                 line-height: 28px;
             }
@@ -65,6 +69,29 @@
             >div {
                 display: inline-block;
                 margin-#{$right}: 15px;
+            }
+        }
+        .event-date,
+        .event-location,
+        .event-registration,
+        .event-type,
+        .event-audience {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            >span {
+                font-weight: 700;
+            }
+            i.fa {
+                display: inline-block;
+                margin-#{$right}: 5px;
+            }
+            .event-startDate,
+            .event-endDate {
+                display: inline-block;
+            }
+            .event-startDate {
+                margin-#{$right}: 20px;
             }
         }
     }
@@ -243,61 +270,14 @@
     }
 }
 
-/*Rating Section*/
-
-/****** Style Star Rating Widget *****/
-
-.rating {
-    border: none;
-    float: $right;
-    direction: ltr;
-    margin-top: -10px;
-    margin-#{$left}: 10px;
-}
-
-.rating>input {
-    display: none;
-}
-
-.rating>label:before {
-    margin: 5px;
-    font-size: 1.25em;
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f005";
-}
-
-.rating>.half:before {
-    content: "\f089";
-    position: absolute;
-}
-
-.rating>label {
-    color: #ddd;
-    float: $left;
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating>input:checked~label,
-/* show gold star when clicked */
-
-.rating:not(:checked)>label:hover,
-/* hover current star */
-
-.rating:not(:checked)>label:hover~label {
-    color: $color-primary;
-}
-
-/* hover previous stars in list */
-
-.rating>input:checked+label:hover,
-/* hover current star when changing rating */
-
-.rating>input:checked~label:hover,
-.rating>label:hover~input:checked~label,
-/* lighten current selection */
-
-.rating>input:checked~label:hover~label {
-    color: $color-primary;
+.rating-section {
+    >span {
+        display: inline-block;
+    }
+    .ms-comm-ratingSeparator{
+        border-left: 0;
+    }
+    .ms-comm-ratingCountContainer{
+        vertical-align: baseline;
+    }
 }

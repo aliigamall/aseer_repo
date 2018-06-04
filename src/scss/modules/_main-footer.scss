@@ -1,5 +1,4 @@
-.main-footer{
-}
+
 .main-footer__top{
     background: $footer-bg;
     padding: $footer-padding;
@@ -18,7 +17,7 @@
     margin-bottom: 0;
     padding: 0;
     list-style: none;
-    margin-top: rem(40);
+    margin-top: rem(40); 
     li{
         padding: 0 10px;
 
@@ -98,5 +97,11 @@
     height: auto !important;
     .fp-tableCell{
         height: auto !important;
+    }
+}
+
+.main-footer{
+    @include breakpoint(isMobile){
+        padding-bottom: 14.5rem;
     }
 }
