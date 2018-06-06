@@ -9291,10 +9291,6 @@ button.button + .button {
   clear: both;
 }
 
-.cbq-layout-main .dfwp-column .dfwp-item:nth-child(3n+1) {
-  clear: both;
-}
-
 .l-sideImg {
   height: 525px;
   background-image: url("../images/sideBox-bg1.jpg");
@@ -12580,6 +12576,11 @@ div#accordion .groupheader:nth-child(1) {
 
 .text-danger {
   color: #d62222;
+  font-size: 12px;
+}
+
+.text-help {
+  color: #888;
   font-size: 12px;
 }
 
