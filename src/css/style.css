@@ -9182,20 +9182,16 @@ button.button + .button {
 .twt {
   padding: 0;
   position: relative;
+  background: url(/Style%20Library/AseerBranding/images/svg/twitter.svg) 0 0 no-repeat;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  opacity: .6;
+  top: 6px;
 }
 
 .twt iframe#twitter-widget-0 {
   left: 0 !important;
-}
-
-.twt::before {
-  content: "\f099";
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .details--header {
@@ -9217,20 +9213,14 @@ button.button + .button {
 
 .details--header #fb-share-button {
   padding: 0;
-  font-size: 25px;
-  color: #c1bfbe;
   position: relative;
-}
-
-.details--header #fb-share-button::before {
-  content: "\f09a";
+  background: url(/Style%20Library/AseerBranding/images/svg/facebook.svg) 0 0 no-repeat;
+  width: 25px;
+  height: 25px;
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 24px;
-  color: #757575;
+  opacity: .6;
+  position: relative;
+  top: 12px;
 }
 
 .details--header #fb-share-button:hover {
@@ -10194,26 +10184,6 @@ div#accordion .groupheader:nth-child(1) {
   padding-bottom: 50px;
 }
 
-.l-inner-details .details--header {
-  margin-left: 100px;
-  float: left;
-  text-align: left;
-}
-
-.l-inner-details .details--header li {
-  display: inline-block;
-  direction: rtl;
-  margin-right: 10px;
-}
-
-.l-inner-details .details--header li a {
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 22px;
-  margin-right: 5px;
-  display: inline-block;
-  font-weight: 700;
-}
-
 .l-inner-details .details-content .event-title,
 .l-inner-details .details-content .news-title {
   font-size: 2.2rem;
@@ -10517,6 +10487,39 @@ div#accordion .groupheader:nth-child(1) {
   vertical-align: baseline;
 }
 
+.details--header {
+  margin-left: 100px;
+  float: left;
+  text-align: left;
+}
+
+.details--header li {
+  display: inline-block;
+  direction: rtl;
+  margin-right: 10px;
+}
+
+.details--header li a {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 22px;
+  margin-right: 5px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.details--header li a .icon svg {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  fill: rgba(0, 0, 0, 0.54);
+  position: relative;
+  top: 6px;
+}
+
+.details--header li a .icon:hover {
+  background-color: transparent;
+}
+
 .news-list {
   position: relative;
   margin-top: 30px;
@@ -10529,6 +10532,12 @@ div#accordion .groupheader:nth-child(1) {
 
 .news-item {
   margin-bottom: 30px;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .news-item {
+    width: 100% !important;
+  }
 }
 
 .news-item .card {

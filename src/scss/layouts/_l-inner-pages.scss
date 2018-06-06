@@ -214,17 +214,14 @@
 .twt {
     padding: 0;
     position: relative;
+    background: url(/Style%20Library/AseerBranding/images/svg/twitter.svg) 0 0 no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    opacity: .6;
+    top: 6px;
     iframe#twitter-widget-0 {
         #{$right}: 0 !important;
-    }
-    &::before {
-        content: "\f099";
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
     }
 }
 
@@ -245,19 +242,14 @@
     }
     #fb-share-button {
         padding: 0;
-        font-size: 25px;
-        color: #c1bfbe;
         position: relative;
-        &::before {
-            content: "\f09a";
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-size: 24px;
-            color: #757575;
-        }
+        background: url(/Style%20Library/AseerBranding/images/svg/facebook.svg) 0 0 no-repeat;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        opacity: .6;
+        position: relative;
+        top: 12px;
         &:hover {
             color: #fff;
         }
@@ -309,15 +301,15 @@
     width: 100%;
 }
 
-.SubSitesJs{
+.SubSitesJs {
     .news-item:nth-child(3n+1) {
         clear: both;
-    } 
+    }
 }
 
-.cbq-layout-main{
-    .dfwp-column{
-        .dfwp-item:nth-child(3n+1){
+.cbq-layout-main {
+    .dfwp-column {
+        .dfwp-item:nth-child(3n+1) {
             clear: both;
         }
     }
