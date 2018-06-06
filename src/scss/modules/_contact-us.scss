@@ -1,0 +1,23 @@
+.contact-us__details{
+    margin-top: 30px;
+}
+.contact-us__details-block{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(#000, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-us__details-title{
+    display: flex;
+    margin-bottom: 10px;
+    svg{
+        width: 24px;
+        height: 24px;
+        margin-#{$right}: 15px;
+    }
+}
+
+.contact-us__details-text{
+    display: block;
+    margin-bottom: 15px;
+}
