@@ -266,37 +266,3 @@
     }
 }
 
-
-.details--header {
-    margin-#{$right}: 100px;
-    float: $right;
-    text-align: $right;
-    li {
-        display: inline-block;
-        direction: rtl;
-        margin-#{$left}: 10px;
-        a {
-            color: rgba(0, 0, 0, 0.54);
-            font-size: 22px;
-            margin-#{$left}: 5px;
-            display: inline-block;
-            font-weight: 700;
-            .icon{
-
-                svg{
-                    width: 25px;
-                    height: 25px;
-                    padding: 0;
-                    fill: rgba(0, 0, 0, 0.54);
-                    position: relative;
-                    top: 6px;
-                }
-
-                &:hover{
-                    background-color: transparent;
-                }
-            }
-           
-        }
-    }
-}

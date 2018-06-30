@@ -9003,6 +9003,63 @@ button.button + .button {
   margin-top: 30px;
 }
 
+.l-inner-page {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.l-inner-page .l-header-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  height: 400px;
+}
+
+.l-inner-page .l-header-image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.l-inner-page .inner-page-header {
+  padding-top: 8rem;
+  height: 400px;
+}
+
+.l-inner-page .inner-page-header .page-header--subtitle {
+  color: #fcbb0c;
+  font-size: 1.2rem;
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.l-inner-page .inner-page-header .page-header--title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-top: 5rem;
+}
+
+.l-inner-page .inner-page-header .page-header--title:before {
+  content: "";
+  background: #fcbb0c;
+  height: 2px;
+  width: 5%;
+  margin-left: 25px;
+  float: right;
+  margin-top: 40px;
+}
+
+.l-inner-page .inner-page-header .page-header--summary {
+  width: 50%;
+  line-height: 32px;
+  color: #fff;
+  margin-right: 100px;
+  font-size: 0.96rem;
+  margin-top: 30px;
+}
+
 .inner-page-content .inner-page-description {
   position: relative;
 }
@@ -9192,56 +9249,6 @@ button.button + .button {
 
 .twt iframe#twitter-widget-0 {
   left: 0 !important;
-}
-
-.details--header {
-  position: relative;
-}
-
-.details--header .twt::before {
-  font-size: 24px;
-  color: #757575;
-}
-
-.details--header .twt iframe {
-  opacity: 0;
-  position: absolute !important;
-  left: 68px !important;
-  width: 30px !important;
-  top: 1px;
-}
-
-.details--header #fb-share-button {
-  padding: 0;
-  position: relative;
-  background: url(/Style%20Library/AseerBranding/images/svg/facebook.svg) 0 0 no-repeat;
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  opacity: .6;
-  position: relative;
-  top: 12px;
-}
-
-.details--header #fb-share-button:hover {
-  color: #fff;
-}
-
-.details--header #fb-share-button span {
-  display: inline-block;
-  position: relative;
-  text-align: justify;
-  height: 40px !important;
-  width: auto !important;
-}
-
-.details--header #fb-share-button span iframe {
-  position: absolute;
-  width: 30px !important;
-  height: 40px !important;
-  left: -7px;
-  opacity: 0;
-  top: 5px;
 }
 
 .image-gallery-url {
@@ -10495,39 +10502,6 @@ div#accordion .groupheader:nth-child(1) {
 
 .rating-section .ms-comm-ratingCountContainer {
   vertical-align: baseline;
-}
-
-.details--header {
-  margin-left: 100px;
-  float: left;
-  text-align: left;
-}
-
-.details--header li {
-  display: inline-block;
-  direction: rtl;
-  margin-right: 10px;
-}
-
-.details--header li a {
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 22px;
-  margin-right: 5px;
-  display: inline-block;
-  font-weight: 700;
-}
-
-.details--header li a .icon svg {
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  fill: rgba(0, 0, 0, 0.54);
-  position: relative;
-  top: 6px;
-}
-
-.details--header li a .icon:hover {
-  background-color: transparent;
 }
 
 .news-list {
@@ -12597,7 +12571,7 @@ div#accordion .groupheader:nth-child(1) {
   .ribbon-wrapper,
   .main-header,
   .page-header,
-  .details--header,
+  .socials__header,
   .main-footer__top,
   .main-footer__quick-links {
     display: none !important;
@@ -12859,6 +12833,10 @@ div#accordion .groupheader:nth-child(1) {
   .dialog-surface {
     min-width: 640px;
   }
+}
+
+.dialog-surface--md {
+  width: 50vw;
 }
 
 .dialog-surface--wd {
@@ -13474,6 +13452,46 @@ div#accordion .groupheader:nth-child(1) {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.socials-header {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  list-style: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.socials-header__share {
+  position: relative;
+  overflow: hidden;
+}
+
+.socials-header__share iframe,
+.socials-header__share .socials-header__share-absolute {
+  position: absolute !important;
+  opacity: 0.01;
+  z-index: 10;
+  min-width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.socials-header__font-size {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.rating-section a {
+  margin: 0 3px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
