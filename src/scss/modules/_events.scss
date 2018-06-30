@@ -27,7 +27,7 @@
         }
         .event-img,
         .news-img {
-            width: 40%;
+            max-width: 40%;
             float: $left;
             overflow: hidden;
             margin-#{$right}: 20px;
@@ -38,9 +38,7 @@
         .details-description {
             margin-top: 0;
             font-size: .98em;
-            display: inline-block;
             line-height: 25px;
-            width: 56%;
             text-align: justify;
             p {
                 line-height: 28px;

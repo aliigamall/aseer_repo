@@ -1,0 +1,142 @@
+
+$mdc-radio-checked-color: #a9a9a9;
+$mdc-radio-border-color: #a9a9a9;
+$md-radio-border-disabled: rgba(0, 0, 0, 0.26);
+$mdc-radio-size: 20px;
+$mdc-radio-checked-size: 20px;
+$mdc-radio-ripple-size: 15px;
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px $mdc-radio-ripple-size rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px $mdc-radio-ripple-size rgba(0, 0, 0, 0);
+    }
+}
+
+.mdc-radio {
+    tbody{
+        display: table;
+     }
+    // margin: 16px 0;
+    &.mdc-radio-inline {
+        display: inline-block;
+        position: relative;
+
+        + .mdc-radio-inline {
+            margin-left: 20px;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked {
+            + label:before {
+                border-color: $mdc-radio-checked-color;
+                //animation: ripple 0.2s linear forwards;
+            }
+
+            + label:after {
+                transform: scale(0.5);
+            }
+
+            &[disabled] {
+                + label:after {
+                    background: #ccc;
+                }
+            }
+        }
+
+        &[disabled] {
+            + label {
+                color: #333;
+            }
+
+            + label:before {
+                border-color: $md-radio-border-disabled;
+            }
+        }
+    }
+
+    .custom-disabled {
+        label {
+            &:after {
+                top: 0px;
+                left: 2px;
+                content: "check";
+                color: #fff;
+                font-family: 'Material Icons';
+                font-weight: bold;
+            }
+
+            &:before {
+                background: $md-radio-border-disabled;
+                border: 0;
+            }
+        }
+    }
+
+    label {
+        padding-right: $mdc-radio-size + 15px;
+        display: inline-block;
+        color: #333;
+        font-size: 14px;
+        line-height: $mdc-radio-size;
+        font-weight: normal;
+        position: relative;
+
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            transition: all .3s ease;
+            transition-property: transform, border-color;
+        }
+
+        &:before {
+            right: 0;
+            top: 0;
+            width: $mdc-radio-size;
+            height: $mdc-radio-size;
+            border: 2px solid $mdc-radio-border-color;
+        }
+
+        &:after {
+            top: 0;
+            right: 0;
+            width: $mdc-radio-checked-size;
+            height: $mdc-radio-checked-size;
+            transform: scale(0);
+            background: $mdc-radio-checked-color;
+        }
+    }
+    // to fix radio button list
+    tr + tr {
+        td{
+            padding-top: 15px;
+        }
+    }
+
+    td {
+        padding: 0;
+
+        + td {
+            padding-left: 20px;
+        }
+    }
+}
+
+.mdc-radio-fix {
+    label {
+        &:before, &:after {
+            top: -2px;
+        }
+    }
+}

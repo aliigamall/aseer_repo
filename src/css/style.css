@@ -2986,6 +2986,58 @@ select.form-control-lg:not([size]):not([multiple]) {
   color: #040505;
 }
 
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #fecd08;
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+  -webkit-animation: progress-bar-stripes 1s linear infinite;
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
 /**
  * Swiper 4.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -7895,6 +7947,10 @@ a:visited {
   display: none;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 @media (min-width: 576px) {
   .button-wrapper {
     margin-right: -16px;
@@ -8944,6 +9000,12 @@ button.button + .button {
   float: right;
   margin-top: 7px;
   font-size: 20px;
+}
+
+.l-inner-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .l-inner-page {
@@ -10224,7 +10286,7 @@ div#accordion .groupheader:nth-child(1) {
 
 .l-inner-details .details-content .event-img,
 .l-inner-details .details-content .news-img {
-  width: 40%;
+  max-width: 40%;
   float: right;
   overflow: hidden;
   margin-left: 20px;
@@ -10238,9 +10300,7 @@ div#accordion .groupheader:nth-child(1) {
 .l-inner-details .details-content .details-description {
   margin-top: 0;
   font-size: .98em;
-  display: inline-block;
   line-height: 25px;
-  width: 56%;
   text-align: justify;
 }
 
@@ -12569,15 +12629,20 @@ div#accordion .groupheader:nth-child(1) {
 
 @media print {
   .ribbon-wrapper,
-  .main-header,
-  .page-header,
+  .breadcrumb,
+  .vertical-nav,
   .socials__header,
   .main-footer__top,
+  .side-nav,
+  .socials-header,
   .main-footer__quick-links {
     display: none !important;
   }
   .l-container {
     padding: 0 !important;
+  }
+  .page-header .top-banner {
+    padding-bottom: 40px;
   }
 }
 
@@ -13492,6 +13557,182 @@ div#accordion .groupheader:nth-child(1) {
 
 .rating-section a {
   margin: 0 3px;
+}
+
+.voting__question {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.voting__actions {
+  margin-top: 20px;
+}
+
+.voting__actions .button,
+.voting__actions .button + .button {
+  margin-right: 0 !important;
+  margin-left: 10px;
+}
+
+.vote__result {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.progress-bar {
+  color: #000;
+}
+
+.voting__count {
+  margin-right: 5px;
+}
+
+.progress__hiddenVal {
+  display: none;
+}
+
+.voting__archive {
+  border: 1px solid #ededed;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 1px transparent;
+    box-shadow: 0px 0px 0px 1px transparent;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 15px transparent;
+    box-shadow: 0px 0px 0px 15px transparent;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 1px transparent;
+    box-shadow: 0px 0px 0px 1px transparent;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 15px transparent;
+    box-shadow: 0px 0px 0px 15px transparent;
+  }
+}
+
+.mdc-radio tbody {
+  display: table;
+}
+
+.mdc-radio.mdc-radio-inline {
+  display: inline-block;
+  position: relative;
+}
+
+.mdc-radio.mdc-radio-inline + .mdc-radio-inline {
+  margin-left: 20px;
+}
+
+.mdc-radio input[type="radio"] {
+  display: none;
+}
+
+.mdc-radio input[type="radio"]:checked + label:before {
+  border-color: #a9a9a9;
+}
+
+.mdc-radio input[type="radio"]:checked + label:after {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.mdc-radio input[type="radio"]:checked[disabled] + label:after {
+  background: #ccc;
+}
+
+.mdc-radio input[type="radio"][disabled] + label {
+  color: #333;
+}
+
+.mdc-radio input[type="radio"][disabled] + label:before {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+
+.mdc-radio .custom-disabled label:after {
+  top: 0px;
+  left: 2px;
+  content: "check";
+  color: #fff;
+  font-family: 'Material Icons';
+  font-weight: bold;
+}
+
+.mdc-radio .custom-disabled label:before {
+  background: rgba(0, 0, 0, 0.26);
+  border: 0;
+}
+
+.mdc-radio label {
+  padding-right: 35px;
+  display: inline-block;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  position: relative;
+}
+
+.mdc-radio label:before, .mdc-radio label:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transition-property: border-color, -webkit-transform;
+  transition-property: border-color, -webkit-transform;
+  transition-property: transform, border-color;
+  transition-property: transform, border-color, -webkit-transform;
+}
+
+.mdc-radio label:before {
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a9a9a9;
+}
+
+.mdc-radio label:after {
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background: #a9a9a9;
+}
+
+.mdc-radio tr + tr td {
+  padding-top: 15px;
+}
+
+.mdc-radio td {
+  padding: 0;
+}
+
+.mdc-radio td + td {
+  padding-left: 20px;
+}
+
+.mdc-radio-fix label:before, .mdc-radio-fix label:after {
+  top: -2px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

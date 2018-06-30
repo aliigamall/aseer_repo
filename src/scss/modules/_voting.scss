@@ -1,0 +1,31 @@
+.voting__question{
+    // color: $color-secondary;
+    font-size: rem(20);
+    margin-bottom: 15px;
+}
+.voting__actions{
+    margin-top: 20px;
+    .button,
+    .button + .button{
+        margin-#{$left}: 0 !important;
+        margin-#{$right}: 10px;
+    }
+}
+.vote__result{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.progress-bar{
+    color: #000;
+}
+.voting__count{
+    margin-#{$left}: 5px;
+}
+.progress__hiddenVal{
+    display: none;
+}
+.voting__archive{
+    border: 1px solid #ededed;
+    padding: 20px;
+    margin-bottom: 30px;
+}
