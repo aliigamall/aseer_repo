@@ -6,7 +6,7 @@ $tab-bg: $color-secondary;
     list-style: none;
     margin-bottom: 0;
     border: 2px solid $tab-bg;
-    border-radius: 2em;
+    border-radius: 3em;
     overflow: hidden;
     @include breakpoint(isMobile) {
         margin-top: 40px;

@@ -8,7 +8,9 @@
     } 
     
     .swiper-slide-active{
-        @include scale(1.1);
+        @include breakpoint(small){
+            transform: scale(1.1);
+        }
     }
 }
 .l-discover__bottom{

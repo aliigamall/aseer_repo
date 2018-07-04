@@ -34,34 +34,29 @@
             }
             >a,
             a:visited {
-                color: #000;
-                &::before {
-                    content: "";
-                    background: rgba(0, 0, 0, 0.5019607843137255);
-                    width: 94%;
-                    height: 97%;
-                    display: inline-block;
-                    position: absolute;
-                    z-index: 9;
-                    transition: all .3s ease-in-out;
-                    @include breakpoint(isMobile) {
-                        width: 100%;
-                        height: 30%;
-                        opacity: 1 !important;
-                        bottom: 0;
-                    }
-                }
-                &:hover {
-                    &:before {
-                        opacity: 0;
-                        overflow: hidden;
-                        @include breakpoint(isMobile) {
-                            opacity: 1;
-                        }
-                    }
+                color: #000;                
+                &:hover {                   
                     .card--title {
                         color: $color-primary !important;
                     }
+                    .card--image{
+                        &:after{
+                            background: rgba(0,0,0,0.01);
+                        }
+                    }
+                }
+            }
+            .card--image{
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    @include transition();
                 }
             }
             .card--center {

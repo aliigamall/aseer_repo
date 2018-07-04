@@ -73,6 +73,8 @@
 .card__title {
     font-size: 1.2em;
     font-weight: 700;
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 0.5em;
     @include breakpoint(isMobile) {
         font-size: 1.5em;
@@ -151,4 +153,8 @@
     .card__title{
         margin-bottom: 0;
     }
+}
+
+.card__idea{
+    margin-bottom: 30px;
 }

@@ -24,13 +24,19 @@ $links-margin: 10px !default;
 .welcome-links__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -#{$links-margin};
+    @include breakpoint(large) {
+        margin: 0 -#{$links-margin};
+    }
 }
 
 .welcome-links__icon {
-    width: 55px;
-    height: 55px;
+    width: 30px;
+    height: 30px;
     fill: $color-primary;
+    @include breakpoint(small){
+        width: 55px;
+        height: 55px;
+    }
     @supports (margin-inline-end: 1em) {
         margin-inline-end: 1em;
     }
@@ -43,19 +49,32 @@ $links-margin: 10px !default;
     display: inline-flex;
     flex-direction: column;
     color: #fff;
-    font-size: rem(20);
+    font-size: rem(16);
+    @include breakpoint(small){
+        font-size: rem(20);
+    }
 }
 
 .welcome-links--lg {
     justify-content: center;
     .welcome-links__title {
-        font-size: rem(25);
+        font-size: rem(20);
+        @include breakpoint(small){
+            font-size: rem(25);
+        }
     }
     strong {
-        font-size: rem(32);
+        font-size: rem(28);
+        @include breakpoint(small){
+            font-size: rem(32);
+        }
     }
     .welcome-links__icon {
-        width: 85px;
-        height: 85px;
+        width: 55px;
+        height: 55px;
+        @include breakpoint(small){
+            width: 85px;
+            height: 85px;
+        }
     }
 }

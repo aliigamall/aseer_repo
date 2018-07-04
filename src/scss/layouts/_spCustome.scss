@@ -1,15 +1,17 @@
-#s4-workspace {
-    overflow: hidden;
-    height: auto !important;
-    @include breakpoint(isMobile) {
-        overflow-y: scroll;
-        overflow-x: hidden;
+.is-displayMode{
+    #s4-workspace {
+        overflow: hidden;
+        height: auto !important;
+        @include breakpoint(isMobile) {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
     }
-}
-
-body {
-    overflow: auto !important;
-    height: auto !important;
+    
+    body {
+        overflow: auto !important;
+        height: auto !important;
+    }
 }
 
 #pageStatusBar[class],
@@ -46,5 +48,18 @@ a:visited {
 .row {
     @include breakpoint(isMobile) {
         display: block;
+    }
+}
+.page-content-text{
+    *{
+        color: #000;
+    }
+    h1, h2, h3, h4, h5, h6{
+        color: $color-secondary--dark;
+        font-weight: 700;
+        margin-top: 1em;
+    }
+    h3{
+        color: #333;
     }
 }

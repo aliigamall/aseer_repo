@@ -57,6 +57,10 @@
     fill: rgba(#606060, .8);
     width: 150px;
     height: 100px;
+    @include breakpoint(isMobile){
+        width: 80px;
+        height: 50px;
+    }
 }
 
 .main-footer__quick-links{
@@ -100,8 +104,8 @@
     }
 }
 
-.main-footer{
-    @include breakpoint(isMobile){
-        padding-bottom: 14.5rem;
-    }
-}
+// .main-footer{
+//     @include breakpoint(isMobile){
+//         padding-bottom: 14.5rem;
+//     }
+// }

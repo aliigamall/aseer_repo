@@ -1,6 +1,9 @@
 .l-container {
     display: flex;
     padding: 5vh 0;
+    @include breakpoint(isMobile){
+        flex-direction: column;
+    }
 }
 
 .l-home-section {
@@ -20,9 +23,9 @@
 
 .fp-section,
 .fp-tableCell {
-    @include breakpoint(isMobile) {
-        height: auto !important;
-    }
+    // @include breakpoint(isMobile) {
+    //     height: auto !important;
+    // }
     .main-footer {
         @include breakpoint(isMobile) {
             display: none;

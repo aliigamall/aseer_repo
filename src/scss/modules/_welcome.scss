@@ -10,12 +10,22 @@
     bottom: 0;
     overflow: hidden;
     z-index: -1;
-    >img,
+    @include breakpoint(isMobile) {
+        background: url("#{$img-path}/aseer-mountains.jpg");
+    }
+    // >img{
+    //     display: none;
+    //     min-width: 100%;
+    //     min-height: 100vh;
+    //     @include breakpoint(isMobile) {
+    //         display: block;
+    //     }
+    // }
     >video {
         min-width: 100%;
         min-height: 100vh;
         @include breakpoint(isMobile) {
-            height: 125vh;
+            display: none;
         }
     }
 }
@@ -23,12 +33,14 @@
 .welcome__container {
     color: #fff;
     padding: 150px 0 50px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     @include breakpoint(isMobile) {
         padding: 130px 0 50px;
+    }
+    @include breakpoint(small) {
+        height: 100vh;
     }
 }
 
@@ -76,5 +88,11 @@
             width: 16px;
             height: 16px;
         }
+    }
+}
+.fp-auto-height-responsive,
+.fp-tableCell{
+    @include breakpoint(isMobile) {
+        height: auto !important;
     }
 }
