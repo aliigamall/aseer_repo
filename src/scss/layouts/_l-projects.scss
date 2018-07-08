@@ -16,17 +16,21 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    @include breakpoint(isMobile) {
-        display: block;
+    @include breakpoint(isCommon) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow: auto;
     }
 }
 
 .l-projects-tabs__items {
     flex: 1;
+    @media(max-width: $screen-lg - 1) {
+        flex: 0 0 80%;
+    }
 }
 
-.l-projects-tabs__link,
-.l-projects-tabs__link:visited {
+.l-projects-tabs__link {
     padding: 30px 0;
     color: #fff;
     font-size: rem(26);
@@ -34,9 +38,10 @@
     width: 70%;
     opacity: 0.5;
     @include transition();
-    @include breakpoint(isMobile) {
-        width: 90%;
+    @include breakpoint(isCommon) {
+        width: 100%;
         padding: 0;
+        padding-#{$left}: 15px;
     }
     &:hover {
         text-decoration: none;
@@ -72,8 +77,17 @@
 
 .l-projects__charts {
     display: flex;
-    @include breakpoint(isMobile) {
+    @include breakpoint(isCommon) {
       margin-bottom: 30px;
+      margin-top: 50px;
+    }
+    div{
+        @include breakpoint(isCommon) {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+          }
     }
 }
 
@@ -86,14 +100,14 @@
     height: 180px;
     position: relative;
     margin: 0 40px;
-    @include breakpoint(isMobile) {
+    @include breakpoint(isCommon) {
         margin: 10px 7px 0;
         float: $left;
         width: 140px;
         height: 140px;
     }
     canvas {
-        @include breakpoint(isMobile) {
+        @include breakpoint(isCommon) {
             width: 140px !important;
             height: 140px !important;
         }
@@ -130,7 +144,7 @@
     color: #fff;
     text-align: center;
     margin-top: 20px;
-    @include breakpoint(isMobile) {
+    @include breakpoint(isCommon) {
         display: inline-block;
     }
 }

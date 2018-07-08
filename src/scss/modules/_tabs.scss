@@ -8,10 +8,7 @@ $tab-bg: $color-secondary;
     border: 2px solid $tab-bg;
     border-radius: 3em;
     overflow: hidden;
-    @include breakpoint(isMobile) {
-        margin-top: 40px;
-        width: 98.8%;
-    }
+    
 }
 
 .tab-bar__item {
@@ -51,9 +48,12 @@ $tab-bg: $color-secondary;
 .tab-item {
     opacity: 0;
     visibility: hidden;
+    width: 100%;
+    height: 100%;
     &:not(&--active) {
         position: absolute;
         top: 0;
+        z-index: -1;
     }
     &--active {
         opacity: 1;

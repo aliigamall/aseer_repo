@@ -28,6 +28,10 @@
 .l-tourism__bottom {
     .row {
         align-items: flex-end;
+        @include breakpoint(isCommon){
+            flex-wrap: nowrap;
+            overflow: auto;
+        }
     }
     .card__image {
         >img {
@@ -40,7 +44,7 @@
     .card__content {
         padding: 2em;
         font-size: 1rem;
-        @include breakpoint(isMobile) {
+        @include breakpoint(isCommon) {
             opacity: 1;
             visibility: visible;
             max-height: 600px;

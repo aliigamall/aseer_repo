@@ -8,11 +8,11 @@
     }
 
     .col{
-        @include breakpoint(isMobile){
-            max-width: 50%;
-            display: inline-block;
+        @include breakpoint(isCommon){
             float: $left;
-            margin-bottom: 30px;
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin: 30px 0;
         }
     }
 }

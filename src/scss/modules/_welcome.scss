@@ -10,8 +10,9 @@
     bottom: 0;
     overflow: hidden;
     z-index: -1;
-    @include breakpoint(isMobile) {
-        background: url("#{$img-path}/aseer-mountains.jpg");
+    @include breakpoint(isCommon) {
+        background: url("#{$img-path}/aseer-mountains.jpg") no-repeat;
+        background-size: cover;
     }
     // >img{
     //     display: none;
@@ -24,22 +25,34 @@
     >video {
         min-width: 100%;
         min-height: 100vh;
-        @include breakpoint(isMobile) {
+        @include breakpoint(isCommon) {
             display: none;
         }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 
 .welcome__container {
     color: #fff;
-    padding: 150px 0 50px;
+    padding: 17vh 0 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include breakpoint(isMobile) {
-        padding: 130px 0 50px;
+    @include breakpoint(isTablet) {
+        padding: 13vh 0 5vh;
     }
-    @include breakpoint(small) {
+    @include breakpoint(isMobile) {
+        padding: 130px 0 0;
+    }
+    @include breakpoint(large) {
         height: 100vh;
     }
 }
@@ -92,7 +105,7 @@
 }
 .fp-auto-height-responsive,
 .fp-tableCell{
-    @include breakpoint(isMobile) {
+    @include breakpoint(isCommon) {
         height: auto !important;
     }
 }

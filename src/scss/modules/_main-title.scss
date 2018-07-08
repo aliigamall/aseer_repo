@@ -3,10 +3,6 @@
     color: $color-text;
     margin: 0;
     display: inline-block;
-    @include breakpoint(isMobile) {
-        margin-top: 30px;
-        font-size: 2.5rem;
-    }
     &--light {
         color: #fff;
         +.main-title__brief {

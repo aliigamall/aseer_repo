@@ -1,5 +1,6 @@
 .idea {
     display: flex;
+    flex: 1;
     color: $color-text;
     @include breakpoint(isMobile) {
         background: rgba(255, 255, 255, 0.87);

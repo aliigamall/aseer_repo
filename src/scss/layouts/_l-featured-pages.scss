@@ -1,10 +1,11 @@
 .l-featured-pages {
     background: url("#{$img-path}/mountains-opacity.jpg") no-repeat #{$left} bottom;
+    background-size: cover;
     position: relative;
     .l-home-section {
         padding-top: 15vh;
-        @include breakpoint(isMobile) {
-            padding-top: 2vh;
+        @include breakpoint(isCommon) {
+            padding: 20px;
         }
     }
     .l-home-title {
@@ -21,6 +22,7 @@
     display: flex;
     justify-content: center;
     max-height: 90vh;
+    height: 90vh;
     @include breakpoint(isMobile) {
         max-height: 46vh;
     }
@@ -42,15 +44,20 @@
     max-height: 225px;
     transform: translate(-30%, 20%);
     filter: grayscale(100%);
-    @include breakpoint(isMobile) {
+}
+.l-featured__figures{
+    @include breakpoint(isCommon){
         display: none;
     }
 }
-
 .l-featured__bottom {
-    position: absolute;
-    bottom: 15vh;
-    left: 0;
-    right: 0;
-    z-index: 10;
+    padding-bottom: 20px;
+    @include breakpoint(large){
+        position: absolute;
+        bottom: 15vh;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding-bottom: 0;
+    }
 }

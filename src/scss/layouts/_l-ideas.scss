@@ -1,9 +1,9 @@
 .l-ideas {
     background: url("#{$img-path}/ideas-bg.png") no-repeat #{$right} bottom,
     url("#{$img-path}/ideas-pattern.png") no-repeat #{$left} top;
-    background-size: auto 97%, auto;
     padding-top: 10vh;
-    @include breakpoint(isMobile) {
+    background-size: auto 97%, auto;
+    @include breakpoint(isCommon) {
         padding-top: 4vh;
         background: none;
     }

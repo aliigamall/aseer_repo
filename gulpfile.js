@@ -106,7 +106,7 @@ gulp.task('DeployJs', function () {
 gulp.task('DeployImages', function () {
     // return gulp.src([srcPath+ 'images/**/*', '!svg-icons.svg'])
     return gulp.src(srcPath+ 'images/**/*')
-        //.pipe(imagemin())
+        .pipe(imagemin({progressive: true,}))
         .pipe(gulp.dest(distPath + 'images/'))
         ;
 });

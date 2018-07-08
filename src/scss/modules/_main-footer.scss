@@ -6,6 +6,11 @@
 .main-footer__bottom{
     background: $footer-bottom-bg;
     padding: 15px 0;
+    .row{
+        @include breakpoint(isMobile){
+            display: block;
+        }
+    }
 }
 .main-footer__container{
     display: flex;
@@ -68,6 +73,9 @@
     padding: 0 10px;
     list-style: none;
     display: flex;
+    @include breakpoint(isMobile){
+        justify-content: center;
+    }
     li{
         padding: 0 10px;
         + li{
