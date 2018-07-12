@@ -1,0 +1,24 @@
+.search-box{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.search-box__icon{
+    display: flex;
+    cursor: pointer;
+}
+.search-box__input{
+    border: 0;
+    background: transparent;
+    padding: 0;
+    width: 0;
+    @include transition();
+    &::placeholder{
+        color: #fff;
+    }
+}
+.search-box.is-open{
+    .search-box__input{
+        padding-#{$right}: 15px;
+        width: 180px;
+    }
+}

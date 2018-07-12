@@ -25,7 +25,9 @@
         // max-width: 865px;
     }
     &--md{
-        width: 50vw;
+        @include breakpoint(small){
+            width: 50vw;
+        }
     }
     &--wd{
         width: 85vw;
@@ -50,7 +52,7 @@
 
 .dialog-body {
     margin-top: 15px;
-    padding: 0 5px;
+    padding: 0 15px 15px;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.04em;

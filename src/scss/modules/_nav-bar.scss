@@ -101,6 +101,11 @@
             display: none;
         }
     }
+    .nav-bar__menu-link{
+        &:hover{
+            color: $color-primary;
+        }
+    }
 }
 
 .nav-bar__menu-item:hover{

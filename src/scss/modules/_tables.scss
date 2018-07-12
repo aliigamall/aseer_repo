@@ -6,7 +6,9 @@
     font-size: 13px;
     color: rgba(#000, .87);
     text-transform: capitalize;
-    min-width: 600px;
+    @include breakpoint(large){
+        min-width: 600px;
+    }
     tr{
         border-bottom: 1px solid #e3e3e3;
     }

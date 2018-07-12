@@ -1,6 +1,6 @@
 .l-container {
     display: flex;
-    padding: 5vh 0;
+    padding: 5vh 15px;
     @include breakpoint(isMobile){
         flex-direction: column;
     }
@@ -158,6 +158,7 @@ iframe#twitter-widget-1 {
 .tab-item:not(.tab-item--active) {
     @include breakpoint(isMobile) {
         top: auto !important;
+        // display: none;
     }
 }
 

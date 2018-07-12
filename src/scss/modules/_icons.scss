@@ -6,8 +6,12 @@
 
     > svg {
         fill: rgba(#000, .54);
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
+        @include breakpoint(small){
+            width: 24px;
+            height: 24px;
+        }
     }
 
     &:hover {

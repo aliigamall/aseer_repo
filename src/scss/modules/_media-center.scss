@@ -196,7 +196,7 @@
     .media-gallery {
         .images-gallery {
             background: url(../images/bg-section1.jpg) 0 0 no-repeat;
-            background-size: 100%;
+            background-size: cover;
             min-height: 500px;
             position: relative;
             a {
@@ -204,6 +204,7 @@
                 bottom: 60px;
                 padding-#{$left}: 40px;
                 &:hover {
+                    text-decoration: none;
                     svg.quick-links__icon {
                         fill: $color-primary;
                     }
@@ -229,10 +230,13 @@
         .aseer-press {
             text-align: center;
             background: url(../images/bg-section2.jpg) 0 0 no-repeat;
-            background-size: 100% !important;
+            background-size: cover !important;
             min-height: 250px;
             position: relative;
             padding-top: 37px;
+            @include breakpoint(isCommon){
+                margin-top: 30px;
+            }
             &:hover {
                 svg.quick-links__icon {
                     fill: $color-primary;
@@ -270,8 +274,10 @@
             fill: #fff;
         }
         div[class^=col] {
-            padding-left: 0;
-            padding-right: 0;
+            @include breakpoint(large){
+                padding-right: 0;
+                padding-left: 0;
+            }
         }
     }
 }
@@ -279,4 +285,9 @@
     background: url('#{$img-path}/menu-cover2.jpg') no-repeat;
     background-size: cover; 
     padding: 70px 0;
+}
+#qrcodeOutput{
+    @include breakpoint(isCommon){
+        display: none;
+    }
 }

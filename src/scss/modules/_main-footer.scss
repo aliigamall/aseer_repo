@@ -6,9 +6,17 @@
 .main-footer__bottom{
     background: $footer-bottom-bg;
     padding: 15px 0;
+    @include breakpoint(isCommon){
+        font-size: rem(14);
+    }
     .row{
-        @include breakpoint(isMobile){
+        @include breakpoint(isCommon){
             display: block;
+        }
+    }
+    .col{
+        @include breakpoint(isCommon){
+            text-align: center;
         }
     }
 }
@@ -73,7 +81,8 @@
     padding: 0 10px;
     list-style: none;
     display: flex;
-    @include breakpoint(isMobile){
+    @include breakpoint(isCommon){
+        margin-top: 20px;
         justify-content: center;
     }
     li{
@@ -98,11 +107,19 @@
     }
 }
 .main-footer__emblem{
-    @supports (margin-inline-end: 35px){
-        margin-inline-end: rem(35);
+    @supports (margin-inline-end: 15px){
+        margin-inline-end: rem(15);
     }
-    @supports not (margin-inline-end: 35px){
-        margin-#{$right}: rem(35);        
+    @supports not (margin-inline-end: 15px){
+        margin-#{$right}: rem(15);        
+    }
+    @include breakpoint(large){
+        @supports (margin-inline-end: 35px){
+            margin-inline-end: rem(35);
+        }
+        @supports not (margin-inline-end: 35px){
+            margin-#{$right}: rem(35);        
+        }
     }
 }
 .l-full-page--auto-height{

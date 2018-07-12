@@ -1,7 +1,11 @@
 .news-list {
     position: relative;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 30px;
+
+    @include breakpoint(large){
+        margin-top: 30px;
+    }
 }
 
 .news-item {
@@ -40,17 +44,19 @@
         }
         .card-content {
             padding: 30px 20px;
-            min-height: 140px;
-            min-height: 275px;
-            overflow: hidden;
-            max-height: 275px;
+            @include breakpoint(large){
+                min-height: 140px;
+                min-height: 275px;
+                overflow: hidden;
+                max-height: 275px;
+            }
             .card-date {
                 color: #666666;
                 font-size: 16px;
             }
             .card--title {
                 color: #000;
-                font-size: 18px;
+                font-size: rem(18);
                 font-weight: 700;
                 margin-top: 15px;
                 margin-bottom: 20px;
@@ -67,7 +73,7 @@
             }
             .card--description {
                 color: #000;
-                font-size: 15px;
+                font-size: rem(15);
                 text-align: justify;
                 line-height: 25px;
                 margin-bottom: 10px;
@@ -95,6 +101,8 @@
 }
 
 .SubSitesJs {
+    display: flex;
+    flex-wrap: wrap;
     .card {
         .card-content {
             min-height: auto;

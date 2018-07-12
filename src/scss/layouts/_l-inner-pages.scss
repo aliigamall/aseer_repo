@@ -1,5 +1,9 @@
 .l-inner-content{
     flex: 1;
+    @include breakpoint(isMobile){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 .l-inner-page {
     // min-height: 450px;
@@ -321,11 +325,11 @@
     width: 100%;
 }
 
-.SubSitesJs {
-    .news-item:nth-child(3n+1) {
-        clear: both;
-    }
-}
+// .SubSitesJs {
+//     .news-item:nth-child(3n+1) {
+//         clear: both;
+//     }
+// }
 
 // .cbq-layout-main {
 //     .dfwp-column {

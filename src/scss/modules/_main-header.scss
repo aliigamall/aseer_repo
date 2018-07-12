@@ -87,3 +87,21 @@
 }
 
 
+
+.site-beta{
+    background: #fecd08;
+    color: #000;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: auto;
+    padding: 3px 30px;
+    transform: translate(-50%, 0);
+    @include breakpoint(small){
+        right: 0;
+        left: auto;
+        padding: 5px 40px;
+        transform: rotate(45deg) translate(44px, -20px);
+    }
+}

@@ -32,8 +32,11 @@ $tab-bg: $color-secondary;
 .tab-bar__link {
     font-size: rem(16);
     color: $color-text;
-    padding: 0.75em 3em;
+    padding: 0.75em 1.5em;
     transition: background-color 0.2s ease, color 0.2s ease;
+    @include breakpoint(small){
+        padding: 0.75em 3em;
+    }
     &:hover {
         color: #fff;
         background-color: rgba($tab-bg, .8);

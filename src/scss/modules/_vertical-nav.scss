@@ -11,4 +11,19 @@
         margin-#{$right}: 20px;
     }
 }
+.vertical-nav--side{
+    @include breakpoint(mid){
+        display: none;
+    }
+    .vertical-nav__icon{
+        @supports (margin-inline-end: auto) {
+            margin-inline-end: 0;
+            margin-inline-start: 20px;
+        }
+        @supports not (margin-inline-end: auto) {
+            margin-#{$right}: 0;
+            margin-#{$left}: 20px;
+        }
+    }
+}
   

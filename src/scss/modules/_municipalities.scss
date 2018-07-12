@@ -1,0 +1,625 @@
+.municipalities-page{
+    .tab-item:not(.tab-item--active){
+        display: none;
+    }
+    .__municipalities-info {
+        background:#fff;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        padding: 0;
+        opacity:0;
+        transition:all 0.5s;
+        margin-left: 20px;
+        margin-right: 20px;
+        @include breakpoint(mid){
+            margin-left: 0;
+            margin-right: 0;
+            #{$right}: 30px;
+        }
+        @include breakpoint(large){
+            position: absolute;
+            #{$right}: 60px;
+            margin-top: 50px;
+        }
+    }
+    .__municipalities-info.done{
+        opacity:1;
+        @include breakpoint(large){
+            #{$right}: 80px;
+        }
+    }
+    .__img {
+        height: 180px;
+        overflow: hidden;
+        outline: 1px solid #fff;
+        outline-offset: -5px;
+        position:relative;
+    }
+    .__img img{
+        width:100%;
+        height: 100%;
+    }
+    .__img:after {
+        content: "";
+        position: absolute;
+        #{$right}: 0;
+        #{$left}: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    h4.__title {
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        margin-top: -47px;
+        font-weight: bold;
+        position: relative;
+    }
+
+    ._desc {
+        padding: 25px 20px;
+        background: #fff;
+        text-align: justify;
+    }
+
+    .__more-info {
+        margin: 0 auto;
+        display: table;
+        background: #fecd07;
+        padding: 15px 35px;
+        margin-bottom: 30px;
+        border-radius: 25px;
+            color: #000;
+        font-weight: bold;
+    }
+
+
+    #sideNavBar {
+        display: none;
+    }
+
+    path {
+        transition: all 0.5s;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .__path-group text {
+        transition: all 0.5s;
+        font-weight: bold;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+        fill: black;
+    }
+
+    .__path-group:hover path,
+    .__path-group.active path {
+        fill: #fecd07;
+        opacity: 1;
+    }
+
+    .__path-group:hover text,
+    .__path-group.active text {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    text[data-title="OhdMun"] {
+        transform: translate(730px,601px);
+    }
+
+    text[data-title="BerkMun"] {
+        transform: translate(408px,536px);
+    }
+
+    text[data-title="AmwaahMun"] {
+        transform: translate(900px,455px);
+    }
+
+    text[data-title="BshairMun"] {
+        transform: translate(509px,250px);
+    }
+
+    text[data-title="ThanihMun"] {
+        transform: translate(580px,180px);
+    }
+
+    text[data-title="HazmiMun"] {
+        transform: translate(620px,280px);
+    }
+
+    text[data-title="RabohMun"] {
+        transform: translate(782px,734px);
+    }
+
+    text[data-title="AlsahilMun"] {
+        transform: translate(525px,628px);
+    }
+
+    text[data-title="SobikhaMun"] {
+        transform: translate(785px,392px);
+    }
+
+    text[data-title="FrshaMun"] {
+        transform: translate(751px,662px);
+    }
+
+    text[data-title="MjardhMun"] {
+        transform: translate(511px,389px);
+    }
+
+    text[data-title="NaqeeaMun"] {
+        transform: translate(691px,156px);
+    }
+
+    text[data-title="NemasMun"] {
+        transform: translate(581px,386px);
+    }
+
+    text[data-title="WadiainMun"] {
+        transform: translate(701px,606px);
+    }
+
+    text[data-title="BariqMun"] {
+        transform: translate(511px,436px);
+    }
+
+    text[data-title="BahrsMun"] {
+        transform: translate(511px,556px);
+    }
+
+    text[data-title="BlqrnMun"] {
+        transform: translate(511px,306px);
+    }
+
+    text[data-title="BllsmrMun"] {
+        transform: translate(601px,456px);
+    }
+
+    text[data-title="BllhmrMun"] {
+        transform: translate(601px,486px);
+    }
+
+    text[data-title="BamrMun"] {
+        transform: translate(571px,338px);
+    }
+
+    text[data-title="BeshaMun"] {
+        transform: translate(711px,253px);
+    }
+
+    text[data-title="TthleethMun"] {
+        transform: translate(841px,268px);
+    }
+
+    text[data-title="TanomahMun"] {
+        transform: translate(631px,398px);
+    }
+
+    text[data-title="KhamisMun"] {
+        transform: translate(801px,499px);
+    }
+
+    text[data-title="RejalMun"] {
+        transform: translate(581px,599px);
+    }
+
+    text[data-title="AlsrahMun"] {
+        transform: translate(821px,599px);
+    }
+
+    text[data-title="SamghMun"] {
+        transform: translate(701px,379px);
+    }
+
+    text[data-title="TreebMun"] {
+        transform: translate(787px,532px);
+    }
+
+    text[data-title="ThJnoobMun"] {
+        transform: translate(907px,692px);
+    }
+
+    text[data-title="QanaMun"] {
+        transform: translate(507px,592px);
+    }
+
+    text[data-title="MassirMun"] {
+        transform: translate(507px,492px);
+    }
+
+    text[data-title="WadiHishMun"] {
+        transform: translate(707px,477px);
+    }
+
+    text[data-title="AlharajahMun"] {
+        transform: translate(857px,617px);
+    }
+
+    text[data-title="SoudaBranch"] {
+        transform: translate(617px,577px);
+    }
+
+    text[data-title="ShaafMun"] {
+        transform: translate(647px,637px);
+    }
+
+    text[data-title="TabtabBranch"] {
+        transform: translate(587px,527px);
+    }
+
+    text[data-title="SultanBranch"] {
+        transform: translate(737px,547px);
+    }
+
+    text[data-title="MarbaBranch"] {
+        transform: translate(597px,667px);
+    }
+
+    .st0 {
+        fill: #dadada;
+    }
+
+    .st1 {
+        fill: #D3D3D3;
+    }
+
+    .st2 {
+        fill: #b3b4b6;
+    }
+
+    .st3 {
+        fill: #A9A9A9;
+    }
+
+    .st4 {
+        fill: #C0C0C0;
+    }
+
+    .st5 {
+        fill: #939393;
+    }
+
+    .st6 {
+        fill: #eeeeee;
+    }
+
+    .st7 {
+        fill: #DCDCDC;
+    }
+
+    .st8 {
+        fill: #78787a;
+    }
+
+    .st9 {
+        fill: #C0C0C0;
+    }
+
+    .st10 {
+        fill: #9e9ea0;
+    }
+
+    .st11 {
+        fill: #777779;
+    }
+
+    .st12 {
+        fill: #595959;
+    }
+
+    .st13 {
+        fill: #868688;
+    }
+
+    .st14 {
+        fill: #898a8d;
+    }
+
+    .st15 {
+        fill: #777;
+    }
+
+    .st16 {
+        fill: #999;
+    }
+
+    .st17 {
+        fill: #111;
+    }
+
+    .st18 {
+        fill: #555;
+    }
+
+    .st19 {
+        fill: #999;
+    }
+
+    .st20 {
+        fill: #8c8c8c;
+    }
+
+    .st21 {
+        fill: #ceced0;
+    }
+
+    .st22 {
+        fill: #bfbfc1;
+    }
+
+    .st23 {
+        fill: #777;
+    }
+
+    .st24 {
+        fill: #999;
+    }
+
+    .st25 {
+        fill: #333;
+    }
+
+    .st26 {
+        fill: #555;
+    }
+
+    .st27 {
+        fill: #777;
+    }
+
+    .st28 {
+        fill: #111;
+    }
+
+    .st29 {
+        fill: #D3D3D3;
+    }
+
+    .st30 {
+        fill: #C0C0C0;
+    }
+
+    .st31 {
+        fill: #DCDCDC;
+    }
+
+    .st32 {
+        fill: #696969;
+    }
+
+    .st33 {
+        fill: #A9A9A9;
+    }
+
+    .st34 {
+        fill: #777779;
+    }
+
+    .st35 {
+        fill: #A9A9A9;
+    }
+
+    .st36 {
+        fill: #C0C0C0;
+    }
+
+    .st37 {
+        fill: #DCDCDC;
+    }
+
+    .st38 {
+        fill: #D3D3D3;
+    }
+
+    .st39 {
+        fill: #C0C0C0;
+    }
+
+    .st40 {
+        fill: #696969;
+    }
+
+    .st41 {
+        fill: #808080;
+    }
+
+    .st42 {
+        fill: #A9A9A9;
+    }
+
+    .st43 {
+        fill: #D3D3D3;
+    }
+
+    .st44 {
+        fill: #C0C0C0;
+    }
+
+    .st45 {
+        fill: #DCDCDC;
+    }
+
+    .st46 {
+        fill: #dadada;
+    }
+
+    .st47 {
+        fill: #9e9e9e;
+    }
+
+    .st48 {
+        fill: #777779;
+    }
+
+    .st49 {
+        fill: #7e7e80;
+    }
+
+    .st50 {
+        fill: #71B5B8;
+    }
+
+    .st51 {
+        fill: #6E8AC5;
+    }
+
+    .st52 {
+        fill: #89548D;
+    }
+
+    .st53 {
+        fill: #959597;
+    }
+
+    .st54 {
+        fill: #6c6c6e;
+    }
+
+    .st55 {
+        fill: #AD67A9;
+    }
+
+    .st56 {
+        fill: #bdbdbd;
+    }
+
+    .st57 {
+        fill: #C576EC;
+    }
+
+    .st58 {
+        fill: #B467EF;
+    }
+
+    .st59 {
+        fill: #A969EF;
+    }
+
+    .st60 {
+        fill: #A984EB;
+    }
+
+    .st61 {
+        fill: #8E84ED;
+    }
+
+    .st62 {
+        fill: #BB8BE6;
+    }
+
+    .st63 {
+        fill: #8D598B;
+    }
+
+    .st64 {
+        fill: #895F8C;
+    }
+
+    .st65 {
+        fill: #82477A;
+    }
+
+    .st66 {
+        fill: #9C6788;
+    }
+
+    .st67 {
+        fill: #795085;
+    }
+
+    .st68 {
+        fill: #cacaca;
+    }
+
+    .st69 {
+        fill: #6d6d6d;
+    }
+
+    .st70 {
+        fill: #CE6D82;
+    }
+
+    .st71 {
+        fill: #72CDCB;
+    }
+
+    .st72 {
+        fill: #78CFD8;
+    }
+
+    .st73 {
+        fill: #72CCD2;
+    }
+
+    .st74 {
+        fill: #75CED2;
+    }
+
+    .st75 {
+        fill: #75CECC;
+    }
+
+    .st76 {
+        fill: #82B0ED;
+    }
+
+    .st77 {
+        fill: #82BAEA;
+    }
+
+    .st78 {
+        fill: #A7D7D8;
+    }
+
+    .st79 {
+        fill: #80C3E6;
+    }
+
+    .st80 {
+        fill: #7BD0FC;
+    }
+
+    .st81 {
+        fill: #70C3FC;
+    }
+
+    .st82 {
+        fill: #80D6FC;
+    }
+
+    .st83 {
+        fill: #78CDFB;
+    }
+
+    .st84 {
+        fill: #8DB9FB;
+    }
+
+    .st85 {
+        fill: #7FEEFD;
+    }
+
+    .st86 {
+        fill: #7BD5FA;
+    }
+
+    .st87 {
+        fill: #79A1FB;
+    }
+
+    .st88 {
+        fill: #84D5FC;
+    }
+
+    .st89 {
+        fill: #79C7FB;
+    }
+
+    .st90 {
+        fill: #8FB9FB;
+    }
+}

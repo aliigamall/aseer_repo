@@ -31,11 +31,15 @@
 
 
 .breadcrumb {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    margin-#{$left}: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    // margin-#{$left}: 45px;
     display: inline-block;
     width: 100%;
+    @include breakpoint(large){
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
     >span {
         a {
             color: rgba(255, 255, 255, 0.8);

@@ -37,7 +37,7 @@
         @include breakpoint(isMobile){
             width: 60px;
             height: 60px;
-            margin-top: 30px;
+            // margin-top: 30px;
         }
 
         @supports (margin-inline-end: 20px) {
