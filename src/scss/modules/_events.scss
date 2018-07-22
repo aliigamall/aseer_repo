@@ -16,6 +16,7 @@
             margin: 0;
             display: inline-block;
             margin-bottom: 25px;
+            font-weight: 500;
             @include breakpoint(large){
                 width: 55%;
             }

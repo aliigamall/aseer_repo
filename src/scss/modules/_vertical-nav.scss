@@ -4,11 +4,17 @@
 .vertical-nav__icon{
     background-color: rgba(255, 255, 255,.1);
     box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
     @supports (margin-inline-end: auto) {
         margin-inline-end: 20px;
     }
     @supports not (margin-inline-end: auto) {
         margin-#{$right}: 20px;
+    }
+    &:hover{
+        > svg{
+            fill: #fff !important;
+        }
     }
 }
 .vertical-nav--side{

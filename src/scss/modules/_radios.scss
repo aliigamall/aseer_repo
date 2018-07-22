@@ -1,6 +1,6 @@
 
-$mdc-radio-checked-color: #a9a9a9;
-$mdc-radio-border-color: #a9a9a9;
+$mdc-radio-checked-color: #5f5f5f;
+$mdc-radio-border-color: #5f5f5f;
 $md-radio-border-disabled: rgba(0, 0, 0, 0.26);
 $mdc-radio-size: 20px;
 $mdc-radio-checked-size: 20px;
@@ -84,7 +84,7 @@ $mdc-radio-ripple-size: 15px;
     }
 
     label {
-        padding-right: $mdc-radio-size + 15px;
+        padding-right: $mdc-radio-size + 10px;
         display: inline-block;
         color: #333;
         font-size: 14px;
@@ -128,7 +128,7 @@ $mdc-radio-ripple-size: 15px;
         padding: 0;
 
         + td {
-            padding-left: 20px;
+            padding-#{$left}: 15px;
         }
     }
 }
@@ -137,6 +137,22 @@ $mdc-radio-ripple-size: 15px;
     label {
         &:before, &:after {
             top: -2px;
+        }
+    }
+}
+
+@include breakpoint(isCommon){
+    .mdc-radio{
+        tr{
+            display: flex;
+            flex-wrap: wrap;
+            td{
+                display: flex;
+                padding-#{$right}: 10px;
+                + td{
+                    padding-#{$left}: 0;
+                }
+            }
         }
     }
 }

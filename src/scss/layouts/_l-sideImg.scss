@@ -1,9 +1,13 @@
-
+.l-sideImg{
+    background: url("#{$img-path}/sideBox-bg1.jpg") no-repeat #{$right} top;
+    background-size: 50%;
+    box-shadow: inset 1px -2px 12px 0px rgba(51, 51, 51, 0.12);
+}
 .sideLinks{
-    background-image: url("#{$img-path}/sideBox-bg1.jpg");
-    background-repeat: no-repeat;
-    // background-size: 50%;
-    background-position: top left;
+    // background-image: url("#{$img-path}/sideBox-bg1.jpg");
+    // background-repeat: no-repeat;
+    // // background-size: 50%;
+    // background-position: top left;
     margin-bottom: 0;
     @include breakpoint(isCommon){
         margin-top: 40px;

@@ -62,3 +62,31 @@ a:visited {
 // .ribbon-wrapper{
 //     display: none;
 // }
+.ms-webpart-zone,
+.ms-webpart-cell-vertical,
+.ms-webpart-chrome-vertical{
+    display: block;
+}
+.is-editMode {
+    .swiper-wrapper{
+        display: block;
+    }
+    .l-home-section{
+        height: auto;
+    }
+}
+.ms-webpart-titleText,
+.ms-webpart-titleText.ms-webpart-titleText{
+    font-size: 1.75rem;
+    color: #25816d;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+    font-family: $font-family ;
+}
+.is-editMode .edit-mode-panel,
+.edit-mode{
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 40px;
+    border: 1px dashed #a7a7a7;
+}

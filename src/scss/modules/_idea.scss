@@ -20,7 +20,7 @@
     @supports (margin-inline-end: 20px) {
         margin-#{$right}: 20px;
     }
-    >span {
+    >span:first-child {
         background-color: $color-secondary;
         border-radius: 50%;
         color: #fff;
@@ -33,11 +33,11 @@
 }
 
 .idea__details {
-    padding-top: 3em;
-
-    @include breakpoint(isMobile) {
-        padding-top: 1em;
-    }
+    // padding-top: 3em;
+    margin-top: auto;
+    // @include breakpoint(isMobile) {
+    //     padding-top: 1em;
+    // }
 }
 
 .idea__title {

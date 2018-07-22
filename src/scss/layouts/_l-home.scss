@@ -82,7 +82,7 @@ iframe#twitter-widget-1 {
 #fp-nav {
     $fp-nav-color: #fff;
     position: fixed;
-    left: 1vw;
+    #{$right}: 1vw;
     top: 50%;
     background: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAnCAQAAABKrMu7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBAQKDhKNF/iuAAAByUlEQVQ4y83Uy0tUcRjG8c85akqL6WpggTqiTIuSbgRCtjAjatOilVIibVz0B9Sf0KZd0CLIWgTRomWbhITCRRgFlSY4YBeRwmywRZqX02ImZs7M8bIRela/93m+nAPPe34niJRot4yMXWot+mnchFwxDKIidt7RwnlZdeE06qn5ONquD5+8lC1EO7TpdEBk0FgRPaYXD7xTriMu4773hKjXa8XNBJC3bqHfzjzahztmJWvGXVwh1KzBB1PW1oRJTfaHTmLI+hrCiVAa07GgwSV7Ys4XpEMpv63GgowOLTFn0apUiOWy10UqtSIIRYIy+w8WyrxAVJ3whDdyJivtJHTBeFINoU1rq9AgsZxyRfmyajaBVolCOXWqNgDrhHKhLJo3QFuQDb3C2Q3QboyGpmW1OrQOeFyjMd9DPES/pjXAVj2WPfp3DdsM4ImRCrDTRdw2Vbzcza7abs6ICb8s2SYl45SUefd8pfSXUavLmYrin3luKT8EsVVVO6jJPrUWfPPZRyvFMNjMVvP6Dz7CrUYvuC5dMre5oTsZnVXvmtOFqcuAvX4U43ivjfqljBp2zmFzBs2shVKjRzt47XHprpK31a3DsBfl9l+HXnZKLrME2AAAAABJRU5ErkJggg==') no-repeat bottom center;
     padding-bottom: 60px;

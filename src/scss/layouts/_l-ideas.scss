@@ -1,5 +1,5 @@
 .l-ideas {
-    background: url("#{$img-path}/ideas-bg.png") no-repeat #{$right} bottom,
+    background: url("#{$img-path}/ideas-bg--#{$dirInv}.png") no-repeat #{$right} bottom,
     url("#{$img-path}/ideas-pattern.png") no-repeat #{$left} top;
     padding-top: 10vh;
     background-size: auto 97%, auto;

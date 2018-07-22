@@ -78,16 +78,18 @@
 .l-projects__charts {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     @include breakpoint(isCommon) {
       margin-bottom: 30px;
       margin-top: 50px;
     }
-    div{
-        @include breakpoint(isCommon) {
-            display: flex;
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(large) {
             flex: 1;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
           }
     }
 }
@@ -100,7 +102,6 @@
     width: 180px;
     height: 180px;
     position: relative;
-    margin: 0 40px;
     @include breakpoint(isCommon) {
         margin: 10px 7px 0;
         float: $left;

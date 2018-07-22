@@ -1,7 +1,9 @@
 .l-featured-pages {
     background: url("#{$img-path}/mountains-opacity.jpg") no-repeat #{$left} bottom;
-    background-size: cover;
     position: relative;
+    @include breakpoint(isCommon) {
+        background-size: 50%;
+    }
     .l-home-section {
         padding-top: 15vh;
         @include breakpoint(isCommon) {
@@ -42,8 +44,13 @@
     #{$right}: 0;
     max-width: 400px;
     max-height: 225px;
-    transform: translate(-30%, 20%);
     filter: grayscale(100%);
+    @if($dir == rtl){
+        transform: translate(-30%, 20%);
+    }
+    @else{
+        transform: translate(30%, 20%);
+    }
 }
 .l-featured__figures{
     @include breakpoint(isCommon){

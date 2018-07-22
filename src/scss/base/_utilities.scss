@@ -55,3 +55,18 @@
 .u-overflow-hidden{
     overflow: hidden !important;
 }
+.u-show-ar{
+    @if($dir == ltr){
+        display: none;
+    }
+}
+.u-show-en{
+    @if($dir == rtl){
+        display: none;
+    }
+}
+.u-flip-en{
+    @if($dir == ltr){
+        @include rotate(180);
+    }
+}
