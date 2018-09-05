@@ -43,3 +43,9 @@
     color: #888;
     font-size: 12px;
 }
+
+.GridFooterMain{
+    @extend .table;
+    background-color: #f7f7f7;
+}
+

@@ -137,5 +137,9 @@ button.button, {
     }
 }
 
-
+.btn{
+    @extend .button;
+    @extend .button--raised;
+    @extend .button--secondary;
+}
 

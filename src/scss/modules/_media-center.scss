@@ -1,4 +1,5 @@
 .media-center {
+    width: 100%;
     section {
         margin: 0 0 50px;
         &:last-child {
@@ -184,7 +185,6 @@
     }
     .l-eventList__bottom {
         float: $left;
-        margin-#{$left}: 50px;
         margin-top: 20px;
         @include breakpoint(isCommon) {
             width: 100%;
@@ -194,6 +194,9 @@
         }
     }
     .media-gallery {
+        .media-gallery__row--0{
+            margin: 0;
+        }
         .images-gallery {
             background: url(../images/bg-section1.jpg) 0 0 no-repeat;
             background-size: cover;

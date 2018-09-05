@@ -149,3 +149,29 @@ tbody.collapse.in {
 div#accordion .groupheader:nth-child(1) {
     margin-top: 0;
 }
+
+
+.download-links{
+    display: flex;
+    padding: 10px 15px;
+    box-shadow: 0.035px 0.999px 6px 0px rgba(0, 0, 0, 0.29);
+    margin-bottom: 20px;
+    @include transition();
+    &:hover{
+        text-decoration: none;
+        background-color: whitesmoke;
+    }
+}
+.download-links__title {
+    flex: 1;
+    margin-bottom: 0;
+    color: $color-secondary--dark;
+    font-weight: 700;
+}
+.download-links__icon {
+    width: 45px;
+    border-#{$left}: 1px solid #ccc;
+    padding-#{$left}: 15px;
+}
+
+

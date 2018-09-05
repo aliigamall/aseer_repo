@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>annyang</title>
+</head>
+
+<body>
+        <div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve pageHeader-DropDown">
+                <div>
+                    <a rel="nofollow" class="rsbtn_play" accesskey="L" title="ReadSpeaker إستمع إلى هذه الصفحةِ مستخدماً" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=9368&lang=ar_ar&amp;&readclass=content&url=">
+                        <span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>استمع</span></span></span>
+                        <span class="rsbtn_right rsimg rsplay rspart"></span>
+                    </a>
+                </div>
+            </div>
+
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem a eaque nam. Et, consequatur officiis aliquid harum maxime
+    doloremque similique quasi temporibus sunt consectetur adipisci modi minima ut suscipit porro.
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit cum a possimus fugiat non dolore sequi doloremque
+        explicabo. Doloribus, nulla saepe? Assumenda tempora aliquam voluptates! Maiores enim culpa deserunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit cum a possimus fugiat non dolore sequi doloremque
+        explicabo. Doloribus, nulla saepe? Assumenda tempora aliquam voluptates! Maiores enim culpa deserunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit cum a possimus fugiat non dolore sequi doloremque
+        explicabo. Doloribus, nulla saepe? Assumenda tempora aliquam voluptates! Maiores enim culpa deserunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit cum a possimus fugiat non dolore sequi doloremque
+        explicabo. Doloribus, nulla saepe? Assumenda tempora aliquam voluptates! Maiores enim culpa deserunt.</p>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./src/scripts/annyang.min.js"></script>
+    <script>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        $(function(){
+            if (!isMobile()) {
+                //place script you don't want to run on mobile here
+                startSpeechRecognition();
+                console.log("DetectSpeechRecognation");
+    
+            }
+        })
+        // SpeechRecognition Start
+        function startSpeechRecognition() {
+
+            "use strict";
+            // first we make sure annyang started succesfully
+            if (annyang) {
+
+                // define the functions our commands will run.
+
+                var goToTo = function (tag) {
+                    var GoToURL = '';
+                    if (tag == 'الصوتيه')
+                        GoToURL = '/ar/Pages/VoiceRec.aspx';
+
+
+                    if (GoToURL != '') {
+                        //window.location.replace(GoToURL);
+                        openInDialog(500, 600, true, true, true, "/ar/Pages/VoiceRec.aspx");
+                    }
+                };
+
+
+
+                var goTo = function (tag) {
+                    var GoToURL = '';
+                    if (tag == 'خدمات الوزاره')
+                        GoToURL = '/ar/MinistryServices/Pages/default.aspx';
+                    else if (tag == 'مركز المعلومات')
+                        GoToURL = '/ar/InformationCenter/Pages/default.aspx';
+                    else if (tag == 'المركز الاعلامي')
+                        GoToURL = '/ar/MediaCenter/Pages/Media.aspx'
+                    else if (tag == 'كيف يمكننا مساعدتك')
+                        GoToURL = '/ar/HowWeCanHelp/Pages/home.aspx'
+
+
+                    else if (tag == 'دليل الخدمات')
+                        GoToURL = '/ar/eServices/Pages/default.aspx'
+                    else if (tag == 'صوت المواطن')
+                        GoToURL = 'http://app.mowe.gov.sa/MoImos/DemandPages/Demand.aspx'
+                    else if (tag == 'الوكالات')
+                        GoToURL = '/ar/Ministry/Agencies/Pages/home.aspx'
+                    else if (tag == 'البيانات المفتوحة')
+                        GoToURL = '/ar/InformationCenter/OpenData/Pages/home.aspx'
+                    else if (tag == 'نظام الحصاد')
+                        GoToURL = 'http://sba1.mewa.gov.sa/pssservice_ara'
+                    else if (tag == 'التحول الوطني')
+                        GoToURL = '/ar/Ministry/initiatives/MinistryInitiatives/Pages/default.aspx'
+                    else if (tag == 'الوزارة')
+                        GoToURL = '/ar/Ministry/Pages/default.aspx'
+
+                    if (GoToURL != '') {
+                        window.location.replace(GoToURL);
+                    }
+                };
+
+
+                // define our commands.
+                // * The key is the phrase you want your users to say.
+                // * The value is the action to do.
+                //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
+                var commands = { 'الاوامر *tag': goToTo, '*tag': goTo };
+
+
+                //var commands = { 'ابحث عن *tag': SearchGo, 'انتقل الى *tag': goTo };
+
+                // OPTIONAL: activate debug mode for detailed logging in the console
+                annyang.debug();
+
+                // Add voice commands to respond to
+                annyang.addCommands(commands);
+
+                // OPTIONAL: Set a language for speech recognition (defaults to English)
+                // For a full list of language codes, see the documentation:
+                // https://github.com/TalAter/annyang/blob/master/docs/FAQ.md#what-languages-are-supported
+                annyang.setLanguage('ar-SA');
+
+                // Start listening. You can call this here, or attach this call to an event, button, etc.
+                annyang.start();
+            } else {
+                //$(document).ready(function() {
+                // $('#unsupported').fadeIn('fast');
+                //});
+            }
+
+        }
+        // SpeechRecognition End
+    </script>
+</body>
+
+</html>

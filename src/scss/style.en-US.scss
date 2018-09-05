@@ -25,7 +25,7 @@
 @import "./vendors/bootstrap/navbar";
 // @import "./vendors/bootstrap/card";
 // @import "./vendors/bootstrap/breadcrumb";
-// @import "./vendors/bootstrap/pagination";
+@import "./vendors/bootstrap/pagination";
 // @import "./vendors/bootstrap/badge";
 // @import "./vendors/bootstrap/jumbotron";
 @import "./vendors/bootstrap/alert";
@@ -64,7 +64,7 @@
 @import "./modules/side-nav";
 @import "./modules/events";
 @import "./modules/news";
-@import "./modules/pager";
+// @import "./modules/pager";
 @import "./modules/breadcrumb";
 @import "./modules/weather-condition";
 @import "./modules/media-galleries";
