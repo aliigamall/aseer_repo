@@ -58,6 +58,17 @@
 </head>
 
 <body>
+    <div class="dialog dialog--fine-artists">
+        <div class="dialog-backdrop"></div>
+        <div class="dialog__wrapper">
+            <a href="#0" class="dialog-surface">
+                <div class="dialog__close icon">
+                    <svg><use xlink:href="././src/images/svg-icons.svg#icon-close"></use></svg>
+                </div>
+                <img class="dialog__fine-img" src="./src/images/fine-artist.jpg" alt="">
+            </a>
+        </div>
+    </div>
     <div id="homePage">
         <header class="main-header main-header--absolute main-header--light">
             <div class="container main-header__container">
@@ -1055,6 +1066,7 @@
                     }
                 },
             });
+            $('.dialog--fine-artists').addClass('is-shown');
         });
     </script>
 </body>
