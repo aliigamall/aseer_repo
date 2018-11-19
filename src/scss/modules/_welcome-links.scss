@@ -20,6 +20,19 @@ $links-margin: 10px !default;
         text-decoration: none;
     }
 }
+.welcome-links--double{
+    padding: 0;
+    box-shadow: none;
+    background: none;
+    border: 0;
+    align-content: space-between;
+    .welcome-links{
+        width: 100%;
+        margin: 0;
+        height: 75px;
+        justify-content: center;
+    }
+}
 
 .welcome-links__wrapper {
     display: flex;

@@ -44,7 +44,7 @@ $mdc-radio-ripple-size: 15px;
             }
 
             + label:after {
-                transform: scale(0.5);
+                transform: translate(0, -50%) scale(0.5);
             }
 
             &[disabled] {
@@ -102,19 +102,20 @@ $mdc-radio-ripple-size: 15px;
 
         &:before {
             right: 0;
-            top: 0;
+            top: 50%;
             width: $mdc-radio-size;
             height: $mdc-radio-size;
             border: 2px solid $mdc-radio-border-color;
+            @include translate(0, -50%);
         }
 
         &:after {
-            top: 0;
+            top: 50%;
             right: 0;
             width: $mdc-radio-checked-size;
             height: $mdc-radio-checked-size;
-            transform: scale(0);
             background: $mdc-radio-checked-color;
+            transform: translate(0, -50%) scale(0);
         }
     }
     // to fix radio button list

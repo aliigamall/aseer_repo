@@ -200,6 +200,9 @@
         min-width: 100px;
         max-height: 80vh;
         top: 370px;
+        @include breakpoint(wide){
+            top: 450px;
+        }
         // top: 10%;
         // opacity: 0;
         // visibility: hidden;

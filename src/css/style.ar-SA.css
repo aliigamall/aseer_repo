@@ -8060,6 +8060,20 @@ a:visited {
   filter: grayscale(100%) brightness(95%) contrast(120%);
 }
 
+.is-displayMode .u-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.block-hint {
+  background: #e6e6e6;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.lg-outer {
+  direction: ltr;
+}
+
 @media (min-width: 576px) {
   .button-wrapper {
     margin-right: -16px;
@@ -13772,6 +13786,12 @@ div#accordion .groupheader:nth-child(1) {
   top: 370px;
 }
 
+@media (min-width: 1600px) {
+  .dialog--fine-artists .dialog-surface {
+    top: 450px;
+  }
+}
+
 .dialog--fine-artists .dialog-surface:after {
   content: '';
   border: 1px solid rgba(255, 255, 255, 0.36);
@@ -14432,6 +14452,25 @@ div#accordion .groupheader:nth-child(1) {
   margin-bottom: 30px;
 }
 
+.OneAnswerShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.OneAnswerShow .img-gallery {
+  margin-right: 15px;
+}
+
+.OneAnswerShow .img-gallery img {
+  max-height: 60px;
+  max-width: 300px;
+}
+
 @-webkit-keyframes ripple {
   0% {
     -webkit-box-shadow: 0px 0px 0px 1px transparent;
@@ -14484,8 +14523,8 @@ div#accordion .groupheader:nth-child(1) {
 }
 
 .mdc-radio input[type="radio"]:checked + label:after {
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: translate(0, -50%) scale(0.5);
+  transform: translate(0, -50%) scale(0.5);
 }
 
 .mdc-radio input[type="radio"]:checked[disabled] + label:after {
@@ -14538,20 +14577,22 @@ div#accordion .groupheader:nth-child(1) {
 
 .mdc-radio label:before {
   right: 0;
-  top: 0;
+  top: 50%;
   width: 20px;
   height: 20px;
   border: 2px solid #5f5f5f;
+  -webkit-transform: translateX(0) translateY(-50%);
+  transform: translateX(0) translateY(-50%);
 }
 
 .mdc-radio label:after {
-  top: 0;
+  top: 50%;
   right: 0;
   width: 20px;
   height: 20px;
-  -webkit-transform: scale(0);
-  transform: scale(0);
   background: #5f5f5f;
+  -webkit-transform: translate(0, -50%) scale(0);
+  transform: translate(0, -50%) scale(0);
 }
 
 .mdc-radio tr + tr td {
